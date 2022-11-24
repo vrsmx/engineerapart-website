@@ -1,4 +1,4 @@
-import 'src/styles/global.css';
+import 'src/styles/global.scss';
 
 // Logs when the client route changes
 /* exports.onRouteUpdate = ({location, prevLocation}) => {
