@@ -11,16 +11,16 @@ export const Navbar: React.FC = () => {
       </div>
 
       <ul className={`${styles.navlinks} flex justify-evenly`}>
-        <li>
+        <li className={styles.navlink}>
           <Link to="/">HOME</Link>
         </li>
-        <li>
+        <li className={styles.navlink}>
           <Link to="/services">SERVICES</Link>
         </li>
-        <li>
+        <li className={styles.navlink}>
           <Link to="/about-us">ABOUT US</Link>
         </li>
-        <li>
+        <li className={`${styles.navlink_cta}`}>
           <Link to="/contact">CONTACT</Link>
         </li>
       </ul>

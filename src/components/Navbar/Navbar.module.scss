@@ -5,3 +5,22 @@
 .navlinks {
   gap: 50px;
 }
+
+.navlink {
+  font-family: var(--main-font-secondary);
+  font-size: 16px;
+  line-height: 1em;
+  text-transform: uppercase;
+  color: var(--main-color-black);
+
+  transition: var(--main-default-animation-time) ease transform;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.navlink_cta {
+  color: var(--main-color-blue);
+  font-weight: 600;
+}

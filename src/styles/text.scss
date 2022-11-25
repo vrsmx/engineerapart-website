@@ -1,11 +1,51 @@
 /* Text */
 
+/* Tools */
+.txt-dark {
+  color: var(--main-color-black);
+}
+.txt-light {
+  color: var(--main-color-white);
+}
+.txt-blue {
+  color: var(--main-color-blue);
+}
+
+.txt-center {
+  text-align: center;
+}
+.txt-left {
+  text-align: start;
+}
+.txt-right {
+  text-align: end;
+}
+.txt-max-width-s {
+  max-width: 50rem;
+}
+.txt-max-width-m {
+  max-width: 55rem;
+}
+.txt-max-width-l {
+  max-width: 60rem;
+}
+
+.word-wrap {
+  word-wrap: break-word;
+}
+
 h1 {
   font-family: var(--main-font-primary);
   font-weight: 500;
-  font-style: normal;
   line-height: 1em;
   font-size: 96px;
   word-break: break-all;
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--main-font-secondary);
+  line-height: 1.5em;
+  font-size: 20px;
   text-align: center;
 }

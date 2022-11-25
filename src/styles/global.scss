@@ -4,6 +4,7 @@
 @import 'src/styles/containers.scss';
 @import 'src/styles/text.scss';
 @import 'src/styles/gradients.scss';
+@import 'src/styles/button.scss';
 
 :root {
   --main-color-blue: #2052cc;
@@ -22,6 +23,7 @@
   --main-font-secondary: neue-haas-unica, sans-serif;
   --main-view-boundary: 1440px;
   --main-navbar-padding: 4.5rem;
+  --main-default-animation-time: 200ms;
 }
 
 html,
@@ -29,4 +31,10 @@ body {
   position: relative;
   background-color: var(--main-color-white);
   font-family: var(--main-font-secondary);
+  color: var(--main-color-darkblue);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

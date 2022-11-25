@@ -1,8 +1,12 @@
 /* Container */
 
-.page-container {
+.page {
   width: 100vw;
+  background-color: var(--main-color-white);
+}
+
+.page-container {
+  width: 100%;
   max-width: var(--main-view-boundary);
   margin: 0 auto;
-  background-color: var(--main-color-white);
 }
