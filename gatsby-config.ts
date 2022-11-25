@@ -1,21 +1,31 @@
 import type {GatsbyConfig} from 'gatsby';
 
+import path from 'path';
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `engineerapart-website`,
     siteUrl: `https://www.yourdomain.tld`,
+  },
+  flags: {
+    DEV_SSR: true,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    'gatsby-plugin-root-import',
+    'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/icon.png',
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -23,6 +33,12 @@ const config: GatsbyConfig = {
         path: './src/images/',
       },
       __key: 'images',
+    },
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        src: path.join(__dirname, 'src'),
+      },
     },
   ],
 };

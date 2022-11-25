@@ -1,0 +1,22 @@
+$breakpoints: (
+  sm: 540px,
+  md: 1280px,
+);
+
+@mixin screen-s {
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    @content;
+  }
+}
+
+@mixin screen-m {
+  @media screen and (max-width: map-get($breakpoints, md)) {
+    @content;
+  }
+}
+
+@mixin screen-query($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}

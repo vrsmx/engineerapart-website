@@ -1,8 +1,32 @@
-a {
-  font-size: 50px;
-  color: blue;
+@import 'src/styles/cssReset.scss';
+@import 'src/styles/flex.scss';
+@import 'src/styles/mediaQuery.scss';
+@import 'src/styles/containers.scss';
+@import 'src/styles/text.scss';
+@import 'src/styles/gradients.scss';
+
+:root {
+  --main-color-blue: #2052cc;
+  --main-color-darkblue: #031149;
+  --main-color-black: #131418;
+  --main-color-white: #f7f7f7;
+  --main-color-white-shade: #f1f1f1;
+  --main-color-white-dark: #ececec;
+  --main-color-orange: #f87f40;
+  --main-color-purple: #8708fa;
+  --main-color-turquoise: #11c6cd;
+  --main-color-border: #dedddd;
+
+  --main-radius: 3px;
+  --main-font-primary: poppins, sans-serif;
+  --main-font-secondary: neue-haas-unica, sans-serif;
+  --main-view-boundary: 1440px;
+  --main-navbar-padding: 4.5rem;
 }
 
-a:hover {
-  color: purple;
+html,
+body {
+  position: relative;
+  background-color: var(--main-color-white);
+  font-family: var(--main-font-secondary);
 }

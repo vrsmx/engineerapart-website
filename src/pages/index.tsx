@@ -1,21 +1,31 @@
 import * as React from 'react';
 import type {HeadFC, PageProps} from 'gatsby';
-import {Link} from 'gatsby';
-
-const pageStyles = {
-  color: '#232129',
-  padding: 96,
-  fontFamily: '-apple-system, Roboto, sans-serif, serif',
-};
+import {GlobalHead} from 'src/components/GlobalHeader/GlobalHead';
+import {Navbar} from 'src/components/Navbar/Navbar';
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <main style={pageStyles}>
-      <Link to="/services">services</Link>
+    <main className="page-container">
+      <Navbar />
+      <h1>
+        Start
+        <br />
+        Scale
+        <br />
+        Accelerate
+      </h1>
+      <h2>
+        Build or grow your software development teams with cost-effective expert
+        engineers specialized in product driven development
+      </h2>
     </main>
   );
 };
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => (
+  <GlobalHead>
+    <title>Home Page</title>
+  </GlobalHead>
+);
