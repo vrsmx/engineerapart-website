@@ -5,6 +5,7 @@ import {GlobalHead} from 'src/components/GlobalHeader/GlobalHead';
 import {Topbar} from 'src/components/Topbar/Topbar';
 import {HomeHeader} from 'src/modules/HomeHeader/HomeHeader';
 import {ClientsSection} from 'src/modules/Clients/Clients';
+import {ValueProposition} from 'src/modules/ValueProposition/ValueProposition';
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -14,6 +15,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <PageHeaderNavbar />
         <HomeHeader />
         <ClientsSection />
+        <ValueProposition />
       </main>
     </>
   );

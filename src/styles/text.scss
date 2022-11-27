@@ -40,17 +40,55 @@
 
 h1 {
   font-family: var(--main-font-primary);
+  @include responsiveFont(3.8rem, 10vw, 6rem);
   font-weight: 500;
   line-height: 1em;
-  @include responsiveFont(3.8rem, 6vw, 6rem);
   word-break: break-all;
   text-align: center;
 }
 
 h2 {
+}
+
+h3 {
+}
+
+h4 {
+  font-family: var(--main-font-primary);
+  font-weight: 500;
+  @include responsiveFont(1rem, 3vw, 1.4rem);
+  line-height: 2em;
+}
+
+p {
   font-family: var(--main-font-secondary);
-  line-height: 1.5em;
-  @include responsiveFont(0.9rem, 2vw, 1.3rem);
+  @include responsiveFont(0.9rem, 3vw, 1.1rem);
   font-weight: 300;
-  text-align: center;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+}
+
+.section-header {
+  font-family: var(--main-font-primary);
+  @include responsiveFont(2.4rem, 10vw, 5rem);
+  font-weight: 500;
+  line-height: 1em;
+  color: var(--main-color-black);
+}
+
+.header-underline {
+  font-family: var(--main-font-secondary);
+  @include responsiveFont(1rem, 3vw, 1.3rem);
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+}
+
+.section-quote {
+  font-family: var(--main-font-primary);
+  @include responsiveFont(1.5rem, 5vw, 2rem);
+  font-weight: 600;
+  line-height: 1.2em;
+  letter-spacing: 0.02em;
+  max-width: 600px;
 }

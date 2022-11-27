@@ -1,6 +1,10 @@
 @import 'src/styles/mediaQuery.scss';
 /* Container */
 
+.full-width {
+  width: 100%;
+}
+
 .page {
   width: 100vw;
   background-color: var(--main-color-white);
@@ -11,4 +15,59 @@
   max-width: var(--main-view-boundary);
   margin: 0 auto;
   padding-inline: 15px;
+}
+
+.section-container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  @include screen-s {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+}
+
+.section-header-underline {
+  max-width: 500px;
+  margin-top: 50px;
+  margin-bottom: 150px;
+
+  @include screen-s {
+    max-width: unset;
+    margin-top: 25px;
+    margin-bottom: 100px;
+  }
+}
+
+.column-grid {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  grid-gap: 100px;
+
+  .column-grid-element {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .column-grid-element-title {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  @include screen-s {
+    display: block;
+
+    .column-grid-element {
+      margin-bottom: 75px;
+    }
+  }
+}
+
+.icon-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }

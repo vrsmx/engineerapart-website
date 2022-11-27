@@ -12,8 +12,8 @@ export const HomeHeader: React.FC = () => {
         <br />
         <span className="txt-blue">Accelerate</span>
       </h1>
-      <div className="flex column align-center" style={{gap: '35px'}}>
-        <h2 className="txt-center txt-max-width-s">
+      <div className={`${styles.underline_container} flex column align-center`}>
+        <h2 className="header-underline txt-center txt-max-width-s">
           Build or grow your software development teams with cost-effective
           expert engineers specialized in product driven development engineers
           engineers
