@@ -1,0 +1,17 @@
+@import 'src/styles/mediaQuery.scss';
+
+.full_logo {
+  display: block;
+
+  @include screen-s {
+    display: none;
+  }
+}
+
+.icon_logo {
+  display: none;
+
+  @include screen-s {
+    display: block;
+  }
+}

@@ -1,3 +1,6 @@
+@import 'src/styles/text.scss';
+@import 'src/styles/mediaQuery.scss';
+
 .button {
   display: flex;
   flex-direction: row;
@@ -6,13 +9,14 @@
   padding: 10px 50px;
   border-radius: 5px;
 
+  cursor: pointer;
   font-family: var(--main-font-secondary);
   font-weight: 500;
   line-height: 1.5em;
   letter-spacing: 1px;
   font-size: 1rem;
 
-  cursor: pointer;
+  @include responsiveFont(0.8rem, 2vw, 1rem);
 
   &.primary {
     background-color: var(--main-color-blue);
@@ -34,5 +38,9 @@
     &:hover {
       transform: scale(1.02);
     }
+  }
+
+  @include screen-s {
+    width: 100%;
   }
 }

@@ -1,5 +1,9 @@
 /* Text */
 
+@mixin responsiveFont($min, $scaleing, $max) {
+  font-size: min(max($min, $scaleing), $max);
+}
+
 /* Tools */
 .txt-dark {
   color: var(--main-color-black);
@@ -38,7 +42,7 @@ h1 {
   font-family: var(--main-font-primary);
   font-weight: 500;
   line-height: 1em;
-  font-size: 96px;
+  @include responsiveFont(3.8rem, 6vw, 6rem);
   word-break: break-all;
   text-align: center;
 }
@@ -46,6 +50,7 @@ h1 {
 h2 {
   font-family: var(--main-font-secondary);
   line-height: 1.5em;
-  font-size: 20px;
+  @include responsiveFont(0.9rem, 2vw, 1.3rem);
+  font-weight: 300;
   text-align: center;
 }

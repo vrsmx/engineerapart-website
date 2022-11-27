@@ -1,13 +1,19 @@
+@import 'src/styles/mediaQuery.scss';
+
 .clients_component {
   background-color: var(--main-color-white-shade);
   width: 100%;
-  padding: 40px 20px;
+  padding: 40px 15px;
 }
 
 .clients_list {
   background-color: var(--main-color-white-shade);
   width: 60%;
   margin: 0 auto;
+
+  @include screen-s {
+    width: 100%;
+  }
 }
 
 .client_container {

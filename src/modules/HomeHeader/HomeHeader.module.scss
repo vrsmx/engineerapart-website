@@ -1,0 +1,17 @@
+@import 'src/styles/mediaQuery.scss';
+
+.hero_component {
+  gap: 75px;
+  padding-top: 100px;
+  padding-bottom: 150px;
+
+  @include screen-s {
+    gap: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.buttons_container {
+  gap: 1em;
+}
