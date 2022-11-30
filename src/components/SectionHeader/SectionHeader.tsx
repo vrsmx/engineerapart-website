@@ -5,18 +5,26 @@ interface Props {
   title: React.ReactNode;
   underline?: React.ReactNode;
   underlineAlign?: 'justify-start' | 'justify-end';
+  underlineSize?: 's' | 'm' | 'l';
 }
 export const SectionHeader: React.FC<Props> = ({
   underlineAlign = 'justify-end',
   title,
   underline,
+  underlineSize = 'm',
 }) => {
   return (
     <div className="section-header-component flex column">
-      <h3 className={`${styles.section_header} section-header`}>{title}</h3>
+      <h3 className={`${styles.section_header} section-header mrg-btm-xs`}>
+        {title}
+      </h3>
       {underline && (
         <div className={`full-width flex ${underlineAlign}`}>
-          <p className="header-underline section-header-underline">
+          <p
+            className={`${
+              styles[`section_header_${underlineSize}`]
+            } header-underline`}
+          >
             {underline}
           </p>
         </div>

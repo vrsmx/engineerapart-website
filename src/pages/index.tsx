@@ -6,6 +6,8 @@ import {Topbar} from 'src/components/Topbar/Topbar';
 import {HomeHeader} from 'src/modules/HomeHeader/HomeHeader';
 import {ClientsSection} from 'src/modules/Clients/Clients';
 import {ValueProposition} from 'src/modules/ValueProposition/ValueProposition';
+import {ProcessValue} from 'src/modules/ProcessValue/ProcessValue';
+import {ClientSocialProof} from 'src/modules/ClientSocialProof/ClientSocialProof';
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -16,6 +18,14 @@ const IndexPage: React.FC<PageProps> = () => {
         <HomeHeader />
         <ClientsSection />
         <ValueProposition />
+        <ProcessValue />
+        <ClientSocialProof
+          review="”Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi convallis
+          facilisis id in vivamus turpis. Faucibus suspendisse molestie congue
+          imperdiet lorem pretium.”"
+          name="Someone from Client"
+          position="Position inside client"
+        />
       </main>
     </>
   );

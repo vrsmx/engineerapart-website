@@ -20,7 +20,7 @@ export const HomeHeader: React.FC = () => {
         </h2>
         <div className={`${styles.buttons_container} flex justify-center wrap`}>
           <button className="button primary">Get started</button>
-          <button className="button clear">Learn more</button>
+          <button className="button clear">Learn more →</button>
         </div>
       </div>
     </section>

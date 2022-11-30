@@ -17,6 +17,22 @@
   );
 }
 
+.gradient-black {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(0, 0, 0, 0.51) 0%,
+    rgba(0, 0, 0, 0.23) 100%
+  );
+}
+
+.gradient-white {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(247, 247, 247, 0.94) 0%,
+    rgba(247, 247, 247, 0.8) 100%
+  );
+}
+
 .gradient-blue-turquioise {
   /*   background: url(pointsGrid.png),
     radial-gradient(
@@ -25,4 +41,9 @@
         rgba(17, 198, 205, 0.29) 100%
       )
   border-radius: 5px; */
+  background: radial-gradient(
+    53.63% 398.46% at 28.15% 45.28%,
+    rgba(32, 82, 204, 0.35) 0%,
+    rgba(17, 198, 205, 0.29) 100%
+  );
 }

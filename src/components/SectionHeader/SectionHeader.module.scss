@@ -1,3 +1,29 @@
+@import 'src/styles/mediaQuery.scss';
+
 .section_header {
   max-width: 900px;
+}
+
+.section_header_l {
+  max-width: 605px;
+
+  @include screen-s {
+    max-width: unset;
+  }
+}
+
+.section_header_m {
+  max-width: 500px;
+
+  @include screen-s {
+    max-width: unset;
+  }
+}
+
+.section_header_s {
+  max-width: 250px;
+
+  @include screen-s {
+    max-width: unset;
+  }
 }

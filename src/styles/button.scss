@@ -23,7 +23,8 @@
     color: var(--main-color-white);
     transition: var(--main-default-animation-time) ease transform, filter;
 
-    &:hover {
+    &:hover,
+    :active {
       transform: scale(1.02);
       filter: brightness(1.2);
     }
@@ -35,8 +36,9 @@
 
     transition: var(--main-default-animation-time) ease transform;
 
-    &:hover {
-      transform: scale(1.02);
+    &:hover,
+    :active {
+      transform: translateX(2.5%);
     }
   }
 
