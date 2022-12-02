@@ -1,0 +1,35 @@
+@import 'src/styles/text.scss';
+
+.nav_header {
+  font-family: var(--main-font-primary);
+  @include responsiveFont(0.8rem, 2vw, 1.1rem);
+  font-weight: 300;
+  line-height: 1em;
+  letter-spacing: 0.03em;
+}
+
+.nav_link {
+  font-family: var(--main-font-secondary);
+  @include responsiveFont(0.8rem, 2vw, 1.1rem);
+  font-weight: 200;
+  line-height: 1em;
+  letter-spacing: 0.03em;
+  transition: var(--main-default-animation-time) ease transform, filter;
+
+  &:hover {
+    transform: translateY(-15%) scale(1.05);
+  }
+}
+
+.legal_link {
+  font-family: var(--main-font-secondary);
+  @include responsiveFont(0.9rem, 2vw, 1rem);
+  font-weight: 200;
+  line-height: 1em;
+  letter-spacing: 0.03em;
+  transition: var(--main-default-animation-time) ease transform;
+
+  &:hover {
+    transform: translateY(-15%) scale(1.05);
+  }
+}

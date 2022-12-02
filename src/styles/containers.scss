@@ -160,10 +160,6 @@
     margin-bottom: 25px;
   }
 }
-.mrg-btm-xxs {
-  margin-bottom: 1em;
-}
-
 .pdg-top-xl {
   padding-top: 200px;
   @include screen-s {
@@ -189,9 +185,6 @@
   }
 }
 .pdg-top-xs {
-  padding-top: 1em;
-}
-.pdg-top-xxs {
   padding-top: 1em;
 }
 
@@ -220,11 +213,8 @@
   }
 }
 .pdg-btm-xs {
-  padding-bottom: 50px;
-  @include screen-s {
-    padding-bottom: 25px;
-  }
-}
-.pdg-btm-xxs {
   padding-bottom: 1em;
+  @include screen-s {
+    padding-bottom: 1em;
+  }
 }

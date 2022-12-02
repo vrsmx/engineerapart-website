@@ -31,7 +31,7 @@
   transition: var(--main-default-animation-time) ease transform;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) translateY(-10%);
   }
 }
 
@@ -42,7 +42,7 @@
   transition: var(--main-default-animation-time) ease transform, filter;
 
   &:hover {
-    transform: scale(1.05);
+    transform: translateY(-15%) scale(1.05);
     filter: brightness(1.2);
   }
 }
