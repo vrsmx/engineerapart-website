@@ -7,3 +7,11 @@
     max-width: unset;
   }
 }
+
+.text_container {
+  gap: 100px;
+
+  @include screen-s {
+    gap: unset;
+  }
+}

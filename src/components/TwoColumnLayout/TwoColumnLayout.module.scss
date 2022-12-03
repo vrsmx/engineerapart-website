@@ -1,0 +1,13 @@
+@import 'src/styles/mediaQuery.scss';
+
+.left_column_container {
+  @include screen-s {
+    order: 2;
+  }
+}
+
+.right_column_container {
+  @include screen-s {
+    order: 1;
+  }
+}

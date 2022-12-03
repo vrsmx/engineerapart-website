@@ -155,11 +155,12 @@
   }
 }
 .mrg-btm-xs {
-  margin-bottom: 50px;
+  margin-bottom: 1em;
   @include screen-s {
-    margin-bottom: 25px;
+    margin-bottom: 0.4em;
   }
 }
+
 .pdg-top-xl {
   padding-top: 200px;
   @include screen-s {

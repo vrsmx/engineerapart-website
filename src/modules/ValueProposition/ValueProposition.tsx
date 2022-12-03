@@ -1,7 +1,30 @@
 import {Link} from 'gatsby';
 import * as React from 'react';
 import {SectionHeader} from 'src/components/SectionHeader/SectionHeader';
+import {ThreeColumnLayout} from 'src/components/ThreeColumnLayout/ThreeColumnLayout';
+import {ServicesCardsContainer} from '../ServicesCardsContainer/ServicesCardsContainer';
 import * as styles from './ValueProposition.module.scss';
+
+const layoutitems = [
+  {
+    title: 'Start',
+    content:
+      'Bootstrap new projects within your company with hand-picked experts aligned with the project needs, goals and constraints.',
+    icon: <></>,
+  },
+  {
+    title: 'Scale',
+    content:
+      'Integrate individual contributors or full teams to upscale the output and speed of software building process.',
+    icon: <></>,
+  },
+  {
+    title: 'Accelerate',
+    content:
+      'Use the specialized skill set of our teams to deliver high quality, maintainable and scalable solutions within large scale projects.',
+    icon: <></>,
+  },
+];
 
 export const ValueProposition: React.FC = () => {
   return (
@@ -15,38 +38,7 @@ export const ValueProposition: React.FC = () => {
           </>
         }
       />
-      <div className="column-grid mrg-top-l mrg-btm-xl">
-        <div className="column-grid-element">
-          <div className="column-grid-element-title">
-            <div className="icon-container gradient-blue"></div>
-            <h4>Start</h4>
-          </div>
-          <p>
-            Bootstrap new projects within your company with hand-picked experts
-            aligned with the project needs, goals and constraints.
-          </p>
-        </div>
-        <div className="column-grid-element">
-          <div className="column-grid-element-title">
-            <div className="icon-container gradient-blue"></div>
-            <h4>Scale</h4>
-          </div>
-          <p>
-            Integrate individual contributors or full teams to upscale the
-            output and speed of software building process.
-          </p>
-        </div>
-        <div className="column-grid-element">
-          <div className="column-grid-element-title">
-            <div className="icon-container gradient-blue"></div>
-            <h4>Accelerate</h4>
-          </div>
-          <p>
-            Use the specialized skill set of our teams to deliver high quality,
-            maintainable and scalable solutions within large scale projects.
-          </p>
-        </div>
-      </div>
+      <ThreeColumnLayout items={layoutitems} />
       <p className="section-quote mrg-btm-m">
         From beautiful UIs to performant cloud services, we cover your modern
         software stack
@@ -59,33 +51,7 @@ export const ValueProposition: React.FC = () => {
           may need, we also master the complete web stack to aid your teams in
           any position they require.
         </p>
-        <div
-          className={`${styles.cards_container} mrg-btm-m full-width gradient-blue-turquioise flex justify-center pdg-top-xs pdg-btm-xs round-corner-primary`}
-        >
-          <div
-            className={`${styles.card} bg-white flex column align-center round-corner-secondary `}
-          >
-            <div className="icon-container large gradient-blue mrg-btm-xs"></div>
-            <h4 className="txt-blue">Cloud Services</h4>
-            <p className="txt-center">
-              Full cloud ecosystems in AWS, Azure or G-Cloud
-            </p>
-          </div>
-          <div
-            className={`${styles.card} bg-white flex column align-center round-corner-secondary `}
-          >
-            <div className="icon-container large gradient-blue mrg-btm-xs"></div>
-            <h4 className="txt-blue">Web Apps</h4>
-            <p className="txt-center">Efficient UIs in any framework</p>
-          </div>
-          <div
-            className={`${styles.card} bg-white flex column align-center round-corner-secondary `}
-          >
-            <div className="icon-container large gradient-blue mrg-btm-xs"></div>
-            <h4 className="txt-blue">Mobile Apps</h4>
-            <p className="txt-center">Native solutions for Android or IOS</p>
-          </div>
-        </div>
+        <ServicesCardsContainer />
         <div className="flex justify-end full-width">
           <Link to="/services" className={`section-link txt-blue txt-right`}>
             Discover everything EngineerApart

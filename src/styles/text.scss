@@ -55,14 +55,14 @@ h3 {
 
 h4 {
   font-family: var(--main-font-primary);
+  @include responsiveFont(1.2rem, 3vw, 1.2rem);
   font-weight: 500;
-  @include responsiveFont(1rem, 3vw, 1.2rem);
   line-height: 2em;
 }
 
 p {
   font-family: var(--main-font-secondary);
-  @include responsiveFont(0.9rem, 3vw, 1.1rem);
+  @include responsiveFont(1rem, 3vw, 1.1rem);
   font-weight: 300;
   line-height: 1.5em;
   letter-spacing: 0.02em;
@@ -78,7 +78,7 @@ p {
 
 .header-underline {
   font-family: var(--main-font-secondary);
-  @include responsiveFont(1rem, 3vw, 1.3rem);
+  @include responsiveFont(1.2rem, 3vw, 1.3rem);
   font-weight: 300;
   line-height: 1.5em;
   letter-spacing: 0.02em;
@@ -109,7 +109,7 @@ p {
 
 .paragraph-link {
   font-family: var(--main-font-primary);
-  @include responsiveFont(0.9rem, 3vw, 1.1rem);
+  @include responsiveFont(1rem, 3vw, 1.1rem);
   font-weight: 500;
   line-height: 1.5em;
 
@@ -123,7 +123,7 @@ p {
 
 .quote-l {
   font-family: var(--main-font-secondary);
-  @include responsiveFont(0.9rem, 3vw, 2.5rem);
+  @include responsiveFont(1rem, 3vw, 2.5rem);
   font-weight: 500;
   line-height: 1.2em;
   letter-spacing: 0.02em;
