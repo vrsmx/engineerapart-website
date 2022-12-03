@@ -13,7 +13,7 @@ export const HomeHeader: React.FC = () => {
         <span className="txt-blue">Accelerate</span>
       </h1>
       <div className={`${styles.underline_container} flex column align-center`}>
-        <h2 className="header-underline txt-center txt-max-width-s">
+        <h2 className="section-header-underline txt-center txt-max-width-s">
           Build or grow your software development teams with cost-effective
           expert engineers specialized in product driven development engineers
           engineers

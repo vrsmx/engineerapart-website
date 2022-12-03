@@ -45,7 +45,7 @@ export const ValueProposition: React.FC = () => {
       </p>
       <div className="flex column align-center">
         <p
-          className={`${styles.services_headline} header-underline txt-center mrg-btm-xs`}
+          className={`${styles.services_headline} section-header-underline txt-center mrg-btm-xs`}
         >
           At EngineerApart we are React experts that can build any web UI you
           may need, we also master the complete web stack to aid your teams in

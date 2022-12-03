@@ -16,7 +16,7 @@ export const ClientSocialProof: React.FC<Props> = ({
       <p className="quote-l txt-light mrg-btm-xs">{review}</p>
       <div className="client-container flex align-center" style={{gap: '20px'}}>
         <div className="flex column">
-          <span className="header-underline txt-light">{name}</span>
+          <span className="section-header-underline txt-light">{name}</span>
           <p className="p txt-light txt-right">{position}</p>
         </div>
         <div className="icon-container large gradient-white"></div>

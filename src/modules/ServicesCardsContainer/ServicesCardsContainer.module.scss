@@ -1,9 +1,23 @@
+@import 'src/styles/mediaQuery.scss';
+
 .card {
   padding: 50px 25px;
   max-width: 250px;
   height: 350px;
+
+  @include screen-s {
+    height: unset;
+  }
 }
 
 .cards_container {
   gap: 30px;
+
+  display: flex;
+  justify-content: center;
+
+  @include screen-s {
+    flex-direction: column;
+    align-items: center;
+  }
 }

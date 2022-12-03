@@ -5,7 +5,7 @@ interface Props {
   title: React.ReactNode;
   underline?: React.ReactNode;
   underlineAlign?: 'justify-start' | 'justify-end';
-  underlineSize?: 's' | 'm' | 'l';
+  underlineSize?: 's' | 'm' | 'l' | 'xl';
 }
 export const SectionHeader: React.FC<Props> = ({
   underlineAlign = 'justify-end',
@@ -23,7 +23,7 @@ export const SectionHeader: React.FC<Props> = ({
           <p
             className={`${
               styles[`section_header_${underlineSize}`]
-            } header-underline`}
+            } section-header-underline`}
           >
             {underline}
           </p>

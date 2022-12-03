@@ -4,6 +4,14 @@
   max-width: 900px;
 }
 
+.section_header_xl {
+  max-width: 705px;
+
+  @include screen-s {
+    max-width: unset;
+  }
+}
+
 .section_header_l {
   max-width: 605px;
 
