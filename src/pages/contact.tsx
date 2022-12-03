@@ -1,16 +1,25 @@
 import * as React from 'react';
 import {HeadFC, Link, PageProps} from 'gatsby';
-
-const pageStyles = {
-  color: '#232129',
-  padding: 96,
-  fontFamily: '-apple-system, Roboto, sans-serif, serif',
-};
+import {PageHeaderNavbar} from 'src/components/Navbar/PageHeaderNavbar/PageHeaderNavbar';
+import {PageHeader} from 'src/components/PageHeader/PageHeader';
+import {Topbar} from 'src/components/Topbar/Topbar';
 
 const ContactPage: React.FC<PageProps> = () => {
   return (
-    <main style={pageStyles}>
-      <Link to="/">home</Link>
+    <main className="page">
+      <Topbar color="black" />
+      <PageHeaderNavbar light={true} />
+      <section className="bg-black full-width">
+        <PageHeader
+          title="Our team of experts are ready to help"
+          underline="Doesn’t matter the problem, If it’s software we can help you."
+          cta={
+            <Link className="button primary big" to="/contact">
+              Call the experts
+            </Link>
+          }
+        />
+      </section>
     </main>
   );
 };

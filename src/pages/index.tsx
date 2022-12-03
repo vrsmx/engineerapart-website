@@ -13,25 +13,23 @@ import {ContactFormWizard} from 'src/modules/ContactFormWizard/ContactFormWizard
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <>
-      <Topbar />
-      <main className="page">
-        <PageHeaderNavbar />
-        <HomeHeader />
-        <ClientsSection />
-        <ValueProposition />
-        <ProcessValue />
-        <ClientSocialProof
-          review="”Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi convallis
+    <main className="page">
+      <Topbar color="blue" />
+      <PageHeaderNavbar />
+      <HomeHeader />
+      <ClientsSection />
+      <ValueProposition />
+      <ProcessValue />
+      <ClientSocialProof
+        review="”Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi convallis
           facilisis id in vivamus turpis. Faucibus suspendisse molestie congue
           imperdiet lorem pretium.”"
-          name="Someone from Client"
-          position="Position inside client"
-        />
-        <ContactFormWizard />
-        <Footer />
-      </main>
-    </>
+        name="Someone from Client"
+        position="Position inside client"
+      />
+      <ContactFormWizard />
+      <Footer />
+    </main>
   );
 };
 
