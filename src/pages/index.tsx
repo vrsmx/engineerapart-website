@@ -8,6 +8,8 @@ import {ClientsSection} from 'src/modules/Clients/Clients';
 import {ValueProposition} from 'src/modules/ValueProposition/ValueProposition';
 import {ProcessValue} from 'src/modules/ProcessValue/ProcessValue';
 import {ClientSocialProof} from 'src/modules/ClientSocialProof/ClientSocialProof';
+import {Footer} from 'src/components/Footer/Footer';
+import {ContactFormWizard} from 'src/modules/ContactFormWizard/ContactFormWizard';
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -26,6 +28,8 @@ const IndexPage: React.FC<PageProps> = () => {
           name="Someone from Client"
           position="Position inside client"
         />
+        <ContactFormWizard />
+        <Footer />
       </main>
     </>
   );
