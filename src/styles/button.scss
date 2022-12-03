@@ -8,6 +8,7 @@
   align-items: center;
   padding: 10px 50px;
   border-radius: 5px;
+  flex-grow: 0;
 
   cursor: pointer;
   font-family: var(--main-font-secondary);
@@ -16,7 +17,9 @@
   letter-spacing: 1px;
   font-size: 1rem;
 
-  @include responsiveFont(0.8rem, 2vw, 1rem);
+  &.big {
+    @include responsiveFont(1rem, 3vw, 1.1rem);
+  }
 
   &.primary {
     background-color: var(--main-color-blue);
