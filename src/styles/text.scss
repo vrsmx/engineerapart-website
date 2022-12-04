@@ -144,3 +144,26 @@ p {
   line-height: 1.2em;
   letter-spacing: 0.02em;
 }
+
+input,
+textarea {
+  background-color: var(--main-color-white-dark);
+  padding: 10px 20px;
+  border-radius: var(--main-radius-primary);
+  border: 1.5px solid var(--main-color-white-dark);
+
+  font-family: var(--main-font-secondary);
+  @include responsiveFont(1rem, 3vw, 1.2rem);
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+
+  &::placeholder {
+    color: var(--main-color-white-dark-shade);
+    @include responsiveFont(1rem, 3vw, 1.2rem);
+  }
+
+  &:active {
+    border: 1.5px solid var(--main-color-blue);
+  }
+}

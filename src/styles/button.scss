@@ -21,9 +21,32 @@
     @include responsiveFont(1rem, 3vw, 1.1rem);
   }
 
+  &.small {
+    @include responsiveFont(1rem, 2vw, 1rem);
+  }
+
+  &.expand {
+    min-width: 250px;
+  }
+
   &.primary {
     background-color: var(--main-color-blue);
     color: var(--main-color-white);
+    border: 1.5px solid var(--main-color-blue);
+
+    transition: var(--main-default-animation-time) ease transform, filter;
+
+    &:hover,
+    :active {
+      transform: scale(1.02);
+      filter: brightness(1.2);
+    }
+  }
+
+  &.secondary {
+    background-color: transparent;
+    border: 1.5px solid var(--main-color-black);
+    color: var(--main-color-black);
     transition: var(--main-default-animation-time) ease transform, filter;
 
     &:hover,
@@ -35,6 +58,8 @@
 
   &.clear {
     background-color: transparent;
+    border: 1.5px solid transparent;
+
     color: var(--main-color-black);
 
     transition: var(--main-default-animation-time) ease transform;

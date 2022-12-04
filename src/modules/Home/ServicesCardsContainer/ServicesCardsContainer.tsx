@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as styles from 'src/modules/ServicesCardsContainer/ServicesCardsContainer.module.scss';
+import * as styles from './ServicesCardsContainer.module.scss';
 
 export const ServicesCardsContainer: React.FC = () => {
   return (

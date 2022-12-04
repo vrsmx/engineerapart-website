@@ -11,7 +11,7 @@ interface Props {
 }
 export const ThreeColumnLayout: React.FC<Props> = ({items}) => {
   return (
-    <div className="column-grid mrg-top-l mrg-btm-xl">
+    <div className="column-grid mrg-top-l mrg-btm-l">
       {items.map((item) => (
         <div className="column-grid-element">
           <div className="column-grid-element-title">

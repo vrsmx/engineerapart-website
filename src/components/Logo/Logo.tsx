@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Link} from 'gatsby';
 import {StaticImage} from 'gatsby-plugin-image';
-import * as styles from 'src/components/Logo/Logo.module.scss';
+import * as styles from './Logo.module.scss';
 
 interface Props {
   light?: boolean;

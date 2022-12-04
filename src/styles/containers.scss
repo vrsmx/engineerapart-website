@@ -17,6 +17,16 @@
   background-color: var(--main-color-white);
 }
 
+.bg-white-shade {
+  background-color: var(--main-color-white-shade);
+}
+.bg-gray {
+  background-color: var(--main-color-white-dark);
+}
+.border-white {
+  border: 2px solid var(--main-color-border);
+}
+
 .bg-blue {
   background-color: var(--main-color-blue);
 }
@@ -34,7 +44,11 @@
   width: 100%;
   max-width: var(--main-view-boundary);
   margin: 0 auto;
-  padding-inline: 15px;
+  padding-inline: 5%;
+
+  @include screen-s {
+    padding-inline: 15px;
+  }
 }
 
 .section-container {
@@ -107,6 +121,16 @@
       height: 50px;
     }
   }
+
+  &.xlarge {
+    width: 100px;
+    height: 100px;
+
+    @include screen-s {
+      width: 75px;
+      height: 75px;
+    }
+  }
 }
 
 .mrg-top-xl {
@@ -140,6 +164,12 @@
   margin-top: 0.5em;
 }
 
+.mrg-btm-xxl {
+  margin-bottom: 300px;
+  @include screen-s {
+    margin-bottom: 200px;
+  }
+}
 .mrg-btm-xl {
   margin-bottom: 200px;
   @include screen-s {

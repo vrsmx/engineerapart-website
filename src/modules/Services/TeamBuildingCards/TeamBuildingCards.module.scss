@@ -1,0 +1,14 @@
+@import 'src/styles/mediaQuery.scss';
+
+.cards_container {
+  gap: 100px;
+
+  @include screen-s {
+    gap: 50px;
+  }
+}
+
+.cta_card {
+  padding-inline: 50px;
+  max-width: 480px;
+}

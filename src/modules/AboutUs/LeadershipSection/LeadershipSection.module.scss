@@ -1,0 +1,11 @@
+@import 'src/styles/text.scss';
+
+.leader_title {
+  color: var(--main-color-blue-shade);
+  font-family: var(--main-font-primary);
+  @include responsiveFont(1.2rem, 3vw, 1.8rem);
+  font-weight: 500;
+  line-height: 1em;
+
+  margin-left: 10%;
+}
