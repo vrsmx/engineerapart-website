@@ -8,6 +8,7 @@ interface Prop {
   rightSize?: number;
   alignItems?: 'start' | 'end' | 'center';
   className?: string;
+  reverseResponsiveOrder?: boolean;
 }
 
 export const TwoColumnLayout: React.FC<Prop> = ({
@@ -17,14 +18,22 @@ export const TwoColumnLayout: React.FC<Prop> = ({
   rightSize = 1,
   alignItems = 'center',
   className = 'mrg-top-m mrg-btm-l',
+  reverseResponsiveOrder = false,
 }) => {
+  const leftContainerClass = reverseResponsiveOrder
+    ? 'left_column_container'
+    : 'left_column_container_reversed';
+  const rightContainerClass = reverseResponsiveOrder
+    ? 'right_column_container'
+    : 'right_column_container_reversed';
+
   return (
     <div
       className={`two-column-grid ${className}`}
       style={{gridAutoColumns: `${leftSize}fr ${rightSize}fr`, alignItems}}
     >
-      <div className={styles.left_column_container}>{leftColumn}</div>
-      <div className={styles.right_column_container}>{rightColumn}</div>
+      <div className={styles[leftContainerClass]}>{leftColumn}</div>
+      <div className={styles[rightContainerClass]}>{rightColumn}</div>
     </div>
   );
 };

@@ -4,12 +4,14 @@ import * as styles from './TeamBuildingCards.module.scss';
 export const TeamBuildingCards: React.FC = () => {
   return (
     <div
-      className={`${styles.cards_container} flex justify-center align-center mrg-btm-xl`}
+      className={`${styles.cards_container} flex justify-center align-stretch wrap mrg-btm-xl`}
     >
       <div
-        className={`${styles.cta_card}  flex column  align-center round-corner-primary bg-white-shade border-white pdg-top-s pdg-btm-s`}
+        className={`${styles.cta_card} flex column justify-between align-center round-corner-primary bg-white-shade border-white pdg-top-s pdg-btm-s`}
       >
-        <h4 className="txt-center mrg-btm-xs ">Extend your current teams</h4>
+        <h4 className={`${styles.card_title} txt-center mrg-btm-xs`}>
+          Extend your current teams
+        </h4>
         <p className="mrg-btm-s">
           A specific position or role, grow the size of your team or extend its
           capabilities with a specific skill set focused to fill a specific role
@@ -19,9 +21,11 @@ export const TeamBuildingCards: React.FC = () => {
         <button className="button primary full-width">Grow your team</button>
       </div>
       <div
-        className={`${styles.cta_card}  flex column  align-center round-corner-primary bg-white-shade border-white pdg-top-s pdg-btm-s`}
+        className={`${styles.cta_card} flex column justify-between align-center round-corner-primary bg-white-shade border-white pdg-top-s pdg-btm-s`}
       >
-        <h4 className="txt-center mrg-btm-xs ">New full-size team</h4>
+        <h4 className={`${styles.card_title} txt-center mrg-btm-xs`}>
+          New full-size team
+        </h4>
         <p className="mrg-btm-s">
           Doesn't matter if you want to delegate an existing project or build a
           new UI, micro-service or both, you will get a fully managed team with

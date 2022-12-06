@@ -1,7 +1,8 @@
 @import 'src/styles/mediaQuery.scss';
+@import 'src/styles/text.scss';
 
 .cards_container {
-  gap: 100px;
+  gap: 50px;
 
   @include screen-s {
     gap: 50px;
@@ -10,5 +11,12 @@
 
 .cta_card {
   padding-inline: 50px;
-  max-width: 480px;
+  max-width: 520px;
+}
+
+.card_title {
+  font-family: var(--main-font-primary);
+  @include responsiveFont(1.2rem, 3vw, 1.5rem);
+  font-weight: 500;
+  line-height: 2em;
 }

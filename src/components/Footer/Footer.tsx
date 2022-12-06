@@ -6,13 +6,17 @@ export const Footer = () => {
   return (
     <footer className="full-width bg-black txt-light pdg-top-l pdg-btm-l">
       <div className="page-container flex column" style={{gap: '50px'}}>
-        <nav className="flex" style={{gap: '75px'}}>
-          <div className="flex column" style={{gap: '24px'}}>
-            <label className={styles.nav_header}>Home</label>
+        <nav className={`${styles.footer_nav} flex wrap`}>
+          <div className={`${styles.navlink_column} flex column`}>
+            <Link className={styles.nav_header} to="/">
+              Home
+            </Link>
           </div>
-          <div className="flex column" style={{gap: '24px'}}>
-            <label className={styles.nav_header}>Services</label>
-            <ul className="flex column" style={{gap: '16px'}}>
+          <div className={`${styles.navlink_column} flex column`}>
+            <Link className={styles.nav_header} to="/services">
+              Services
+            </Link>
+            <ul className={`${styles.navlinks_container} flex`}>
               <li className={styles.nav_link}>
                 <Link to="/services#expertice">Expertice</Link>
               </li>
@@ -24,9 +28,11 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex column" style={{gap: '24px'}}>
-            <label className={styles.nav_header}>About us</label>
-            <ul className="flex column" style={{gap: '16px'}}>
+          <div className={`${styles.navlink_column} flex column`}>
+            <Link className={styles.nav_header} to="/about-us">
+              About us
+            </Link>
+            <ul className={`${styles.navlinks_container} flex`}>
               <li className={styles.nav_link}>
                 <Link to="/about-us#story">Story and goal</Link>
               </li>
@@ -35,9 +41,11 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex column" style={{gap: '24px'}}>
-            <label className={styles.nav_header}>Contact</label>
-            <ul className="flex column" style={{gap: '16px'}}>
+          <div className={`${styles.navlink_column} flex column`}>
+            <Link className={styles.nav_header} to="/contact">
+              Contact
+            </Link>
+            <ul className={`${styles.navlinks_container} flex`}>
               <li className={styles.nav_link}>
                 <Link to="/contact#schedule-a-call">Schedule a call</Link>
               </li>
@@ -48,7 +56,7 @@ export const Footer = () => {
           </div>
         </nav>
         <div
-          className="full-width flex justify-end align-center"
+          className={`${styles.linkedin_link} full-width flex align-center`}
           style={{gap: '8px'}}
         >
           <div className="icon-container gradient-white"></div>
@@ -59,11 +67,13 @@ export const Footer = () => {
             LinkedIn
           </a>
         </div>
-        <div className="full-width flex justify-between">
-          <span className={styles.legal_link}>
+        <div className="full-width flex justify-between wrap">
+          <span className={`${styles.legal_link} mrg-btm-s`}>
             © 2022 EngineerApart. All rights reserved.
           </span>
-          <ul className="flex" style={{gap: '30px'}}>
+          <ul
+            className={`${styles.legal_links_container} flex justify-between`}
+          >
             <li className={styles.legal_link}>
               <Link to="/legals#privacy-policy">Privacy Policy</Link>
             </li>

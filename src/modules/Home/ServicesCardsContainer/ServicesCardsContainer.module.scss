@@ -2,11 +2,13 @@
 
 .card {
   padding: 50px 25px;
-  max-width: 250px;
+  max-width: 275px;
   height: 350px;
+  gap: 75px;
 
   @include screen-s {
     height: unset;
+    gap: 25px;
   }
 }
 

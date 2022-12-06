@@ -63,9 +63,9 @@ h3 {
 
 h4 {
   font-family: var(--main-font-primary);
-  @include responsiveFont(1.2rem, 3vw, 1.2rem);
+  @include responsiveFont(1.2rem, 3vw, 1.3rem);
   font-weight: 500;
-  line-height: 2em;
+  line-height: 1.2em;
 }
 
 p {
@@ -78,7 +78,7 @@ p {
 
 .section-header {
   font-family: var(--main-font-primary);
-  @include responsiveFont(2.4rem, 10vw, 5rem);
+  @include responsiveFont(3.1rem, 10vw, 5rem);
   font-weight: 500;
   line-height: 1em;
   color: var(--main-color-black);
@@ -94,7 +94,7 @@ p {
 
 .section-header-underline {
   font-family: var(--main-font-secondary);
-  @include responsiveFont(1.2rem, 3vw, 1.3rem);
+  @include responsiveFont(1.1rem, 3vw, 1.3rem);
   font-weight: 300;
   line-height: 1.5em;
   letter-spacing: 0.02em;

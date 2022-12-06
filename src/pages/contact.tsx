@@ -26,7 +26,7 @@ const ContactPage: React.FC<PageProps> = () => {
             }
           />
         </section>
-        <section className="page-container mrg-top-xl mrg-btm-xl">
+        <section className="page-container mrg-top-xl mrg-btm-l">
           <TwoColumnLayout
             leftSize={1}
             rightSize={1}
@@ -46,10 +46,10 @@ const ContactPage: React.FC<PageProps> = () => {
             }
           />
         </section>
-        <section className="page-container mrg-top-l mrg-btm-xl">
+        <section className="page-container pdg-btm-xl">
           <Calendar />
         </section>
-        <section className="page-container mrg-top-xl mrg-btm-l">
+        <section className="page-container mrg-top-xl mrg-btm-xl">
           <TwoColumnLayout
             alignItems="start"
             leftColumn={

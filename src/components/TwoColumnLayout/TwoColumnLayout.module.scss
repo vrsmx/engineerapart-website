@@ -11,3 +11,15 @@
     order: 1;
   }
 }
+
+.left_column_container_reversed {
+  @include screen-s {
+    order: 1;
+  }
+}
+
+.right_column_container_reversed {
+  @include screen-s {
+    order: 2;
+  }
+}

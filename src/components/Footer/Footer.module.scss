@@ -1,4 +1,34 @@
 @import 'src/styles/text.scss';
+@import 'src/styles/mediaQuery';
+
+.footer_nav {
+  gap: 75px;
+
+  @include screen-s {
+    gap: 35px;
+  }
+}
+
+.navlink_column {
+  gap: 24px;
+  min-width: 100px;
+
+  @include screen-s {
+    gap: 12px;
+    width: 100%;
+  }
+}
+
+.navlinks_container {
+  min-width: 100px;
+  gap: 16px;
+  flex-direction: column;
+
+  @include screen-s {
+    gap: 24px;
+    flex-direction: row;
+  }
+}
 
 .nav_header {
   font-family: var(--main-font-primary);
@@ -6,18 +36,41 @@
   font-weight: 300;
   line-height: 1em;
   letter-spacing: 0.03em;
+  transition: var(--main-default-animation-time) ease transform, filter;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateX(10%) scale(1.05);
+  }
 }
 
 .nav_link {
   font-family: var(--main-font-secondary);
   @include responsiveFont(0.8rem, 2vw, 1.1rem);
-  font-weight: 200;
+  font-weight: 100;
   line-height: 1em;
   letter-spacing: 0.03em;
   transition: var(--main-default-animation-time) ease transform, filter;
+  cursor: pointer;
 
   &:hover {
-    transform: translateY(-15%) scale(1.05);
+    transform: translateX(10%) scale(1.05);
+  }
+}
+
+.linkedin_link {
+  justify-content: flex-end;
+
+  @include screen-s {
+    justify-content: flex-start;
+  }
+}
+
+.legal_links_container {
+  gap: 30px;
+
+  @include screen-s {
+    width: 100%;
   }
 }
 
@@ -27,9 +80,11 @@
   font-weight: 200;
   line-height: 1em;
   letter-spacing: 0.03em;
-  transition: var(--main-default-animation-time) ease transform;
+  transition: var(--main-default-animation-time) ease transform, filter;
+  cursor: pointer;
 
   &:hover {
-    transform: translateY(-15%) scale(1.05);
+    transform: scale(1.04) translateY(1px);
+    filter: brightness(1.1);
   }
 }
