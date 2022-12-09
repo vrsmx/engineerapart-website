@@ -38,6 +38,7 @@
 .page {
   width: 100vw;
   background-color: var(--main-color-white);
+  position: relative;
 }
 
 .page-container {
@@ -47,7 +48,7 @@
   padding-inline: 5%;
 
   @include screen-s {
-    padding-inline: 15px;
+    padding-inline: 20px;
   }
 }
 
@@ -264,4 +265,41 @@
   @include screen-s {
     padding-bottom: 1em;
   }
+}
+
+.nav-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--main-color-blue);
+  color: var(--main-color-white);
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Content {
+  transform: translateY(50px);
+  transition: transform 500ms ease-out;
+}
+
+.ReactModal__Content--after-open {
+  transform: translateY(0);
+}
+
+.ReactModal__Content--before-close {
+  transform: translateY(50px);
 }

@@ -1,10 +1,12 @@
 @import 'src/styles/mediaQuery.scss';
+@import 'src/styles/text.scss';
 
 .navbar_component {
   padding-top: 4rem;
   padding-bottom: 4rem;
 
   @include screen-s {
+    align-items: baseline;
     padding-top: 2rem;
   }
 }
@@ -42,5 +44,17 @@
   &:hover {
     transform: translateY(-15%) scale(1.05);
     filter: brightness(1.2);
+  }
+}
+
+.menu_button {
+  display: none;
+  font-family: var(--main-font-primary);
+  @include responsiveFont(1.5rem, 2vw, 1.2rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+
+  @include screen-s {
+    display: block;
   }
 }

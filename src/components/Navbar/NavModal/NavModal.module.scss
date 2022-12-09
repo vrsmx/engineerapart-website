@@ -1,0 +1,36 @@
+@import 'src/styles/text.scss';
+
+.modal_container {
+  position: fixed;
+
+  background-color: var(--main-color-black);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  padding: 50px;
+}
+
+.close_button {
+  color: var(--main-color-white);
+  font-family: var(--main-font-primary);
+  @include responsiveFont(1.5rem, 2vw, 1.2rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin-top: 40px;
+}
+
+.navlinks {
+  flex: 1;
+  gap: 3em;
+  margin-bottom: 50px;
+}
+
+.navlink {
+  font-family: var(--main-font-secondary);
+  @include responsiveFont(1.5rem, 9vw, 2.2rem);
+  font-weight: 300;
+
+  color: var(--main-color-white);
+}

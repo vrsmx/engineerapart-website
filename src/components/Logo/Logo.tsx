@@ -7,8 +7,6 @@ interface Props {
   light?: boolean;
 }
 export const Logo: React.FC<Props> = ({light = false}) => {
-  console.log(light);
-
   return (
     <div className="logo-component">
       <Link to="/">
@@ -33,13 +31,7 @@ export const Logo: React.FC<Props> = ({light = false}) => {
             placeholder="blurred"
           />
         )}
-      </Link>
-    </div>
-  );
-};
-
-{
-  /*  {light ? (
+        {light ? (
           <StaticImage
             className={styles.icon_logo}
             src={'../../images/icon-white.png'}
@@ -59,5 +51,8 @@ export const Logo: React.FC<Props> = ({light = false}) => {
             transformOptions={{fit: 'contain', cropFocus: 'attention'}}
             placeholder="blurred"
           />
-        )} */
-}
+        )}
+      </Link>
+    </div>
+  );
+};
