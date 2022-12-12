@@ -15,7 +15,7 @@ export const SectionHeader: React.FC<Props> = ({
 }) => {
   return (
     <div className="section-header-component flex column">
-      <h3 className={`${styles.section_header} section-header mrg-btm-xs`}>
+      <h3 className={`${styles.section_header} section-header mrg-btm-s`}>
         {title}
       </h3>
       {underline && (

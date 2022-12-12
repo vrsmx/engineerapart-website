@@ -10,6 +10,7 @@ import {Topbar} from 'src/components/Topbar/Topbar';
 import {TeamBuildingCards} from 'src/modules/Services/TeamBuildingCards/TeamBuildingCards';
 import {ContactCtaSection} from 'src/modules/Shared/ContactCtaSection/ContactCtaSection';
 import {Footer} from 'src/components/Footer/Footer';
+import {CloudAndMobileSolutions} from 'src/modules/Services/CloudAndMobileSolutions/CloudAndMobileSolutions';
 
 const layoutitems = [
   {
@@ -143,71 +144,7 @@ const ServicesPage: React.FC<PageProps> = () => {
             </p>
           </div>
         </QuoteSection>
-        <section
-          className="page-container mrg-top-xl mrg-btm-xl"
-          id="hiring-process"
-        >
-          <SectionHeader
-            title={<>Cloud and mobile solutions</>}
-            underlineAlign={'justify-start'}
-            underlineSize={'xl'}
-            underline={
-              <>
-                Propel your business forward with software tailored to your
-                specific needs. From inventory management software to online
-                booking systems.
-              </>
-            }
-          />
-          <TwoColumnLayout
-            leftSize={4}
-            rightSize={3}
-            leftColumn={
-              <div
-                className="image-body flex column gradient-blue-turquioise"
-                style={{
-                  minWidth: '300px',
-                  minHeight: '600px',
-                }}
-              ></div>
-            }
-            rightColumn={
-              <div className="flex column" style={{gap: 100}}>
-                <div className="column-grid-element">
-                  <div className="column-grid-element-title">
-                    <div className="icon-container gradient-blue"></div>
-                    <h4>Performant cloud services</h4>
-                  </div>
-                  <p>
-                    Fast and reliable cloud services are key to a performant
-                    infrastructure. Our engineers can assist with designing or
-                    scaling performant cloud architectures to power products or
-                    services on multiple cloud platforms, including AWS, Google
-                    Cloud, and Azure.
-                  </p>
-                </div>
-                <div className="column-grid-element">
-                  <div className="column-grid-element-title">
-                    <div className="icon-container gradient-blue"></div>
-                    <h4>User-first apps</h4>
-                  </div>
-                  <p>
-                    We realize that mobile apps are vital for keeping your
-                    customers engaged and we know how to get your app stand
-                    above the rest to increase your customer base and
-                    experience.
-                  </p>
-                </div>
-                <Link
-                  to="/services"
-                  className={`paragraph-link txt-blue txt-left`}
-                >
-                  You name it, we build it →
-                </Link>
-              </div>
-            }
-          />
-        </section>
+        <CloudAndMobileSolutions />
         <section className="page-container flex column align-center">
           <h3 className="section-header txt-center txt-max-width-s">
             Grow and build your teams

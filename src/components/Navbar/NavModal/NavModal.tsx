@@ -1,13 +1,14 @@
 import {Link} from 'gatsby';
 import * as React from 'react';
 import {Modal} from 'src/components/Modal/Modal';
+
 import * as styles from './NavModal.module.scss';
 
-interface Props {
+interface NavModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
-export const NavModal: React.FC<Props> = ({isOpen, onClose}) => {
+export const NavModal: React.FC<NavModalProps> = ({isOpen, onClose}) => {
   React.useEffect(() => {
     isOpen && document.body.classList.add('disable-scroll');
 
@@ -44,5 +45,27 @@ export const NavModal: React.FC<Props> = ({isOpen, onClose}) => {
         </ul>
       </div>
     </Modal>
+  );
+};
+
+interface NavModalButtonProps {
+  light: boolean;
+}
+export const NavModalButton: React.FC<NavModalButtonProps> = ({light}) => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  return (
+    <>
+      <button
+        className={`${styles.menu_button} ${
+          styles[light ? 'menu_button_light' : 'menu_button_dark']
+        }`}
+        onClick={() => setIsOpen(true)}
+      >
+        menu
+      </button>
+
+      <NavModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
+    </>
   );
 };

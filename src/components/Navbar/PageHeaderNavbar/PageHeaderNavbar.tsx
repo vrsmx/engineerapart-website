@@ -1,12 +1,11 @@
 import {Link} from 'gatsby';
 import * as React from 'react';
 import {Logo} from 'src/components/Logo/Logo';
-import {NavModal} from 'src/components/Navbar/NavModal/NavModal';
+import {NavModalButton} from '../NavModal/NavModal';
 import * as styles from './PageHeaderNavbar.module.scss';
 
 export const PageHeaderNavbar = ({light = false}) => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const containerClassname = `${styles.navbar_component} page-container flex justify-between`;
+  const containerClassname = `${styles.navbar_component} page-container flex justify-between align-end`;
 
   return (
     <>
@@ -34,15 +33,9 @@ export const PageHeaderNavbar = ({light = false}) => {
               <Link to="/contact">CONTACT</Link>
             </li>
           </ul>
-          <button
-            className={styles.menu_button}
-            onClick={() => setIsOpen(true)}
-          >
-            menu
-          </button>
+          <NavModalButton light={light} />
         </div>
       </nav>
-      <NavModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </>
   );
 };

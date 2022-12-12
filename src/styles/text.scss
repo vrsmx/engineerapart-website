@@ -141,8 +141,8 @@ p {
   font-family: var(--main-font-secondary);
   @include responsiveFont(1.5rem, 3vw, 2.5rem);
   font-weight: 500;
-  line-height: 1.2em;
-  letter-spacing: 0.02em;
+  line-height: 1.3em;
+  letter-spacing: 0.05em;
 }
 
 input,

@@ -28,8 +28,8 @@ const ContactPage: React.FC<PageProps> = () => {
         </section>
         <section className="page-container mrg-top-xl mrg-btm-l">
           <TwoColumnLayout
-            leftSize={1}
-            rightSize={1}
+            leftSize={5}
+            rightSize={3}
             leftColumn={
               <h3 className="section-header">
                 Meet the experts and grow your teams

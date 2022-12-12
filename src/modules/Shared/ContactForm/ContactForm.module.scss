@@ -1,0 +1,19 @@
+@import 'src/styles/mediaQuery.scss';
+
+.form_input {
+  margin-bottom: 1.5em;
+  min-width: 150px;
+
+  @include screen-s {
+    margin-bottom: 1em;
+  }
+}
+
+.form_row {
+  gap: 50px;
+
+  @include screen-s {
+    gap: unset;
+    flex-wrap: wrap;
+  }
+}

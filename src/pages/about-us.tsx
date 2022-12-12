@@ -54,13 +54,15 @@ const AboutPage: React.FC<PageProps> = () => {
             }
           />
         </section>
-        <QuoteSection>
-          <div className="page-container flex justify-end">
-            <p className="quote-l txt-light txt-left txt-max-width-xs">
-              We are proud of our work and the impact it caused in our clients
-            </p>
-          </div>
-        </QuoteSection>
+        <section className="mrg-top-l mrg-btm-l">
+          <QuoteSection>
+            <div className="page-container flex justify-end">
+              <p className="quote-l txt-light txt-left txt-max-width-xs">
+                We are proud of our work and the impact it caused in our clients
+              </p>
+            </div>
+          </QuoteSection>
+        </section>
         <LeadershipSection />
         <ContactCtaSection />
       </main>

@@ -1,4 +1,5 @@
 @import 'src/styles/text.scss';
+@import 'src/styles/mediaQuery.scss';
 
 .modal_container {
   position: fixed;
@@ -33,4 +34,24 @@
   font-weight: 300;
 
   color: var(--main-color-white);
+}
+
+.menu_button {
+  display: none;
+  font-family: var(--main-font-primary);
+  @include responsiveFont(1.5rem, 2vw, 1.2rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+
+  @include screen-s {
+    display: block;
+  }
+}
+.menu_button_light {
+  color: var(--main-color-white);
+  @include responsiveFont(1.5rem, 2vw, 1.3rem);
+}
+
+.menu_button_dark {
+  color: var(--main-color-black);
 }

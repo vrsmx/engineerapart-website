@@ -1,0 +1,9 @@
+@import 'src/styles/mediaQuery.scss';
+
+.descriptions_container {
+  gap: 100px;
+
+  @include screen-s {
+    gap: 10px;
+  }
+}

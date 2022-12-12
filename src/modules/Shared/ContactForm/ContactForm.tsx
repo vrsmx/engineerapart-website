@@ -1,30 +1,39 @@
 import * as React from 'react';
+import * as styles from './ContactForm.module.scss';
 
 export const ContactForm: React.FC = () => {
   return (
     <form className="flex column full-width">
-      <div className="flex justify-between" style={{gap: '50px'}}>
+      <div className={`${styles.form_row} flex justify-between`}>
         <input
-          className="full-width mrg-btm-xs"
+          className={`${styles.form_input} full-width mrg-btm-xs`}
           name="name"
           placeholder="Name"
         />
         <input
-          className="full-width mrg-btm-xs"
+          className={`${styles.form_input} full-width mrg-btm-xs`}
           name="lastName"
           placeholder="Lastname"
         />
       </div>
-      <input className="mrg-btm-xs" name="company" placeholder="Company" />
-      <input className="mrg-btm-xs" name="phone" placeholder="Phone" />
       <input
-        className="mrg-btm-xs"
+        className={`${styles.form_input}`}
+        name="company"
+        placeholder="Company"
+      />
+      <input
+        className={`${styles.form_input}`}
+        name="phone"
+        placeholder="Phone"
+      />
+      <input
+        className={`${styles.form_input}`}
         name="email"
         placeholder="Email"
         type="email"
       />
       <textarea
-        className="mrg-btm-xs"
+        className={`${styles.form_input}`}
         name="message"
         placeholder="Message"
         cols={30}
