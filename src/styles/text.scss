@@ -145,6 +145,16 @@ p {
   letter-spacing: 0.05em;
 }
 
+.quote-xl {
+  font-family: var(--main-font-primary);
+  @include responsiveFont(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.2em;
+  text-align: right;
+  letter-spacing: 0.03em;
+}
+
 input,
 textarea {
   background-color: var(--main-color-white-dark);

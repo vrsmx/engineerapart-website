@@ -1,0 +1,42 @@
+@import 'src/styles/text.scss';
+
+.numbers_container {
+  gap: 33px;
+}
+
+.card {
+  padding: 80px 50px;
+  background-color: var(--main-color-white-shade);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  border: 1px solid var(--main-color-border);
+
+  border-radius: var(--main-radius-primary);
+
+  &:hover {
+    border-color: var(--main-color-blue);
+    box-shadow: rgba(182, 185, 187, 0.2) 0px 8px 24px;
+  }
+}
+
+.number {
+  font-family: var(--main-font-primary);
+  @include responsiveFont(2rem, 10vw, 5rem);
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  color: var(--main-color-black);
+}
+
+.label {
+  font-family: var(--main-font-secondary);
+  @include responsiveFont(1rem, 3vw, 1.1rem);
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  color: var(--main-color-blue);
+}

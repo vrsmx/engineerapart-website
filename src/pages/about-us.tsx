@@ -8,6 +8,7 @@ import {QuoteSection} from 'src/components/QuoteSection/QuoteSection';
 import {ContactCtaSection} from 'src/modules/Shared/ContactCtaSection/ContactCtaSection';
 import {Footer} from 'src/components/Footer/Footer';
 import {LeadershipSection} from 'src/modules/AboutUs/LeadershipSection/LeadershipSection';
+import {AchievementNumbers} from 'src/modules/AboutUs/AchievementNumbers/AchievementNumbers';
 
 const AboutPage: React.FC<PageProps> = () => {
   return (
@@ -53,12 +54,13 @@ const AboutPage: React.FC<PageProps> = () => {
               </div>
             }
           />
+          <AchievementNumbers />
         </section>
         <section className="mrg-top-l mrg-btm-l">
           <QuoteSection>
             <div className="page-container flex justify-end">
-              <p className="quote-l txt-light txt-left txt-max-width-xs">
-                We are proud of our work and the impact it caused in our clients
+              <p className="quote-xl txt-light txt-left txt-max-width-xs">
+                We are proud of our work and the impact it has on our clients
               </p>
             </div>
           </QuoteSection>
