@@ -23,7 +23,7 @@ const ContactFormWizardStepCard: React.FC<ContactFormWizardStepCardProps> = ({
 };
 
 interface ContactFormWizardStepProps {
-  options: Array<{label: string; icon?: React.ReactNode}>;
+  options: Array<{id: number; label: string; icon?: React.ReactNode}>;
   fieldName: string;
   title: string;
 }
@@ -33,7 +33,7 @@ export const ContactFormWizardCardsStep: React.FC<
   return (
     <div className="flex column mrg-top-s">
       <h4 className={styles.step_title}>{title}</h4>
-      <ul className="flex pdg-top-s pdg-btm-s" style={{gap: 30}}>
+      <ul className="flex pdg-top-s pdg-btm-s wrap" style={{gap: 30}}>
         {options.map((option) => (
           <ContactFormWizardStepCard
             label={option.label}

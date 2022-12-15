@@ -1,4 +1,5 @@
 @import 'src/styles/text.scss';
+@import 'src/styles/mediaQuery.scss';
 
 .card {
   cursor: pointer;
@@ -17,11 +18,15 @@
     border-color: var(--main-color-blue);
     box-shadow: rgba(182, 185, 187, 0.2) 0px 8px 24px;
   }
+
+  @include screen-s {
+    padding: 50px;
+  }
 }
 
 .card_transparent {
   cursor: pointer;
-  padding: 50px;
+  padding: 70px 50px;
 
   display: flex;
   flex-direction: column;
@@ -34,6 +39,10 @@
   &:hover {
     border-color: var(--main-color-blue);
     box-shadow: rgba(182, 185, 187, 0.2) 0px 8px 24px;
+  }
+
+  @include screen-s {
+    padding: 50px;
   }
 }
 
@@ -59,6 +68,10 @@
   border-radius: 5px;
   min-width: 250px;
   width: 600px;
+
+  @include screen-s {
+    width: 100%;
+  }
 }
 
 .progess_bar {
@@ -98,5 +111,32 @@
   &:disabled {
     cursor: unset;
     color: var(--main-color-white-dark-shade);
+  }
+}
+
+.details_container {
+  width: 900px;
+  margin-inline: auto;
+
+  @include screen-s {
+    width: 100%;
+  }
+}
+
+.form_input {
+  margin-bottom: 1.5em;
+  min-width: 150px;
+
+  @include screen-s {
+    margin-bottom: 1em;
+  }
+}
+
+.form_row {
+  gap: 50px;
+
+  @include screen-s {
+    gap: unset;
+    flex-wrap: wrap;
   }
 }
