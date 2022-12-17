@@ -2,73 +2,93 @@ import * as React from 'react';
 import {SectionHeader} from 'src/components/SectionHeader/SectionHeader';
 import {ContactFormWizardCardsStep} from 'src/modules/Shared/ContactFormWizard/ContactFormWizardCardsStep';
 import {ContactFormWizardStepController} from 'src/modules/Shared/ContactFormWizard/ContactFormWizardStepController';
-import {ContactFormWizardDetailsStep} from './ContactFormWizardDetailsStep';
+import {useContactFormWizard} from 'src/modules/Shared/ContactFormWizard/ContactFormWizard.utils';
+import {ContactFormWizardDetailsStep} from 'src/modules/Shared/ContactFormWizard/ContactFormWizardDetailsStep';
+import {
+  ContactFormWizardValues,
+  ListUpdate,
+  UpdateContactFormWizard,
+} from 'src/modules/Shared/ContactFormWizard/ContactFormWizard.types';
 
-const getSteps = (onSubmit: () => void) => [
+interface GetSteps {
+  updateList: ListUpdate;
+  update: UpdateContactFormWizard;
+  onSubmit: () => void;
+  data: ContactFormWizardValues;
+  isSent: boolean;
+}
+const getSteps = ({updateList, update, onSubmit, data, isSent}: GetSteps) => [
   <ContactFormWizardCardsStep
     options={[
       {
-        id: 1,
+        id: 'cloud-services',
         icon: <></>,
         label: 'Cloud services',
       },
       {
-        id: 2,
+        id: 'web-apps',
         icon: <></>,
         label: 'Web Apps',
       },
       {
-        id: 3,
+        id: 'mobile-apps',
         icon: <></>,
-        label: 'Cloud services',
+        label: 'Mobile Apps',
       },
       {
-        id: 4,
+        id: 'not-sure',
         label: 'Not sure',
       },
     ]}
-    fieldName="service"
+    fieldName="services"
     title="Tell us how we can help"
+    selected={data.services}
+    onUpdate={updateList}
   />,
   <ContactFormWizardCardsStep
     options={[
       {
-        id: 1,
+        id: 'grow-team',
         icon: <></>,
         label: 'Grow a team',
       },
       {
-        id: 2,
+        id: 'hire-team',
         icon: <></>,
         label: 'Hire a team',
       },
       {
-        id: 3,
+        id: 'both',
         icon: <></>,
         label: 'Both',
       },
       {
-        id: 4,
+        id: 'not-sure',
         label: 'Not sure',
       },
     ]}
-    fieldName="hire"
+    fieldName="hireMethod"
     title="How do you want to grow?"
+    selected={data.hireMethod}
+    onUpdate={updateList}
   />,
-  <ContactFormWizardDetailsStep onSubmit={onSubmit} />,
+  <ContactFormWizardDetailsStep
+    onSubmit={onSubmit}
+    update={update}
+    data={data}
+    isSent={isSent}
+  />,
 ];
 
 export const ContactFormWizard = () => {
   const [formStep, setFormStep] = React.useState<number>(0);
+  const {data, updateList, update, onSubmit, loading, error, isSent} =
+    useContactFormWizard();
 
   const nextStep = () => setFormStep((prev) => prev + 1);
   const backStep = () => setFormStep((prev) => prev - 1);
 
-  const submitForm = () => {
-    console.log('submit');
-  };
-
-  const steps = getSteps(submitForm);
+  const steps = getSteps({updateList, update, onSubmit, data, isSent});
 
   return (
     <section className="page-container flex column mrg-top-xl">
@@ -86,6 +106,7 @@ export const ContactFormWizard = () => {
         doneSteps={formStep}
         nextStep={nextStep}
         backStep={backStep}
+        done={isSent}
       />
     </section>
   );

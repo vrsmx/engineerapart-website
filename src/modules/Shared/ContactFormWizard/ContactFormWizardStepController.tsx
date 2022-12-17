@@ -4,6 +4,7 @@ import * as styles from './ContactFormWizard.module.scss';
 interface Props {
   totalSteps: number;
   doneSteps: number;
+  done?: boolean;
   nextStep: () => void;
   backStep: () => void;
 }
@@ -12,13 +13,16 @@ export const ContactFormWizardStepController: React.FC<Props> = ({
   doneSteps,
   nextStep,
   backStep,
+  done,
 }) => {
+  const progressValue = done ? 100 : (doneSteps * 100) / totalSteps;
+
   return (
     <div className="flex column align-center mrg-btm-l">
       <div className={`${styles.progess_bar_container} mrg-btm-xs`}>
         <div
           className={styles.progess_bar}
-          style={{width: `${totalSteps + 1 / doneSteps + 1}%`}}
+          style={{width: `${progressValue}%`}}
         />
       </div>
       <div className={`${styles.indicators_grid} pdg-top-xs pdg-btm-xs`}>

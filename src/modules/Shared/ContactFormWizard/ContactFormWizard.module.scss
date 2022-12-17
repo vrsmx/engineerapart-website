@@ -1,10 +1,9 @@
 @import 'src/styles/text.scss';
 @import 'src/styles/mediaQuery.scss';
 
-.card {
+@mixin cardProps {
   cursor: pointer;
   padding: 70px 50px;
-  background-color: var(--main-color-white-shade);
 
   display: flex;
   flex-direction: column;
@@ -12,27 +11,27 @@
   justify-content: center;
   flex: 1;
   border-radius: var(--main-radius-primary);
-  border: 1.5px solid var(--main-color-border);
-
-  &:hover {
-    border-color: var(--main-color-blue);
-    box-shadow: rgba(182, 185, 187, 0.2) 0px 8px 24px;
-  }
 
   @include screen-s {
     padding: 50px;
   }
 }
 
-.card_transparent {
-  cursor: pointer;
-  padding: 70px 50px;
+.card {
+  @include cardProps;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
+  background-color: var(--main-color-white-shade);
+  border: 1.5px solid var(--main-color-border);
+
+  &:hover {
+    border-color: var(--main-color-blue);
+    box-shadow: rgba(182, 185, 187, 0.2) 0px 8px 24px;
+  }
+}
+
+.card_transparent {
+  @include cardProps;
+
   border-radius: var(--main-radius-primary);
   border: 1.5px solid transparent;
 
@@ -40,10 +39,10 @@
     border-color: var(--main-color-blue);
     box-shadow: rgba(182, 185, 187, 0.2) 0px 8px 24px;
   }
+}
 
-  @include screen-s {
-    padding: 50px;
-  }
+.selected {
+  border: 1.5px solid var(--main-color-blue);
 }
 
 .card_label {
