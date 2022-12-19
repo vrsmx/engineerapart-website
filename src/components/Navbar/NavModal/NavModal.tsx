@@ -43,6 +43,42 @@ export const NavModal: React.FC<NavModalProps> = ({isOpen, onClose}) => {
             <Link to="/contact">CONTACT</Link>
           </li>
         </ul>
+        <div
+          className={`${styles.modal_details} flex column full-width txt-light`}
+        >
+          <div
+            className="full-width flex align-center mrg-btm-xs pdg-top-xs"
+            style={{gap: '8px'}}
+          >
+            <div className="icon-container small gradient-white"></div>
+            <a
+              href="https://www.linkedin.com/company/engineerapart"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+          </div>
+          <div
+            className="full-width flex align-center mrg-btm-m"
+            style={{gap: '8px'}}
+          >
+            <div className="icon-container small gradient-white"></div>
+            <a
+              href="https://www.linkedin.com/company/engineerapart"
+              target="_blank"
+            >
+              contact@engineerapart.com
+            </a>
+          </div>
+          <ul className="flex justify-between">
+            <li className={styles.legal_link}>
+              <Link to="/legals#privacy-policy">Privacy Policy</Link>
+            </li>
+            <li className={styles.legal_link}>
+              <Link to="/legals#terms-and-condition">Terms and Condition</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </Modal>
   );

@@ -55,3 +55,9 @@
 .menu_button_dark {
   color: var(--main-color-black);
 }
+
+.modal_details {
+  border-top: 1.5px solid var(--main-color-white);
+  padding-top: 25px;
+  @include responsiveFont(0.9rem, 2vw, 0.9rem);
+}
