@@ -11,6 +11,7 @@
   height: 100vh;
 
   padding: 50px;
+  z-index: 20;
 }
 
 .close_button {
@@ -30,7 +31,7 @@
 
 .navlink {
   font-family: var(--main-font-secondary);
-  @include responsiveFont(1.5rem, 9vw, 2.2rem);
+  @include responsiveFont(1.5rem, 9vw, 2rem);
   font-weight: 300;
 
   color: var(--main-color-white);

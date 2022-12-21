@@ -1,0 +1,9 @@
+@import 'src/styles/mediaQuery.scss';
+
+.topbar_component {
+  padding-bottom: 4em;
+
+  @include screen-s {
+    padding-bottom: unset;
+  }
+}

@@ -2,6 +2,7 @@
 
 .full_logo {
   display: block;
+  padding-top: 5px;
 
   @include screen-s {
     display: none;

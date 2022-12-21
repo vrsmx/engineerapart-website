@@ -1,13 +1,25 @@
 @import 'src/styles/text.scss';
 @import 'src/styles/mediaQuery.scss';
 
+.sticky_navbar {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.bottom_light {
+  border-bottom: 1px solid var(--main-color-white-dark);
+}
+
 .navbar_component {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 2em;
+  padding-bottom: 2em;
 
   @include screen-s {
     align-items: baseline;
-    padding-top: 2rem;
+    padding-top: 1.6em;
+    padding-bottom: 1.6em;
   }
 }
 

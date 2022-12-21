@@ -47,7 +47,7 @@ export const NavModal: React.FC<NavModalProps> = ({isOpen, onClose}) => {
           className={`${styles.modal_details} flex column full-width txt-light`}
         >
           <div
-            className="full-width flex align-center mrg-btm-xs pdg-top-xs"
+            className="full-width flex align-center mrg-btm-xs pdg-top-s"
             style={{gap: '8px'}}
           >
             <div className="icon-container small gradient-white"></div>
@@ -59,7 +59,7 @@ export const NavModal: React.FC<NavModalProps> = ({isOpen, onClose}) => {
             </a>
           </div>
           <div
-            className="full-width flex align-center mrg-btm-m"
+            className="full-width flex align-center mrg-btm-m pdg-top-xs"
             style={{gap: '8px'}}
           >
             <div className="icon-container small gradient-white"></div>

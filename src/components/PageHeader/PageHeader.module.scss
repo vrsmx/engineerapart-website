@@ -1,0 +1,7 @@
+@import 'src/styles/mediaQuery.scss';
+
+.page_header_component {
+  @include screen-s {
+    padding-top: 100px;
+  }
+}

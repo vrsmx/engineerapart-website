@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as styles from './PageHeader.module.scss';
 
 interface Props {
   title: string;
@@ -7,7 +8,9 @@ interface Props {
 }
 export const PageHeader: React.FC<Props> = ({title, underline, cta}) => {
   return (
-    <div className="page-container flex column pdg-top-l pdg-btm-l txt-light">
+    <div
+      className={`${styles.page_header_component} page-container flex column pdg-top-l pdg-btm-l txt-light`}
+    >
       <h1 className="txt-left txt-max-width-xl mrg-btm-xxs">{title}</h1>
       <h2 className="page-header-underline txt-left txt-max-width-xs mrg-btm-xxs">
         {underline}
