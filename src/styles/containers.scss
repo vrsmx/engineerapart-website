@@ -31,6 +31,21 @@
   background-color: var(--main-color-blue);
 }
 
+.icon-blue {
+  stroke: var(--main-color-blue);
+  fill: var(--main-color-blue);
+}
+
+.icon-black {
+  stroke: var(--main-color-black);
+  fill: var(--main-color-black);
+}
+
+.icon-white {
+  stroke: var(--main-color-white);
+  fill: var(--main-color-white);
+}
+
 .full-width {
   width: 100%;
 }
@@ -110,6 +125,9 @@
   border-radius: 50%;
   flex-grow: 0;
   flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &.medium {
     width: 65px;

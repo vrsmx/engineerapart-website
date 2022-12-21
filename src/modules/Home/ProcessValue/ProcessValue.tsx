@@ -2,7 +2,9 @@ import {Link} from 'gatsby';
 import * as React from 'react';
 import {SectionHeader} from 'src/components/SectionHeader/SectionHeader';
 import {TwoColumnLayout} from 'src/components/TwoColumnLayout/TwoColumnLayout';
+import {PersonalizedSearchIcon} from 'src/assets/icons/PersonalizedSearchIcon';
 import * as styles from './ProcessValue.module.scss';
+import {HireToFitIcon} from 'src/assets/icons/HireToFitIcon';
 
 export const ProcessValue: React.FC = () => {
   return (
@@ -26,7 +28,12 @@ export const ProcessValue: React.FC = () => {
           <div className={`${styles.text_container} flex column`}>
             <div className="column-grid-element">
               <div className="column-grid-element-title">
-                <div className="icon-container gradient-blue"></div>
+                <div className="icon-container gradient-blue">
+                  <PersonalizedSearchIcon
+                    className="icon-blue"
+                    styles={{width: 65, height: 65}}
+                  />
+                </div>
                 <h4>Personalized search</h4>
               </div>
               <p>
@@ -37,7 +44,12 @@ export const ProcessValue: React.FC = () => {
             </div>
             <div className="column-grid-element">
               <div className="column-grid-element-title">
-                <div className="icon-container gradient-blue"></div>
+                <div className="icon-container gradient-blue">
+                  <HireToFitIcon
+                    className="icon-blue"
+                    styles={{width: 55, height: 55}}
+                  />
+                </div>
                 <h4>Hire to fit your needs</h4>
               </div>
               <p>

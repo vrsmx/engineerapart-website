@@ -11,25 +11,41 @@ import {TeamBuildingCards} from 'src/modules/Services/TeamBuildingCards/TeamBuil
 import {ContactCtaSection} from 'src/modules/Shared/ContactCtaSection/ContactCtaSection';
 import {Footer} from 'src/components/Footer/Footer';
 import {CloudAndMobileSolutions} from 'src/modules/Services/CloudAndMobileSolutions/CloudAndMobileSolutions';
+import {ProductOrToolIcon} from 'src/assets/icons/ProductOrToolIcon';
+import {AccurateSearchIcon} from 'src/assets/icons/AccurateSearchIcon';
+import {PersonalizedSearchIcon} from 'src/assets/icons/PersonalizedSearchIcon';
+import {FollowUpIcon} from 'src/assets/icons/FollowUpIcon';
 
 const layoutitems = [
   {
     title: 'Accurate search',
     content:
       'We perform an extensive search and selection process to hand-pick each candidate matching its experience and skills with your needs.',
-    icon: <></>,
+    icon: (
+      <AccurateSearchIcon
+        className="icon-blue"
+        styles={{width: 80, height: 65}}
+      />
+    ),
   },
   {
     title: 'Personalized filtering',
     content:
       'We follow a planned interview process to validate the candidate skills and experience to find the best fit.',
-    icon: <></>,
+    icon: (
+      <PersonalizedSearchIcon
+        className="icon-blue"
+        styles={{width: 80, height: 65}}
+      />
+    ),
   },
   {
     title: 'Permanent follow-up',
     content:
       'Weekly follow-ups and internal management with our hirees to provide constant feedback to both sides.',
-    icon: <></>,
+    icon: (
+      <FollowUpIcon className="icon-blue" styles={{width: 80, height: 65}} />
+    ),
   },
 ];
 
@@ -116,7 +132,12 @@ const ServicesPage: React.FC<PageProps> = () => {
             rightColumn={
               <div className="column-grid-element">
                 <div className="column-grid-element-title">
-                  <div className="icon-container medium gradient-blue"></div>
+                  <div className="icon-container medium gradient-blue">
+                    <ProductOrToolIcon
+                      className="icon-blue"
+                      styles={{width: 55, height: 55}}
+                    />
+                  </div>
                   <h4>Product or tools, top performance and experience</h4>
                 </div>
                 <p>

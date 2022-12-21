@@ -9,6 +9,13 @@ import {
   ListUpdate,
   UpdateContactFormWizard,
 } from 'src/modules/Shared/ContactFormWizard/ContactFormWizard.types';
+import {CloudServicesIcon} from 'src/assets/icons/CloudServicesIcon';
+import {CloudServiceIcon} from 'src/assets/icons/CloudServiceIcon';
+import {WebAppsIcon} from 'src/assets/icons/WebAppsIcon';
+import {MobileAppsIcon} from 'src/assets/icons/MobileAppsIcon';
+import {ExtendTeamIcon} from 'src/assets/icons/ExtendTeamIcon';
+import {NewTeamIcon} from 'src/assets/icons/NewTeamIcon';
+import {ScaleIcon} from 'src/assets/icons/ScaleIcon.tsx';
 
 interface GetSteps {
   updateList: ListUpdate;
@@ -22,17 +29,29 @@ const getSteps = ({updateList, update, onSubmit, data, isSent}: GetSteps) => [
     options={[
       {
         id: 'cloud-services',
-        icon: <></>,
+        icon: (
+          <CloudServiceIcon
+            className="icon-blue"
+            styles={{width: 95, height: 95}}
+          />
+        ),
         label: 'Cloud services',
       },
       {
         id: 'web-apps',
-        icon: <></>,
+        icon: (
+          <WebAppsIcon className="icon-blue" styles={{width: 75, height: 75}} />
+        ),
         label: 'Web Apps',
       },
       {
         id: 'mobile-apps',
-        icon: <></>,
+        icon: (
+          <MobileAppsIcon
+            className="icon-blue"
+            styles={{width: 55, height: 55}}
+          />
+        ),
         label: 'Mobile Apps',
       },
       {
@@ -49,17 +68,26 @@ const getSteps = ({updateList, update, onSubmit, data, isSent}: GetSteps) => [
     options={[
       {
         id: 'grow-team',
-        icon: <></>,
+        icon: (
+          <ExtendTeamIcon
+            className="icon-blue"
+            styles={{width: 55, height: 55}}
+          />
+        ),
         label: 'Grow a team',
       },
       {
         id: 'hire-team',
-        icon: <></>,
+        icon: (
+          <NewTeamIcon className="icon-blue" styles={{width: 55, height: 55}} />
+        ),
         label: 'Hire a team',
       },
       {
         id: 'both',
-        icon: <></>,
+        icon: (
+          <ScaleIcon className="icon-blue" styles={{width: 55, height: 55}} />
+        ),
         label: 'Both',
       },
       {

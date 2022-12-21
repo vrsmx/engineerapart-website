@@ -1,4 +1,6 @@
 import * as React from 'react';
+import {ExtendTeamIcon} from 'src/assets/icons/ExtendTeamIcon';
+import {NewTeamIcon} from 'src/assets/icons/NewTeamIcon';
 import * as styles from './TeamBuildingCards.module.scss';
 
 export const TeamBuildingCards: React.FC = () => {
@@ -17,7 +19,12 @@ export const TeamBuildingCards: React.FC = () => {
           capabilities with a specific skill set focused to fill a specific role
           and meet your objectives.
         </p>
-        <div className="icon-container xlarge gradient-blue mrg-btm-s"></div>
+        <div className="icon-container xlarge gradient-blue mrg-btm-s">
+          <ExtendTeamIcon
+            className="icon-blue"
+            styles={{width: 80, height: 65}}
+          />
+        </div>
         <button className="button primary full-width">Grow your team</button>
       </div>
       <div
@@ -31,7 +38,9 @@ export const TeamBuildingCards: React.FC = () => {
           new UI, micro-service or both, you will get a fully managed team with
           the roles required to deliver high quality and on time results.
         </p>
-        <div className="icon-container xlarge gradient-blue mrg-btm-s"></div>
+        <div className="icon-container xlarge gradient-blue mrg-btm-s">
+          <NewTeamIcon className="icon-blue" styles={{width: 80, height: 65}} />
+        </div>
         <button className="button primary full-width">Hire a team</button>
       </div>
     </div>

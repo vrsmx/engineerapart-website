@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Link} from 'gatsby';
 import * as styles from './Footer.module.scss';
+import {LinkedInIcon} from 'src/assets/icons/LinkedInIcon';
 
 export const Footer = () => {
   return (
@@ -57,9 +58,14 @@ export const Footer = () => {
         </nav>
         <div
           className={`${styles.linkedin_link} full-width flex align-center`}
-          style={{gap: '8px'}}
+          style={{gap: '0px'}}
         >
-          <div className="icon-container gradient-white"></div>
+          <div className="icon-container">
+            <LinkedInIcon
+              className="icon-white"
+              styles={{width: 30, height: 30}}
+            />
+          </div>
           <a
             href="https://www.linkedin.com/company/engineerapart"
             target="_blank"

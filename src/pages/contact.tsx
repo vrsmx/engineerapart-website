@@ -13,7 +13,7 @@ const ContactPage: React.FC<PageProps> = () => {
   return (
     <>
       <main className="page">
-        <Topbar color="black" />
+        <Topbar color="black" light={true} />
         <PageHeaderNavbar light={true} />
         <section className="bg-black full-width">
           <PageHeader

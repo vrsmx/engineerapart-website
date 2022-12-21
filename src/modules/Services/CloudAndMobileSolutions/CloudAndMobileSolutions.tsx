@@ -1,5 +1,7 @@
 import {Link} from 'gatsby';
 import * as React from 'react';
+import {AppIcon} from 'src/assets/icons/AppIcon';
+import {CloudServicesIcon} from 'src/assets/icons/CloudServicesIcon';
 import {SectionHeader} from 'src/components/SectionHeader/SectionHeader';
 import {TwoColumnLayout} from 'src/components/TwoColumnLayout/TwoColumnLayout';
 import * as styles from './CloudAndMobileSolutions.module.scss';
@@ -37,7 +39,12 @@ export const CloudAndMobileSolutions: React.FC = () => {
           <div className={`${styles.descriptions_container} flex column`}>
             <div className="column-grid-element">
               <div className="column-grid-element-title">
-                <div className="icon-container gradient-blue"></div>
+                <div className="icon-container medium gradient-blue">
+                  <CloudServicesIcon
+                    className="icon-blue"
+                    styles={{width: 80, height: 65}}
+                  />
+                </div>
                 <h4>Performant cloud services</h4>
               </div>
               <p>
@@ -50,7 +57,12 @@ export const CloudAndMobileSolutions: React.FC = () => {
             </div>
             <div className="column-grid-element">
               <div className="column-grid-element-title">
-                <div className="icon-container gradient-blue"></div>
+                <div className="icon-container gradient-blue">
+                  <AppIcon
+                    className="icon-blue"
+                    styles={{width: 80, height: 65}}
+                  />
+                </div>
                 <h4>User-first apps</h4>
               </div>
               <p>

@@ -13,7 +13,7 @@ export const Logo: React.FC<Props> = ({light = false}) => {
         <div className={styles.full_logo}>
           {light ? (
             <StaticImage
-              src={'../../assets/images/full-white.png'}
+              src={'../../images/full-white.png'}
               alt="EngineerApart Logo"
               width={200}
               aspectRatio={196 / 23}
@@ -22,7 +22,7 @@ export const Logo: React.FC<Props> = ({light = false}) => {
             />
           ) : (
             <StaticImage
-              src={'../../assets/images/full-gradient.png'}
+              src={'../../images/full-gradient.png'}
               alt="EngineerApart Logo"
               width={200}
               aspectRatio={196 / 23}
@@ -34,7 +34,7 @@ export const Logo: React.FC<Props> = ({light = false}) => {
         <div className={styles.icon_logo}>
           {light ? (
             <StaticImage
-              src={'../../assets/images/icon-white.png'}
+              src={'../../images/icon-white.png'}
               alt="EngineerApart Logo"
               width={50}
               aspectRatio={100 / 44}
@@ -43,7 +43,7 @@ export const Logo: React.FC<Props> = ({light = false}) => {
             />
           ) : (
             <StaticImage
-              src={'../../assets/images/icon-gradient.png'}
+              src={'../../images/icon-gradient.png'}
               alt="EngineerApart Logo"
               width={50}
               aspectRatio={100 / 44}

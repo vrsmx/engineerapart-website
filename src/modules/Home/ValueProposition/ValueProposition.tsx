@@ -1,5 +1,8 @@
 import {Link} from 'gatsby';
 import * as React from 'react';
+import {AccelerateIcon} from 'src/assets/icons/AccelerateIcon';
+import {ScaleIcon} from 'src/assets/icons/ScaleIcon.tsx';
+import {StartIcon} from 'src/assets/icons/StartIcon';
 import {SectionHeader} from 'src/components/SectionHeader/SectionHeader';
 import {ThreeColumnLayout} from 'src/components/ThreeColumnLayout/ThreeColumnLayout';
 import {ServicesCardsContainer} from '../ServicesCardsContainer/ServicesCardsContainer';
@@ -10,19 +13,21 @@ const layoutitems = [
     title: 'Start',
     content:
       'Bootstrap new projects within your company with hand-picked experts aligned with the project needs, goals and constraints.',
-    icon: <></>,
+    icon: <StartIcon className="icon-blue" styles={{width: 75, height: 75}} />,
   },
   {
     title: 'Scale',
     content:
       'Integrate individual contributors or full teams to upscale the output and speed of software building process.',
-    icon: <></>,
+    icon: <ScaleIcon className="icon-blue" styles={{width: 55, height: 55}} />,
   },
   {
     title: 'Accelerate',
     content:
       'Use the specialized skill set of our teams to deliver high quality, maintainable and scalable solutions within large scale projects.',
-    icon: <></>,
+    icon: (
+      <AccelerateIcon className="icon-blue" styles={{width: 85, height: 85}} />
+    ),
   },
 ];
 

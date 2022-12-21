@@ -1,4 +1,7 @@
 import * as React from 'react';
+import {CloudServiceIcon} from 'src/assets/icons/CloudServiceIcon';
+import {MobileAppsIcon} from 'src/assets/icons/MobileAppsIcon';
+import {WebAppsIcon} from 'src/assets/icons/WebAppsIcon';
 import * as styles from './ServicesCardsContainer.module.scss';
 
 export const ServicesCardsContainer: React.FC = () => {
@@ -9,7 +12,12 @@ export const ServicesCardsContainer: React.FC = () => {
       <div
         className={`${styles.card} bg-white flex column align-center round-corner-secondary `}
       >
-        <div className="icon-container large gradient-blue"></div>
+        <div className="icon-container large gradient-blue">
+          <CloudServiceIcon
+            className="icon-blue"
+            styles={{width: 95, height: 95}}
+          />
+        </div>
         <div className="flex column  align-center">
           <h4 className="txt-blue">Cloud Services</h4>
           <p className="txt-center txt-center">
@@ -20,7 +28,9 @@ export const ServicesCardsContainer: React.FC = () => {
       <div
         className={`${styles.card} bg-white flex column align-center round-corner-secondary `}
       >
-        <div className="icon-container large gradient-blue"></div>
+        <div className="icon-container large gradient-blue">
+          <WebAppsIcon className="icon-blue" styles={{width: 75, height: 75}} />
+        </div>
         <div className="flex column  align-center">
           <h4 className="txt-blue txt-center">Web Apps</h4>
           <p className="txt-center">Efficient UIs in any framework</p>
@@ -29,7 +39,12 @@ export const ServicesCardsContainer: React.FC = () => {
       <div
         className={`${styles.card} bg-white flex column align-center round-corner-secondary `}
       >
-        <div className="icon-container large gradient-blue"></div>
+        <div className="icon-container large gradient-blue">
+          <MobileAppsIcon
+            className="icon-blue"
+            styles={{width: 65, height: 65}}
+          />
+        </div>
         <div className="flex column align-center">
           <h4 className="txt-blue txt-center">Mobile Apps</h4>
           <p className="txt-center ">Native solutions for Android or IOS</p>
