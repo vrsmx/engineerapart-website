@@ -15,10 +15,7 @@ export const ContactLinks: React.FC = () => {
       </li>
       <li className="flex align-center mrg-btm-xs" style={{gap: '1em'}}>
         <div className="icon-container">
-          <LinkedInIcon
-            className="icon-blue"
-            styles={{width: 35, height: 35}}
-          />
+          <LinkedInIcon className="icon-blue" styles={{width: 35, top: 2}} />
         </div>
         <a href="https://www.linkedin.com/company/engineerapart">LinkedIn</a>
       </li>

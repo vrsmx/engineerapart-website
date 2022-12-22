@@ -29,29 +29,17 @@ const getSteps = ({updateList, update, onSubmit, data, isSent}: GetSteps) => [
     options={[
       {
         id: 'cloud-services',
-        icon: (
-          <CloudServiceIcon
-            className="icon-blue"
-            styles={{width: 95, height: 95}}
-          />
-        ),
+        icon: <CloudServiceIcon className="icon-blue" styles={{width: 75}} />,
         label: 'Cloud services',
       },
       {
         id: 'web-apps',
-        icon: (
-          <WebAppsIcon className="icon-blue" styles={{width: 75, height: 75}} />
-        ),
+        icon: <WebAppsIcon className="icon-blue" styles={{width: 65}} />,
         label: 'Web Apps',
       },
       {
         id: 'mobile-apps',
-        icon: (
-          <MobileAppsIcon
-            className="icon-blue"
-            styles={{width: 55, height: 55}}
-          />
-        ),
+        icon: <MobileAppsIcon className="icon-blue" styles={{width: 35}} />,
         label: 'Mobile Apps',
       },
       {

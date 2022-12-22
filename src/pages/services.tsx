@@ -24,7 +24,7 @@ const layoutitems = [
     icon: (
       <AccurateSearchIcon
         className="icon-blue"
-        styles={{width: 80, height: 65}}
+        styles={{width: 50, top: -4, left: 5}}
       />
     ),
   },
@@ -35,7 +35,7 @@ const layoutitems = [
     icon: (
       <PersonalizedSearchIcon
         className="icon-blue"
-        styles={{width: 80, height: 65}}
+        styles={{width: 45, left: -2, top: -2}}
       />
     ),
   },
@@ -43,9 +43,7 @@ const layoutitems = [
     title: 'Permanent follow-up',
     content:
       'Weekly follow-ups and internal management with our hirees to provide constant feedback to both sides.',
-    icon: (
-      <FollowUpIcon className="icon-blue" styles={{width: 80, height: 65}} />
-    ),
+    icon: <FollowUpIcon className="icon-blue" styles={{width: 45}} />,
   },
 ];
 

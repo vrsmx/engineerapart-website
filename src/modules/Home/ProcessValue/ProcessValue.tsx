@@ -31,7 +31,7 @@ export const ProcessValue: React.FC = () => {
                 <div className="icon-container gradient-blue">
                   <PersonalizedSearchIcon
                     className="icon-blue"
-                    styles={{width: 65, height: 65}}
+                    styles={{width: 45}}
                   />
                 </div>
                 <h4>Personalized search</h4>
@@ -45,10 +45,7 @@ export const ProcessValue: React.FC = () => {
             <div className="column-grid-element">
               <div className="column-grid-element-title">
                 <div className="icon-container gradient-blue">
-                  <HireToFitIcon
-                    className="icon-blue"
-                    styles={{width: 55, height: 55}}
-                  />
+                  <HireToFitIcon className="icon-blue" styles={{width: 45}} />
                 </div>
                 <h4>Hire to fit your needs</h4>
               </div>

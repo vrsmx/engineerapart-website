@@ -13,10 +13,7 @@ export const ServicesCardsContainer: React.FC = () => {
         className={`${styles.card} bg-white flex column align-center round-corner-secondary `}
       >
         <div className="icon-container large gradient-blue">
-          <CloudServiceIcon
-            className="icon-blue"
-            styles={{width: 95, height: 95}}
-          />
+          <CloudServiceIcon className="icon-blue" styles={{width: 75}} />
         </div>
         <div className="flex column  align-center">
           <h4 className="txt-blue">Cloud Services</h4>
@@ -29,7 +26,7 @@ export const ServicesCardsContainer: React.FC = () => {
         className={`${styles.card} bg-white flex column align-center round-corner-secondary `}
       >
         <div className="icon-container large gradient-blue">
-          <WebAppsIcon className="icon-blue" styles={{width: 75, height: 75}} />
+          <WebAppsIcon className="icon-blue" styles={{width: 65}} />
         </div>
         <div className="flex column  align-center">
           <h4 className="txt-blue txt-center">Web Apps</h4>
@@ -40,10 +37,7 @@ export const ServicesCardsContainer: React.FC = () => {
         className={`${styles.card} bg-white flex column align-center round-corner-secondary `}
       >
         <div className="icon-container large gradient-blue">
-          <MobileAppsIcon
-            className="icon-blue"
-            styles={{width: 65, height: 65}}
-          />
+          <MobileAppsIcon className="icon-blue" styles={{width: 40}} />
         </div>
         <div className="flex column align-center">
           <h4 className="txt-blue txt-center">Mobile Apps</h4>

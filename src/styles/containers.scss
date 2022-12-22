@@ -34,16 +34,19 @@
 .icon-blue {
   stroke: var(--main-color-blue);
   fill: var(--main-color-blue);
+  position: absolute;
 }
 
 .icon-black {
   stroke: var(--main-color-black);
   fill: var(--main-color-black);
+  position: absolute;
 }
 
 .icon-white {
   stroke: var(--main-color-white);
   fill: var(--main-color-white);
+  position: absolute;
 }
 
 .full-width {
@@ -128,6 +131,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: visible;
 
   &.medium {
     width: 65px;

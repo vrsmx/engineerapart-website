@@ -1,5 +1,7 @@
 import {Link} from 'gatsby';
 import * as React from 'react';
+import {EmailIcon} from 'src/assets/icons/EmailIcon';
+import {LinkedInIcon} from 'src/assets/icons/LinkedInIcon';
 import {Modal} from 'src/components/Modal/Modal';
 
 import * as styles from './NavModal.module.scss';
@@ -50,7 +52,12 @@ export const NavModal: React.FC<NavModalProps> = ({isOpen, onClose}) => {
             className="full-width flex align-center mrg-btm-xs pdg-top-s"
             style={{gap: '8px'}}
           >
-            <div className="icon-container small gradient-white"></div>
+            <div className="icon-container small">
+              <LinkedInIcon
+                className="icon-white"
+                styles={{width: 35, top: -7, strokeWidth: 0.1}}
+              />
+            </div>
             <a
               href="https://www.linkedin.com/company/engineerapart"
               target="_blank"
@@ -62,7 +69,9 @@ export const NavModal: React.FC<NavModalProps> = ({isOpen, onClose}) => {
             className="full-width flex align-center mrg-btm-m pdg-top-xs"
             style={{gap: '8px'}}
           >
-            <div className="icon-container small gradient-white"></div>
+            <div className="icon-container small">
+              <EmailIcon className="icon-white" styles={{width: 35}} />
+            </div>
             <a
               href="https://www.linkedin.com/company/engineerapart"
               target="_blank"

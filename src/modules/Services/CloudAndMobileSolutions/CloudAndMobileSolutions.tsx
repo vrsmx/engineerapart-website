@@ -42,7 +42,7 @@ export const CloudAndMobileSolutions: React.FC = () => {
                 <div className="icon-container medium gradient-blue">
                   <CloudServicesIcon
                     className="icon-blue"
-                    styles={{width: 80, height: 65}}
+                    styles={{width: 65, top: 10}}
                   />
                 </div>
                 <h4>Performant cloud services</h4>
@@ -58,10 +58,7 @@ export const CloudAndMobileSolutions: React.FC = () => {
             <div className="column-grid-element">
               <div className="column-grid-element-title">
                 <div className="icon-container gradient-blue">
-                  <AppIcon
-                    className="icon-blue"
-                    styles={{width: 80, height: 65}}
-                  />
+                  <AppIcon className="icon-blue" styles={{width: 50}} />
                 </div>
                 <h4>User-first apps</h4>
               </div>

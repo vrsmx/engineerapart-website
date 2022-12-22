@@ -61,10 +61,7 @@ export const Footer = () => {
           style={{gap: '0px'}}
         >
           <div className="icon-container">
-            <LinkedInIcon
-              className="icon-white"
-              styles={{width: 30, height: 30}}
-            />
+            <LinkedInIcon className="icon-white" styles={{width: 30, top: 5}} />
           </div>
           <a
             href="https://www.linkedin.com/company/engineerapart"
