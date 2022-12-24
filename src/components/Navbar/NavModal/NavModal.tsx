@@ -49,13 +49,13 @@ export const NavModal: React.FC<NavModalProps> = ({isOpen, onClose}) => {
           className={`${styles.modal_details} flex column full-width txt-light`}
         >
           <div
-            className="full-width flex align-center mrg-btm-xs pdg-top-s"
+            className="full-width flex align-center pdg-top-s"
             style={{gap: '8px'}}
           >
             <div className="icon-container small">
               <LinkedInIcon
                 className="icon-white"
-                styles={{width: 35, top: -7, strokeWidth: 0.1}}
+                styles={{width: 25, top: 0, strokeWidth: 0.1}}
               />
             </div>
             <a
@@ -66,27 +66,26 @@ export const NavModal: React.FC<NavModalProps> = ({isOpen, onClose}) => {
             </a>
           </div>
           <div
-            className="full-width flex align-center mrg-btm-m pdg-top-xs"
+            className="full-width flex align-center pdg-top-xs"
             style={{gap: '8px'}}
           >
             <div className="icon-container small">
-              <EmailIcon className="icon-white" styles={{width: 35}} />
+              <EmailIcon className="icon-white" styles={{width: 25}} />
             </div>
-            <a
-              href="https://www.linkedin.com/company/engineerapart"
-              target="_blank"
-            >
+            <a href="mailto:contact@engineerapart.com">
               contact@engineerapart.com
             </a>
           </div>
-          <ul className="flex justify-between">
+          {/* <ul className="flex justify-end">
             <li className={styles.legal_link}>
-              <Link to="/legals#privacy-policy">Privacy Policy</Link>
+              <Link to="/legals#privacy-policy">
+                Privacy Policy and Terms of use
+              </Link>
             </li>
-            <li className={styles.legal_link}>
+            {<li className={styles.legal_link}>
               <Link to="/legals#terms-and-condition">Terms and Condition</Link>
-            </li>
-          </ul>
+            </li>}
+          </ul> */}
         </div>
       </div>
     </Modal>

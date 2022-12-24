@@ -74,6 +74,14 @@ p {
   font-weight: 300;
   line-height: 1.5em;
   letter-spacing: 0.02em;
+
+  a {
+    color: var(--main-color-blue);
+  }
+
+  strong {
+    font-weight: 400;
+  }
 }
 
 .section-header {
@@ -126,7 +134,7 @@ p {
 .paragraph-link {
   font-family: var(--main-font-primary);
   @include responsiveFont(1rem, 3vw, 1.1rem);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.5em;
 
   transition: var(--main-default-animation-time) ease transform, filter;

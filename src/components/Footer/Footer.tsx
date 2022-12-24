@@ -58,10 +58,13 @@ export const Footer = () => {
         </nav>
         <div
           className={`${styles.linkedin_link} full-width flex align-center`}
-          style={{gap: '0px'}}
+          style={{gap: 2}}
         >
-          <div className="icon-container">
-            <LinkedInIcon className="icon-white" styles={{width: 30, top: 5}} />
+          <div className="icon-container small">
+            <LinkedInIcon
+              className="icon-white"
+              styles={{width: 25, top: 1.5, strokeWidth: 0}}
+            />
           </div>
           <a
             href="https://www.linkedin.com/company/engineerapart"
@@ -78,11 +81,13 @@ export const Footer = () => {
             className={`${styles.legal_links_container} flex justify-between`}
           >
             <li className={styles.legal_link}>
-              <Link to="/legals#privacy-policy">Privacy Policy</Link>
+              <Link to="/legals#privacy-policy">
+                Privacy Policy and Terms of Use
+              </Link>
             </li>
-            <li className={styles.legal_link}>
+            {/* <li className={styles.legal_link}>
               <Link to="/legals#terms-and-condition">Terms and Condition</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

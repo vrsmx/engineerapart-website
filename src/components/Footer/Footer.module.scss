@@ -60,6 +60,12 @@
 
 .linkedin_link {
   justify-content: flex-end;
+  font-family: var(--main-font-secondary);
+  @include responsiveFont(0.8rem, 2vw, 1.1rem);
+  font-weight: 300;
+  line-height: 1em;
+  letter-spacing: 0.03em;
+  cursor: pointer;
 
   @include screen-s {
     justify-content: flex-start;
