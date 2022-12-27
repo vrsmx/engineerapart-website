@@ -1,9 +1,21 @@
 import * as React from 'react';
 import {ExtendTeamIcon} from 'src/assets/icons/ExtendTeamIcon';
 import {NewTeamIcon} from 'src/assets/icons/NewTeamIcon';
+import {useContactFormWizard} from 'src/modules/Shared/ContactFormWizard/ContactFormWizard.utils';
+import {CardsFormWizard} from '../CardsFormWizard/CardsFormWizard';
 import * as styles from './TeamBuildingCards.module.scss';
 
 export const TeamBuildingCards: React.FC = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const {data, updateList, update, onSubmit, loading, error, isSent} =
+    useContactFormWizard();
+
+  const handleCardClick = (value: string) => {
+    console.log(value);
+    updateList(value, 'hireMethod');
+    setIsOpen(true);
+  };
+
   return (
     <div
       className={`${styles.cards_container} flex justify-center align-stretch wrap mrg-btm-xl`}
@@ -25,7 +37,12 @@ export const TeamBuildingCards: React.FC = () => {
             styles={{width: 80, height: 65}}
           />
         </div>
-        <button className="button primary full-width">Grow your team</button>
+        <button
+          className="button primary full-width"
+          onClick={() => handleCardClick('grow-team')}
+        >
+          Grow your team
+        </button>
       </div>
       <div
         className={`${styles.cta_card} flex column justify-between align-center round-corner-primary bg-white-shade border-white pdg-top-s pdg-btm-s`}
@@ -41,8 +58,23 @@ export const TeamBuildingCards: React.FC = () => {
         <div className="icon-container xlarge gradient-blue mrg-btm-s">
           <NewTeamIcon className="icon-blue" styles={{width: 80, height: 65}} />
         </div>
-        <button className="button primary full-width">Hire a team</button>
+        <button
+          className="button primary full-width"
+          onClick={() => handleCardClick('hire-team')}
+        >
+          Hire a team
+        </button>
       </div>
+      <CardsFormWizard
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        data={data}
+        updateList={updateList}
+        update={update}
+        onSubmit={onSubmit}
+        isSent={isSent}
+        loading={loading}
+      />
     </div>
   );
 };

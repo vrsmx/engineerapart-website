@@ -1,3 +1,4 @@
+import {Link} from 'gatsby';
 import * as React from 'react';
 import * as styles from './HomeHeader.module.scss';
 
@@ -19,8 +20,12 @@ export const HomeHeader: React.FC = () => {
           engineers
         </h2>
         <div className={`${styles.buttons_container} flex justify-center wrap`}>
-          <button className="button primary">Get started</button>
-          <button className="button clear">Learn more →</button>
+          <Link className="button primary" to="/#wizard">
+            Get started
+          </Link>
+          <Link className="button clear" to="/services">
+            Learn more →
+          </Link>
         </div>
       </div>
     </section>

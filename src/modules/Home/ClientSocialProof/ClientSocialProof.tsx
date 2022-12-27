@@ -12,7 +12,7 @@ export const ClientSocialProof: React.FC<Props> = ({
   position,
 }) => (
   <QuoteSection>
-    <div className="page-container flex column align-end">
+    <div className="page-container flex column align-end" id="wizard">
       <p className="quote-l txt-light mrg-btm-xs">{review}</p>
       <div className="client-container flex align-center" style={{gap: '20px'}}>
         <div className="flex column">

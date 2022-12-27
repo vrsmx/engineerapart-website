@@ -46,7 +46,7 @@ const ContactPage: React.FC<PageProps> = () => {
             }
           />
         </section>
-        <section className="page-container pdg-btm-xl">
+        <section className="page-container pdg-btm-xl" id="form">
           <Calendar />
         </section>
         <section className="page-container mrg-top-xl mrg-btm-xl">

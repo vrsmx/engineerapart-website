@@ -1,3 +1,4 @@
+import {Link} from 'gatsby';
 import * as React from 'react';
 import {TwoColumnLayout} from 'src/components/TwoColumnLayout/TwoColumnLayout';
 
@@ -16,7 +17,9 @@ export const ContactCtaSection: React.FC = () => {
             </h4>
             <div className="flex wrap" style={{gap: '24px'}}>
               <button className="button primary">Schedule a call</button>
-              <button className="button secondary">Leave a message</button>
+              <Link className="button secondary" to="/contact/#form">
+                Leave a message
+              </Link>
             </div>
           </div>
         }

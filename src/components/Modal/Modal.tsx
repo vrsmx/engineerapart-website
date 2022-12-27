@@ -52,6 +52,6 @@ interface Props {
 }
 export const Modal: React.FC<Props> = ({children, isOpen, wrapperId}) => {
   if (!isOpen) return null;
-
+  console.log({Modal: isOpen});
   return <ReactPortal wrapperId={wrapperId}>{children}</ReactPortal>;
 };

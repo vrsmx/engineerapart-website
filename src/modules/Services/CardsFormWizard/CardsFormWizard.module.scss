@@ -1,0 +1,53 @@
+@import 'src/styles/text.scss';
+@import 'src/styles/mediaQuery.scss';
+
+.wizard_backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.wizard_container {
+  background-color: var(--main-color-white);
+  width: min(800px, 100%);
+  border: 1.5px solid var(--main-color-border);
+  border-radius: var(--main-radius-secondary);
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.form_input {
+  margin-bottom: 1.5em;
+  min-width: 150px;
+  @include responsiveFont(1rem, 3vw, 1rem);
+
+  &::placeholder {
+    color: var(--main-color-white-dark-shade);
+    @include responsiveFont(1rem, 3vw, 1rem);
+  }
+
+  @include screen-s {
+    margin-bottom: 1em;
+  }
+}
+
+.form_row {
+  gap: 30px;
+
+  @include screen-s {
+    gap: unset;
+    flex-wrap: wrap;
+  }
+}
