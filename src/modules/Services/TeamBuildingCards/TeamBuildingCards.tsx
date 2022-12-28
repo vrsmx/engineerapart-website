@@ -74,6 +74,7 @@ export const TeamBuildingCards: React.FC = () => {
         onSubmit={onSubmit}
         isSent={isSent}
         loading={loading}
+        error={error}
       />
     </div>
   );

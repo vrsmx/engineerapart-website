@@ -1,12 +1,12 @@
 export interface ContactFormWizardValues {
-  services: ReadonlyArray<string>;
-  hireMethod: ReadonlyArray<string>;
-  name: string;
-  lastname: string;
-  company: string;
-  phone: string;
-  email: string;
-  message: string;
+  readonly services: ReadonlyArray<string>;
+  readonly hireMethod: ReadonlyArray<string>;
+  readonly name: string;
+  readonly lastname: string;
+  readonly company: string;
+  readonly phone: string;
+  readonly email: string;
+  readonly message: string;
 }
 
 export type UpdateContactFormWizard = React.Dispatch<

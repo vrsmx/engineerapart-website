@@ -1,10 +1,12 @@
 import * as React from 'react';
+import {Button} from 'src/components/Button/Button';
 import {ContactFormWizardValues} from '../ContactFormWizard/ContactFormWizard.types';
 import {useContactFormWizard} from '../ContactFormWizard/ContactFormWizard.utils';
 import * as styles from './ContactForm.module.scss';
 
 export const ContactForm: React.FC = () => {
-  const {data, onSubmit, isSent, update} = useContactFormWizard();
+  const {data, onSubmit, isSent, error, update, loading} =
+    useContactFormWizard();
 
   const isValid = () => {
     const {name, lastname, company, phone, email} = data;
@@ -84,13 +86,18 @@ export const ContactForm: React.FC = () => {
         value={data.message}
       />
       <div className="flex justify-end">
-        <button
-          className="button small primary expand"
-          disabled={isSent || !isValid()}
+        <Button
+          className="button primary expand"
+          disabled={!isValid()}
           onClick={handlClick}
+          success={isSent}
+          error={Boolean(error)}
+          loading={loading}
+          successMessage="Sent"
+          errorMessage="Unable to submit"
         >
           Send
-        </button>
+        </Button>
       </div>
     </form>
   );

@@ -10,7 +10,7 @@
 }
 
 .form_row {
-  gap: 50px;
+  gap: 25px;
 
   @include screen-s {
     gap: unset;

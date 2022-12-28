@@ -4,6 +4,7 @@ import {
   ContactFormWizardValues,
   UpdateContactFormWizard,
 } from 'src/modules/Shared/ContactFormWizard/ContactFormWizard.types';
+import {Button} from 'src/components/Button/Button';
 
 interface ContactFormWizardStepProps {
   readonly onSubmit: () => void;
@@ -11,10 +12,12 @@ interface ContactFormWizardStepProps {
   readonly update: UpdateContactFormWizard;
   readonly data: ContactFormWizardValues;
   readonly isSent: boolean;
+  readonly loading: boolean;
+  readonly error: null | string;
 }
 export const ContactFormWizardDetailsStep: React.FC<
   ContactFormWizardStepProps
-> = ({onSubmit, update, isValid, data, isSent}) => {
+> = ({onSubmit, update, isValid, data, isSent, loading, error}) => {
   const handlClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     onSubmit();
@@ -74,13 +77,18 @@ export const ContactFormWizardDetailsStep: React.FC<
         value={data.email}
       />
       <div className="flex justify-end">
-        <button
-          className="button small primary expand"
-          onClick={handlClick}
+        <Button
+          className="small primary expand"
           disabled={isSent || !isValid()}
+          onClick={handlClick}
+          success={isSent}
+          error={Boolean(error)}
+          loading={loading}
+          successMessage="Sent"
+          errorMessage="Unable to submit"
         >
           Send
-        </button>
+        </Button>
       </div>
     </form>
   );

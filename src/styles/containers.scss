@@ -137,6 +137,16 @@
   position: relative;
   overflow: visible;
 
+  &.xsmall {
+    width: min(max(1rem, 3vw), 1.5rem);
+    height: min(max(1rem, 3vw), 1.5rem);
+  }
+
+  &.small {
+    width: 35px;
+    height: 35px;
+  }
+
   &.medium {
     width: 65px;
     height: 65px;
@@ -160,11 +170,6 @@
       width: 75px;
       height: 75px;
     }
-  }
-
-  &.small {
-    width: 35px;
-    height: 35px;
   }
 }
 

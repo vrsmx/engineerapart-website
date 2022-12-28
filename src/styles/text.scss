@@ -170,14 +170,14 @@ textarea {
   border: 1.5px solid var(--main-color-white-dark);
 
   font-family: var(--main-font-secondary);
-  @include responsiveFont(1rem, 3vw, 1.2rem);
+  @include responsiveFont(1rem, 3vw, 1.1rem);
   font-weight: 300;
   line-height: 1.5em;
   letter-spacing: 0.02em;
 
   &::placeholder {
     color: var(--main-color-white-dark-shade);
-    @include responsiveFont(1rem, 3vw, 1.2rem);
+    @include responsiveFont(1rem, 3vw, 1.1rem);
   }
 
   &:active {

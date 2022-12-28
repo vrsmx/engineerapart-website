@@ -17,6 +17,10 @@
   letter-spacing: 1px;
   font-size: 1rem;
 
+  &:disabled {
+    cursor: not-allowed;
+  }
+
   &.big {
     @include responsiveFont(1rem, 3vw, 1.1rem);
   }

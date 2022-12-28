@@ -17,12 +17,14 @@ import {NewTeamIcon} from 'src/assets/icons/NewTeamIcon';
 import {ScaleIcon} from 'src/assets/icons/ScaleIcon.tsx';
 
 interface GetSteps {
-  updateList: ListUpdate;
-  update: UpdateContactFormWizard;
-  onSubmit: () => void;
-  isValid: () => boolean;
-  data: ContactFormWizardValues;
-  isSent: boolean;
+  readonly updateList: ListUpdate;
+  readonly update: UpdateContactFormWizard;
+  readonly onSubmit: () => void;
+  readonly isValid: () => boolean;
+  readonly data: ContactFormWizardValues;
+  readonly isSent: boolean;
+  readonly loading: boolean;
+  readonly error: null | string;
 }
 const getSteps = ({
   updateList,
@@ -31,6 +33,8 @@ const getSteps = ({
   isValid,
   data,
   isSent,
+  loading,
+  error,
 }: GetSteps) => [
   <ContactFormWizardCardsStep
     options={[
@@ -101,6 +105,8 @@ const getSteps = ({
     data={data}
     isSent={isSent}
     isValid={isValid}
+    loading={loading}
+    error={error}
   />,
 ];
 
@@ -112,7 +118,16 @@ export const ContactFormWizard = () => {
   const nextStep = () => setFormStep((prev) => prev + 1);
   const backStep = () => setFormStep((prev) => prev - 1);
 
-  const steps = getSteps({updateList, update, onSubmit, isValid, data, isSent});
+  const steps = getSteps({
+    updateList,
+    update,
+    onSubmit,
+    isValid,
+    data,
+    isSent,
+    loading,
+    error,
+  });
 
   return (
     <section className="page-container flex column mrg-top-xl">

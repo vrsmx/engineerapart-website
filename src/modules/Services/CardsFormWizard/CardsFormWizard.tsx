@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {CheckIcon} from 'src/assets/icons/CheckIcon';
 import {CrossIcon} from 'src/assets/icons/CrossIcon';
+import {Button} from 'src/components/Button/Button';
 import {Modal} from 'src/components/Modal/Modal';
 import {
   ContactFormWizardValues,
@@ -11,14 +11,15 @@ import {usePreventScroll} from 'src/utils/usePreventScroll';
 import * as styles from './CardsFormWizard.module.scss';
 
 interface Props {
-  isOpen: boolean;
-  onClose: () => void;
-  updateList: ListUpdate;
-  update: UpdateContactFormWizard;
-  onSubmit: () => void;
-  data: ContactFormWizardValues;
-  isSent: boolean;
-  loading: boolean;
+  readonly isOpen: boolean;
+  readonly onClose: () => void;
+  readonly updateList: ListUpdate;
+  readonly update: UpdateContactFormWizard;
+  readonly onSubmit: () => void;
+  readonly data: ContactFormWizardValues;
+  readonly isSent: boolean;
+  readonly loading: boolean;
+  readonly error: null | string;
 }
 export const CardsFormWizard: React.FC<Props> = ({
   isOpen,
@@ -28,6 +29,7 @@ export const CardsFormWizard: React.FC<Props> = ({
   data,
   isSent,
   loading,
+  error,
 }) => {
   usePreventScroll({isOpen});
 
@@ -122,20 +124,20 @@ export const CardsFormWizard: React.FC<Props> = ({
               type="email"
               value={data.email}
             />
+
             <div className="flex justify-end mrg-top-xs">
-              <button
-                className={`button small primary expand ${
-                  isSent ? 'clear' : 'primary'
-                }`}
-                onClick={handlClick}
+              <Button
+                className="small primary expand"
                 disabled={loading || isSent || !isValid()}
+                onClick={handlClick}
+                success={isSent}
+                error={Boolean(error)}
+                loading={loading}
+                successMessage="Sent"
+                errorMessage="Unable to submit"
               >
-                {isSent ? (
-                  <CheckIcon className="icon-black" styles={{width: 20}} />
-                ) : (
-                  'Send'
-                )}
-              </button>
+                Send
+              </Button>
             </div>
           </form>
         </div>

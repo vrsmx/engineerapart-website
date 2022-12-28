@@ -8,14 +8,14 @@ import {
 } from 'src/modules/Shared/ContactFormWizard/ContactFormWizard.types';
 
 interface UseContactFormWizard {
-  data: ContactFormWizardValues;
-  updateList: ListUpdate;
-  update: UpdateContactFormWizard;
-  onSubmit: () => void;
-  isValid: () => boolean;
-  loading: boolean;
-  error: string | null;
-  isSent: boolean;
+  readonly data: ContactFormWizardValues;
+  readonly updateList: ListUpdate;
+  readonly update: UpdateContactFormWizard;
+  readonly onSubmit: () => void;
+  readonly isValid: () => boolean;
+  readonly loading: boolean;
+  readonly error: string | null;
+  readonly isSent: boolean;
 }
 const INITIAL_VALUES: ContactFormWizardValues = {
   services: [],
