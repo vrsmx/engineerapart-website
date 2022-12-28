@@ -3,6 +3,7 @@ import * as React from 'react';
 import {EmailIcon} from 'src/assets/icons/EmailIcon';
 import {LinkedInIcon} from 'src/assets/icons/LinkedInIcon';
 import {Modal} from 'src/components/Modal/Modal';
+import {usePreventScroll} from 'src/utils/usePreventScroll';
 
 import * as styles from './NavModal.module.scss';
 
@@ -11,15 +12,7 @@ interface NavModalProps {
   onClose: () => void;
 }
 export const NavModal: React.FC<NavModalProps> = ({isOpen, onClose}) => {
-  React.useEffect(() => {
-    isOpen && document.body.classList.add('disable-scroll');
-
-    return () => {
-      document.body.classList.remove('disable-scroll');
-    };
-  }, [isOpen]);
-
-  if (!isOpen) return null;
+  usePreventScroll({isOpen});
 
   return (
     <Modal wrapperId="react-portal-modal-container" isOpen={isOpen}>

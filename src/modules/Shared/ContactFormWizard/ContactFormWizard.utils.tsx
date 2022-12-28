@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {
   ContactFormWizardValues,
+  FormKeys,
   ListKeys,
   ListUpdate,
   UpdateContactFormWizard,
@@ -11,6 +12,7 @@ interface UseContactFormWizard {
   updateList: ListUpdate;
   update: UpdateContactFormWizard;
   onSubmit: () => void;
+  isValid: () => boolean;
   loading: boolean;
   error: string | null;
   isSent: boolean;
@@ -46,6 +48,13 @@ export const useContactFormWizard = (): UseContactFormWizard => {
     setForm((prev) => ({...prev, [listName]: newList}));
   };
 
+  const isValid = () => {
+    const res = Object.keys(form).every(
+      (field) => form[field as FormKeys].length > 0
+    );
+    return res;
+  };
+
   return {
     loading,
     error,
@@ -53,6 +62,7 @@ export const useContactFormWizard = (): UseContactFormWizard => {
     isSent,
     updateList,
     update: setForm,
-    onSubmit: onSubmit,
+    onSubmit,
+    isValid,
   };
 };

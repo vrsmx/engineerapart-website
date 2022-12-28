@@ -17,4 +17,7 @@ export type ListKeys = keyof Pick<
   ContactFormWizardValues,
   'services' | 'hireMethod'
 >;
+
+export type FormKeys = keyof ContactFormWizardValues;
+
 export type ListUpdate = (id: string, listName: ListKeys) => void;

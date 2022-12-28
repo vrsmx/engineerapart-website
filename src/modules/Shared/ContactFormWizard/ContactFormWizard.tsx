@@ -9,7 +9,6 @@ import {
   ListUpdate,
   UpdateContactFormWizard,
 } from 'src/modules/Shared/ContactFormWizard/ContactFormWizard.types';
-import {CloudServicesIcon} from 'src/assets/icons/CloudServicesIcon';
 import {CloudServiceIcon} from 'src/assets/icons/CloudServiceIcon';
 import {WebAppsIcon} from 'src/assets/icons/WebAppsIcon';
 import {MobileAppsIcon} from 'src/assets/icons/MobileAppsIcon';
@@ -21,10 +20,18 @@ interface GetSteps {
   updateList: ListUpdate;
   update: UpdateContactFormWizard;
   onSubmit: () => void;
+  isValid: () => boolean;
   data: ContactFormWizardValues;
   isSent: boolean;
 }
-const getSteps = ({updateList, update, onSubmit, data, isSent}: GetSteps) => [
+const getSteps = ({
+  updateList,
+  update,
+  onSubmit,
+  isValid,
+  data,
+  isSent,
+}: GetSteps) => [
   <ContactFormWizardCardsStep
     options={[
       {
@@ -93,18 +100,19 @@ const getSteps = ({updateList, update, onSubmit, data, isSent}: GetSteps) => [
     update={update}
     data={data}
     isSent={isSent}
+    isValid={isValid}
   />,
 ];
 
 export const ContactFormWizard = () => {
   const [formStep, setFormStep] = React.useState<number>(0);
-  const {data, updateList, update, onSubmit, loading, error, isSent} =
+  const {data, updateList, update, onSubmit, isValid, loading, error, isSent} =
     useContactFormWizard();
 
   const nextStep = () => setFormStep((prev) => prev + 1);
   const backStep = () => setFormStep((prev) => prev - 1);
 
-  const steps = getSteps({updateList, update, onSubmit, data, isSent});
+  const steps = getSteps({updateList, update, onSubmit, isValid, data, isSent});
 
   return (
     <section className="page-container flex column mrg-top-xl">

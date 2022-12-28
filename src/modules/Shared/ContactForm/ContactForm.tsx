@@ -6,6 +6,18 @@ import * as styles from './ContactForm.module.scss';
 export const ContactForm: React.FC = () => {
   const {data, onSubmit, isSent, update} = useContactFormWizard();
 
+  const isValid = () => {
+    const {name, lastname, company, phone, email} = data;
+
+    return (
+      name.length > 0 &&
+      lastname.length > 0 &&
+      company.length > 0 &&
+      phone.length > 0 &&
+      email.length > 0
+    );
+  };
+
   const handlClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     onSubmit();
@@ -74,7 +86,7 @@ export const ContactForm: React.FC = () => {
       <div className="flex justify-end">
         <button
           className="button small primary expand"
-          disabled={isSent}
+          disabled={isSent || !isValid()}
           onClick={handlClick}
         >
           Send

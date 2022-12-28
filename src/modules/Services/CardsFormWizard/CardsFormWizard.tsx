@@ -7,6 +7,7 @@ import {
   ListUpdate,
   UpdateContactFormWizard,
 } from 'src/modules/Shared/ContactFormWizard/ContactFormWizard.types';
+import {usePreventScroll} from 'src/utils/usePreventScroll';
 import * as styles from './CardsFormWizard.module.scss';
 
 interface Props {
@@ -28,6 +29,21 @@ export const CardsFormWizard: React.FC<Props> = ({
   isSent,
   loading,
 }) => {
+  usePreventScroll({isOpen});
+
+  const isValid = () => {
+    const {hireMethod, name, lastname, company, phone, email} = data;
+
+    return (
+      hireMethod.length > 0 &&
+      name.length > 0 &&
+      lastname.length > 0 &&
+      company.length > 0 &&
+      phone.length > 0 &&
+      email.length > 0
+    );
+  };
+
   const handlClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     onSubmit();
@@ -112,7 +128,7 @@ export const CardsFormWizard: React.FC<Props> = ({
                   isSent ? 'clear' : 'primary'
                 }`}
                 onClick={handlClick}
-                disabled={loading || isSent}
+                disabled={loading || isSent || !isValid()}
               >
                 {isSent ? (
                   <CheckIcon className="icon-black" styles={{width: 20}} />

@@ -7,13 +7,14 @@ import {
 
 interface ContactFormWizardStepProps {
   readonly onSubmit: () => void;
+  readonly isValid: () => boolean;
   readonly update: UpdateContactFormWizard;
   readonly data: ContactFormWizardValues;
   readonly isSent: boolean;
 }
 export const ContactFormWizardDetailsStep: React.FC<
   ContactFormWizardStepProps
-> = ({onSubmit, update, data, isSent}) => {
+> = ({onSubmit, update, isValid, data, isSent}) => {
   const handlClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     onSubmit();
@@ -76,7 +77,7 @@ export const ContactFormWizardDetailsStep: React.FC<
         <button
           className="button small primary expand"
           onClick={handlClick}
-          disabled={isSent}
+          disabled={isSent || !isValid()}
         >
           Send
         </button>
