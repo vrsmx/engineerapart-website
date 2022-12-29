@@ -15,6 +15,8 @@ import {ProductOrToolIcon} from 'src/assets/icons/ProductOrToolIcon';
 import {AccurateSearchIcon} from 'src/assets/icons/AccurateSearchIcon';
 import {PersonalizedSearchIcon} from 'src/assets/icons/PersonalizedSearchIcon';
 import {FollowUpIcon} from 'src/assets/icons/FollowUpIcon';
+import {ServicesResults} from 'src/modules/Services/Results/Results';
+import {ReactExpertice} from 'src/modules/Services/ReactExpertice/ReactExpertice';
 
 const layoutitems = [
   {
@@ -65,94 +67,13 @@ const ServicesPage: React.FC<PageProps> = () => {
           />
         </section>
         <section className="page-container mrg-top-xl mrg-btm-xl">
-          <TwoColumnLayout
-            leftSize={1}
-            rightSize={1}
-            leftColumn={
-              <div className="flex column" style={{gap: 50}}>
-                <h3 className="section-header">
-                  Discover how we achieve our results
-                </h3>
-                <p>
-                  We understand shipping quality software is about problem
-                  solving and not code writing, a quality we look for in every
-                  member of our team in addition to technical and soft skills
-                  required to expand your existing teams or build new ones from
-                  zero.
-                </p>
-                <Link
-                  to="/services"
-                  className={`paragraph-link txt-blue txt-left`}
-                >
-                  Learn more on how we build teams →
-                </Link>
-              </div>
-            }
-            rightColumn={
-              <div
-                className="image-body flex column gradient-blue-turquioise"
-                style={{
-                  minWidth: '300px',
-                  minHeight: '500px',
-                }}
-              ></div>
-            }
-          />
+          <ServicesResults />
         </section>
         <section
           className="page-container mrg-top-xl mrg-btm-xl"
           id="expertice"
         >
-          <SectionHeader
-            title={<>React experts</>}
-            underlineAlign={'justify-start'}
-            underlineSize={'xl'}
-            underline={
-              <>
-                By building responsive and efficient UI's with technologies
-                based on ReactJS we allow users to enjoy high quality software
-                built with performance and scalability in mind.
-              </>
-            }
-          />
-          <TwoColumnLayout
-            leftSize={4}
-            rightSize={3}
-            leftColumn={
-              <div
-                className="image-body flex column gradient-blue-turquioise"
-                style={{
-                  minWidth: '300px',
-                  minHeight: '500px',
-                }}
-              ></div>
-            }
-            rightColumn={
-              <div className="column-grid-element">
-                <div className="column-grid-element-title">
-                  <div className="icon-container medium gradient-blue">
-                    <ProductOrToolIcon
-                      className="icon-blue"
-                      styles={{width: 55, height: 55}}
-                    />
-                  </div>
-                  <h4>Product or tools, top performance and experience</h4>
-                </div>
-                <p>
-                  By leveraging the power of the React ecosystem we are able to
-                  build any type of web tool that your business needs: content
-                  management, enterprise security management or custom
-                  e-commerce platform.
-                </p>
-
-                <p>
-                  Our React experts will deliver high quality, responsive and
-                  efficient UIs that can be easily scaled and maintained to
-                  future proof your investment.
-                </p>
-              </div>
-            }
-          />
+          <ReactExpertice />
         </section>
         <QuoteSection>
           <div className="page-container flex column align-end">

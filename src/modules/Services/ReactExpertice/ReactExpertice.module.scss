@@ -1,0 +1,58 @@
+@import 'src/styles/mediaQuery.scss';
+
+.product_container {
+  background-color: var(--main-color-white);
+  width: 300px;
+  height: 300px;
+}
+
+.product_navbar {
+}
+
+.product_navbar_button {
+  background-color: var(--main-color-white-dark);
+  height: 1rem;
+}
+
+.product_navbar_link {
+  background-color: var(--main-color-white-dark);
+  height: 0.8rem;
+}
+
+.product_actionbar {
+}
+
+.product_actionbar_search {
+  background-color: var(--main-color-white-dark);
+}
+
+.product_actionbar_filter {
+  background-color: var(--main-color-white-dark);
+}
+
+.product_sidebar {
+}
+
+.product_sidebar_filter {
+  background-color: var(--main-color-white-dark);
+
+  * {
+    background-color: var(--main-color-white-dark-shade);
+    height: 0.8rem;
+  }
+}
+
+.product_grid {
+}
+
+.product_grid_element {
+  background-color: var(--main-color-white-dark);
+  * {
+    background-color: var(--main-color-white-dark-shade);
+    height: 0.8rem;
+  }
+
+  :nth-child(2) {
+    height: 45px;
+  }
+}

@@ -5,6 +5,7 @@ import {TwoColumnLayout} from 'src/components/TwoColumnLayout/TwoColumnLayout';
 import {PersonalizedSearchIcon} from 'src/assets/icons/PersonalizedSearchIcon';
 import * as styles from './ProcessValue.module.scss';
 import {HireToFitIcon} from 'src/assets/icons/HireToFitIcon';
+import {ProcessAnimation} from './ProcessAnimaiton';
 
 export const ProcessValue: React.FC = () => {
   return (
@@ -65,9 +66,11 @@ export const ProcessValue: React.FC = () => {
             className="image-body flex column gradient-blue-turquioise"
             style={{
               minWidth: '300px',
-              minHeight: '500px',
+              padding: '35px 65px',
             }}
-          ></div>
+          >
+            <ProcessAnimation />
+          </div>
         }
       />
     </section>

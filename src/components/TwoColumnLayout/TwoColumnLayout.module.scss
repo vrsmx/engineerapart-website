@@ -3,23 +3,27 @@
 .left_column_container {
   @include screen-s {
     order: 2;
+    width: 100%;
   }
 }
 
 .right_column_container {
   @include screen-s {
     order: 1;
+    width: 100%;
   }
 }
 
 .left_column_container_reversed {
   @include screen-s {
     order: 1;
+    width: 100%;
   }
 }
 
 .right_column_container_reversed {
   @include screen-s {
     order: 2;
+    width: 100%;
   }
 }
