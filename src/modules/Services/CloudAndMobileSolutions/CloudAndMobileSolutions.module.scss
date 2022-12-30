@@ -7,3 +7,81 @@
     gap: 10px;
   }
 }
+
+.mobile_animation_mobile_container {
+  width: 254px;
+  height: 482px;
+  margin: 50px;
+  background-color: var(--main-color-white);
+  border: 1px solid var(--main-color-border);
+  border-radius: var(--main-radius-secondary);
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile_animation_notificationbar {
+  width: 100%;
+  height: 2em;
+  background-color: var(--main-color-white-dark);
+}
+
+.mobile_animation_menubar {
+  width: 100%;
+  height: 2.6em;
+  background-color: var(--main-color-white-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  * {
+    width: 1.6em;
+    height: 1.6em;
+    background-color: var(--main-color-white-dark-shade);
+    border-radius: var(--main-radius-primary);
+    opacity: 0.3;
+  }
+
+  :nth-child(2) {
+    background-color: var(--main-color-blue);
+  }
+}
+
+.mobile_animation_row {
+  padding: 20px;
+}
+
+.mobile_animation_banner {
+  width: 100%;
+  height: 80px;
+  background-color: var(--main-color-blue);
+  opacity: 0.3;
+  border-radius: var(--main-radius-primary);
+}
+
+.mobile_animation_section_label {
+  width: 5em;
+  height: 1em;
+  border-radius: var(--main-radius-primary);
+  background-color: var(--main-color-white-dark-shade);
+  opacity: 0.5;
+  margin-bottom: 0.6em;
+}
+
+.mobile_animation_carrousel {
+  width: 100%;
+
+  display: flex;
+  gap: 15px;
+}
+
+.mobile_animation_carrousel_element {
+  width: 8em;
+  height: 4em;
+  border-radius: var(--main-radius-primary);
+  background-color: var(--main-color-white-dark);
+  transform: translateX(20px);
+}

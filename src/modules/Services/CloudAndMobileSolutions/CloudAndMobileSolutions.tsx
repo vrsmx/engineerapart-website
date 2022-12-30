@@ -5,6 +5,7 @@ import {CloudServicesIcon} from 'src/assets/icons/CloudServicesIcon';
 import {SectionHeader} from 'src/components/SectionHeader/SectionHeader';
 import {TwoColumnLayout} from 'src/components/TwoColumnLayout/TwoColumnLayout';
 import * as styles from './CloudAndMobileSolutions.module.scss';
+import {MobileAppAnimation} from './MobileAppAnimation';
 
 export const CloudAndMobileSolutions: React.FC = () => {
   return (
@@ -28,12 +29,13 @@ export const CloudAndMobileSolutions: React.FC = () => {
         rightSize={3}
         leftColumn={
           <div
-            className="image-body flex column gradient-blue-turquioise"
+            className="image-body flex justify-center align-center gradient-blue-turquioise"
             style={{
               minWidth: '300px',
-              minHeight: '600px',
             }}
-          ></div>
+          >
+            <MobileAppAnimation />
+          </div>
         }
         rightColumn={
           <div className={`${styles.descriptions_container} flex column`}>
