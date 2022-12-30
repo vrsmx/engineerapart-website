@@ -2,6 +2,7 @@ import * as React from 'react';
 import {ProductOrToolIcon} from 'src/assets/icons/ProductOrToolIcon';
 import {SectionHeader} from 'src/components/SectionHeader/SectionHeader';
 import {TwoColumnLayout} from 'src/components/TwoColumnLayout/TwoColumnLayout';
+import {ProductAnimation} from './ProductAnimation';
 
 export const ReactExpertice: React.FC = () => {
   return (
@@ -22,13 +23,9 @@ export const ReactExpertice: React.FC = () => {
         leftSize={4}
         rightSize={3}
         leftColumn={
-          <div
-            className="image-body flex column gradient-blue-turquioise"
-            style={{
-              minWidth: '300px',
-              minHeight: '500px',
-            }}
-          ></div>
+          <div className="image-body flex justify-center align-center column gradient-blue-turquioise">
+            <ProductAnimation />
+          </div>
         }
         rightColumn={
           <div className="column-grid-element">
