@@ -41,11 +41,13 @@
   height: 2.5px;
   margin-bottom: 1rem;
   background-color: rgba(32, 82, 204, 0.4);
+  box-shadow: rgba(182, 185, 187, 0.7) 0px 8px 24px;
 }
 
 .graph_bar {
   width: 50px;
   background-color: rgba(32, 82, 204, 0.5);
+  box-shadow: rgba(182, 185, 187, 0.7) 0px 8px 24px;
 }
 
 .labels_container {
@@ -63,7 +65,7 @@
 .graph_label {
   width: 70px;
   height: 1.2rem;
-
+  box-shadow: rgba(182, 185, 187, 0.7) 0px 8px 24px;
   background-color: rgba(32, 82, 204, 0.5);
   border-radius: calc(2 * var(--main-radius-secondary));
 }

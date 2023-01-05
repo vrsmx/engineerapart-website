@@ -6,6 +6,8 @@
   height: 350px;
   gap: 75px;
 
+  box-shadow: rgba(182, 185, 187, 0.7) 0px 6px 12px;
+
   @include screen-s {
     height: unset;
     gap: 25px;

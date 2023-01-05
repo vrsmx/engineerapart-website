@@ -8,12 +8,8 @@
 
 .clients_list {
   background-color: var(--main-color-white-shade);
-  width: 60%;
   margin: 0 auto;
-
-  @include screen-s {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .client_container {
