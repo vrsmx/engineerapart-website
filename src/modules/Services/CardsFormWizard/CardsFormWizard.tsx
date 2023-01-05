@@ -59,6 +59,7 @@ export const CardsFormWizard: React.FC<Props> = ({
       [name as keyof ContactFormWizardValues]: value,
     }));
   };
+  const disableSubmit = !isValid() || isSent || loading;
 
   return (
     <Modal wrapperId="react-portal-modal-container" isOpen={isOpen}>
@@ -127,8 +128,10 @@ export const CardsFormWizard: React.FC<Props> = ({
 
             <div className="flex justify-end mrg-top-xs">
               <Button
-                className="small primary expand"
-                disabled={loading || isSent || !isValid()}
+                className={`small primary expand ${
+                  disableSubmit ? 'disabled' : ''
+                }`}
+                disabled={disableSubmit}
                 onClick={handlClick}
                 success={isSent}
                 error={Boolean(error)}

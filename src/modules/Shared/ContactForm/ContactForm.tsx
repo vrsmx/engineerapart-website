@@ -35,6 +35,7 @@ export const ContactForm: React.FC = () => {
       [name as keyof ContactFormWizardValues]: value,
     }));
   };
+  const disableSubmit = !isValid() || isSent || loading;
 
   return (
     <form className="flex column full-width">
@@ -45,6 +46,7 @@ export const ContactForm: React.FC = () => {
           name="name"
           placeholder="Name"
           value={data.name}
+          disabled={loading || isSent}
         />
         <input
           onChange={handleChange}
@@ -52,6 +54,7 @@ export const ContactForm: React.FC = () => {
           name="lastname"
           placeholder="Lastname"
           value={data.lastname}
+          disabled={loading || isSent}
         />
       </div>
       <input
@@ -60,6 +63,7 @@ export const ContactForm: React.FC = () => {
         name="company"
         placeholder="Company"
         value={data.company}
+        disabled={loading || isSent}
       />
       <input
         onChange={handleChange}
@@ -67,6 +71,7 @@ export const ContactForm: React.FC = () => {
         name="phone"
         placeholder="Phone"
         value={data.phone}
+        disabled={loading || isSent}
       />
       <input
         onChange={handleChange}
@@ -75,6 +80,7 @@ export const ContactForm: React.FC = () => {
         placeholder="Email"
         type="email"
         value={data.email}
+        disabled={loading || isSent}
       />
       <textarea
         onChange={handleChange}
@@ -84,11 +90,12 @@ export const ContactForm: React.FC = () => {
         cols={30}
         rows={10}
         value={data.message}
+        disabled={loading || isSent}
       />
       <div className="flex justify-end">
         <Button
-          className="button primary expand"
-          disabled={!isValid()}
+          className={`button primary expand ${disableSubmit ? 'disabled' : ''}`}
+          disabled={disableSubmit}
           onClick={handlClick}
           success={isSent}
           error={Boolean(error)}

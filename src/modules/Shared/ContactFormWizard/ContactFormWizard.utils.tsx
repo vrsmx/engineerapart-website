@@ -6,6 +6,7 @@ import {
   ListUpdate,
   UpdateContactFormWizard,
 } from 'src/modules/Shared/ContactFormWizard/ContactFormWizard.types';
+import {createFormSubmission} from 'src/services/formSubmit';
 
 interface UseContactFormWizard {
   readonly data: ContactFormWizardValues;
@@ -30,12 +31,20 @@ const INITIAL_VALUES: ContactFormWizardValues = {
 export const useContactFormWizard = (): UseContactFormWizard => {
   const [loading, setLoading] = React.useState(false);
   const [isSent, setIsSent] = React.useState(false);
-  const [error, setError] = React.useState(null);
+  const [error, setError] = React.useState<string | null>(null);
   const [form, setForm] = React.useState(INITIAL_VALUES);
 
-  const onSubmit = () => {
-    console.log('submit', form);
-    setIsSent(true);
+  const onSubmit = async () => {
+    setLoading(true);
+    const res = await createFormSubmission(form);
+    console.log(res);
+    setLoading(false);
+
+    if (res.success) {
+      setIsSent(true);
+    } else {
+      setError(res.error);
+    }
   };
 
   const updateList = (targetId: string, listName: ListKeys) => {

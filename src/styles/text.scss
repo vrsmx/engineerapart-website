@@ -183,4 +183,8 @@ textarea {
   &:active {
     border: 1.5px solid var(--main-color-blue);
   }
+
+  &:disabled {
+    color: var(--main-color-white-dark-shade);
+  }
 }

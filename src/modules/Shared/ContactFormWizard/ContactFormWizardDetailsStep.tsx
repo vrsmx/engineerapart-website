@@ -32,6 +32,8 @@ export const ContactFormWizardDetailsStep: React.FC<
     }));
   };
 
+  const disableSubmit = !isValid() || isSent || loading;
+
   return (
     <form
       className={`${styles.details_container} flex column mrg-top-s mrg-btm-s`}
@@ -43,6 +45,7 @@ export const ContactFormWizardDetailsStep: React.FC<
           name="name"
           placeholder="Name"
           value={data.name}
+          disabled={loading || isSent}
         />
         <input
           onChange={handleChange}
@@ -50,6 +53,7 @@ export const ContactFormWizardDetailsStep: React.FC<
           name="lastname"
           placeholder="Lastname"
           value={data.lastname}
+          disabled={loading || isSent}
         />
       </div>
       <div className={`${styles.form_row} flex justify-between`}>
@@ -59,6 +63,7 @@ export const ContactFormWizardDetailsStep: React.FC<
           name="company"
           placeholder="Company"
           value={data.company}
+          disabled={loading || isSent}
         />
         <input
           onChange={handleChange}
@@ -66,6 +71,7 @@ export const ContactFormWizardDetailsStep: React.FC<
           name="phone"
           placeholder="Phone"
           value={data.phone}
+          disabled={loading || isSent}
         />
       </div>
       <input
@@ -75,11 +81,12 @@ export const ContactFormWizardDetailsStep: React.FC<
         placeholder="Email"
         type="email"
         value={data.email}
+        disabled={loading || isSent}
       />
       <div className="flex justify-end">
         <Button
-          className="small primary expand"
-          disabled={isSent || !isValid()}
+          className={`small primary expand ${disableSubmit ? 'disabled' : ''}`}
+          disabled={disableSubmit}
           onClick={handlClick}
           success={isSent}
           error={Boolean(error)}
