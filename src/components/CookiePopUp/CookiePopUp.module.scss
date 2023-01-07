@@ -1,0 +1,28 @@
+@import 'src/styles/mediaQuery.scss';
+
+.cookie_popup_backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.cookie_popup_container {
+  border-radius: var(--main-radius-secondary);
+  max-width: 1000px;
+  color: var(--main-color-white);
+  padding: 50px 100px;
+
+  @include screen-s {
+    padding: 50px 25px;
+  }
+}
+
+.popup_link {
+  color: var(--main-color-turquoise);
+  text-decoration: underline;
+}

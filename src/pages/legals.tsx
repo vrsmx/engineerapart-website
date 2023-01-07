@@ -4,6 +4,7 @@ import {Footer} from 'src/components/Footer/Footer';
 import {PageHeader} from 'src/components/PageHeader/PageHeader';
 import {PageHeaderNavbar} from 'src/components/Navbar/PageHeaderNavbar/PageHeaderNavbar';
 import {Topbar} from 'src/components/Topbar/Topbar';
+import {CookiePopUp} from 'src/components/CookiePopUp/CookiePopUp';
 
 const pageStyles = {
   color: '#232129',
@@ -145,6 +146,7 @@ const LegalsPage: React.FC<PageProps> = () => {
         </section>
       </main>
       <Footer />
+      <CookiePopUp />
     </>
   );
 };

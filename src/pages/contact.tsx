@@ -8,6 +8,7 @@ import {TwoColumnLayout} from 'src/components/TwoColumnLayout/TwoColumnLayout';
 import {Calendar} from 'src/modules/Contact/Calendar/Calendar';
 import {ContactForm} from 'src/modules/Shared/ContactForm/ContactForm';
 import {ContactLinks} from 'src/modules/Contact/ContactLinks/ContactLinks';
+import {CookiePopUp} from 'src/components/CookiePopUp/CookiePopUp';
 
 const ContactPage: React.FC<PageProps> = () => {
   return (
@@ -69,6 +70,7 @@ const ContactPage: React.FC<PageProps> = () => {
         </section>
       </main>
       <Footer />
+      <CookiePopUp />
     </>
   );
 };

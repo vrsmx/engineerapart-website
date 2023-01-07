@@ -9,6 +9,7 @@ import {ContactCtaSection} from 'src/modules/Shared/ContactCtaSection/ContactCta
 import {Footer} from 'src/components/Footer/Footer';
 import {LeadershipSection} from 'src/modules/AboutUs/LeadershipSection/LeadershipSection';
 import {AchievementNumbers} from 'src/modules/AboutUs/AchievementNumbers/AchievementNumbers';
+import {CookiePopUp} from 'src/components/CookiePopUp/CookiePopUp';
 
 const AboutPage: React.FC<PageProps> = () => {
   return (
@@ -69,6 +70,7 @@ const AboutPage: React.FC<PageProps> = () => {
         <ContactCtaSection />
       </main>
       <Footer />
+      <CookiePopUp />
     </>
   );
 };

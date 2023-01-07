@@ -17,6 +17,7 @@ import {PersonalizedSearchIcon} from 'src/assets/icons/PersonalizedSearchIcon';
 import {FollowUpIcon} from 'src/assets/icons/FollowUpIcon';
 import {ServicesResults} from 'src/modules/Services/Results/Results';
 import {ReactExpertice} from 'src/modules/Services/ReactExpertice/ReactExpertice';
+import {CookiePopUp} from 'src/components/CookiePopUp/CookiePopUp';
 
 const layoutitems = [
   {
@@ -95,6 +96,7 @@ const ServicesPage: React.FC<PageProps> = () => {
         <ContactCtaSection />
       </main>
       <Footer />
+      <CookiePopUp />
     </>
   );
 };

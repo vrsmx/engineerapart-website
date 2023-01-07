@@ -10,6 +10,7 @@ import {ProcessValue} from 'src/modules/Home/ProcessValue/ProcessValue';
 import {ClientSocialProof} from 'src/modules/Home/ClientSocialProof/ClientSocialProof';
 import {Footer} from 'src/components/Footer/Footer';
 import {ContactFormWizard} from 'src/modules/Shared/ContactFormWizard/ContactFormWizard';
+import {CookiePopUp} from 'src/components/CookiePopUp/CookiePopUp';
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -31,6 +32,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <ContactFormWizard />
       </main>
       <Footer />
+      <CookiePopUp />
     </>
   );
 };
