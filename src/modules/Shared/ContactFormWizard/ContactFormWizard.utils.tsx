@@ -37,7 +37,6 @@ export const useContactFormWizard = (): UseContactFormWizard => {
   const onSubmit = async () => {
     setLoading(true);
     const res = await createFormSubmission(form);
-    console.log(res);
     setLoading(false);
 
     if (res.success) {

@@ -13,7 +13,7 @@ export const ThreeColumnLayout: React.FC<Props> = ({items}) => {
   return (
     <div className="column-grid mrg-top-l mrg-btm-l">
       {items.map((item) => (
-        <div className="column-grid-element">
+        <div className="column-grid-element" key={item.title}>
           <div className="column-grid-element-title">
             <div className="icon-container gradient-blue">{item.icon}</div>
             <h4>{item.title}</h4>

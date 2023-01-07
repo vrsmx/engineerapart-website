@@ -11,7 +11,6 @@ export const TeamBuildingCards: React.FC = () => {
     useContactFormWizard();
 
   const handleCardClick = (value: string) => {
-    console.log(value);
     updateList(value, 'hireMethod');
     setIsOpen(true);
   };
