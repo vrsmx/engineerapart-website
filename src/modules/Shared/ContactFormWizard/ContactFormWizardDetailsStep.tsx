@@ -83,9 +83,9 @@ export const ContactFormWizardDetailsStep: React.FC<
         value={data.email}
         disabled={loading || isSent}
       />
-      <div className="flex justify-end">
+      <div className="flex column align-end" style={{gap: 16}}>
         <Button
-          className={`small primary expand ${disableSubmit ? 'disabled' : ''}`}
+          className={`button primary expand ${disableSubmit ? 'disabled' : ''}`}
           disabled={disableSubmit}
           onClick={handlClick}
           success={isSent}
@@ -96,6 +96,12 @@ export const ContactFormWizardDetailsStep: React.FC<
         >
           Send
         </Button>
+        {error && (
+          <div className="alert error">
+            <h4 className="txt-orange">Submit error</h4>
+            <p>{error}</p>
+          </div>
+        )}
       </div>
     </form>
   );

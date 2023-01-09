@@ -7,7 +7,7 @@ export const CookiePopUp: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   React.useEffect(() => {
-    const cookiePreference = !localStorage.getItem('cookie_preference');
+    const cookiePreference = localStorage.getItem('cookie_preference');
     setIsOpen(!cookiePreference);
   }, []);
 

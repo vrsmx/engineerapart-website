@@ -126,7 +126,7 @@ export const CardsFormWizard: React.FC<Props> = ({
               value={data.email}
             />
 
-            <div className="flex justify-end mrg-top-xs">
+            <div className="flex column align-end mrg-top-xs" style={{gap: 16}}>
               <Button
                 className={`small primary expand ${
                   disableSubmit ? 'disabled' : ''
@@ -141,6 +141,12 @@ export const CardsFormWizard: React.FC<Props> = ({
               >
                 Send
               </Button>
+              {error && (
+                <div className="alert error">
+                  <h4 className="txt-orange">Submit error</h4>
+                  <p>{error}</p>
+                </div>
+              )}
             </div>
           </form>
         </div>

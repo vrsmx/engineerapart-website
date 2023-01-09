@@ -339,3 +339,13 @@
 .ReactModal__Content--before-close {
   transform: translateY(50px);
 }
+
+.alert {
+  padding: 1rem 1.6rem;
+  border-radius: var(--main-radius-primary);
+
+  &.error {
+    //border: 1px solid #e17979;
+    border: 1.5px solid var(--main-color-orange);
+  }
+}

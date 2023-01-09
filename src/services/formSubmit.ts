@@ -1,6 +1,9 @@
 import AWS from 'aws-sdk';
 import {ContactFormWizardValues} from 'src/modules/Shared/ContactFormWizard/ContactFormWizard.types';
 
+const ERROR_MESSAGE =
+  'We were not able to submit your message, please try again or reach to contact@engineerapart.com.';
+
 const htmlTemplate = (data: ContactFormWizardValues) => {
   return `
     <h3><strong>NEW CONTACT ENTRY - ${data.name} ${data.lastname}</strong></h3>
@@ -53,15 +56,17 @@ export async function createFormSubmission(data: ContactFormWizardValues) {
 
     const sendPromise = new AWS.SES().sendEmail(params).promise();
 
-    sendPromise
-      .then((data) => data)
+    return sendPromise
+      .then((data) => ({success: true, error: null}))
       .catch((e) => {
-        throw new Error(e);
+        console.error(e);
+        return {
+          success: false,
+          error: ERROR_MESSAGE,
+        };
       });
-
-    return {success: true, error: null};
   } catch (e) {
     console.error(e);
-    return {success: false, error: 'Failed to submit, please try again later'};
+    return {success: false, error: ERROR_MESSAGE};
   }
 }

@@ -92,7 +92,7 @@ export const ContactForm: React.FC = () => {
         value={data.message}
         disabled={loading || isSent}
       />
-      <div className="flex justify-end">
+      <div className="flex column align-end" style={{gap: 16}}>
         <Button
           className={`button primary expand ${disableSubmit ? 'disabled' : ''}`}
           disabled={disableSubmit}
@@ -105,6 +105,12 @@ export const ContactForm: React.FC = () => {
         >
           Send
         </Button>
+        {error && (
+          <div className="alert error">
+            <h4 className="txt-orange">Submit error</h4>
+            <p>{error}</p>
+          </div>
+        )}
       </div>
     </form>
   );
