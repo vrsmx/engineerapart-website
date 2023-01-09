@@ -1,11 +1,25 @@
 @import 'src/styles/text.scss';
+@import 'src/styles/mediaQuery.scss';
 
 .leader_title {
   color: var(--main-color-blue-shade);
   font-family: var(--main-font-primary);
-  @include responsiveFont(1.2rem, 3vw, 1.8rem);
+  @include responsiveFont(1.4rem, 3vw, 1.8rem);
   font-weight: 500;
   line-height: 1em;
 
   margin-left: 10%;
+
+  @include screen-s {
+    margin-left: unset;
+  }
+}
+
+.leader_image_container {
+  display: flex;
+  justify-content: flex-end;
+
+  @include screen-s {
+    justify-content: center;
+  }
 }

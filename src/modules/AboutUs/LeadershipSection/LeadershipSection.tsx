@@ -27,7 +27,7 @@ export const LeadershipSection: React.FC = () => {
             leftSize={2}
             rightSize={3}
             leftColumn={
-              <div className="flex justify-end">
+              <div className={styles.leader_image_container}>
                 <div
                   className="bg-gray"
                   style={{width: '208px', height: '241px'}}
@@ -61,7 +61,7 @@ export const LeadershipSection: React.FC = () => {
             leftSize={2}
             rightSize={3}
             leftColumn={
-              <div className="flex justify-end">
+              <div className={styles.leader_image_container}>
                 <div
                   className="bg-gray"
                   style={{width: '208px', height: '241px'}}

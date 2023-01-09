@@ -21,6 +21,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include screen-s {
+    margin: 20px;
+    width: 284px;
+  }
 }
 
 .mobile_animation_notificationbar {

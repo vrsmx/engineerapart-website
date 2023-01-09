@@ -32,7 +32,7 @@
 
 .nav_header {
   font-family: var(--main-font-primary);
-  @include responsiveFont(0.8rem, 2vw, 1.1rem);
+  @include responsiveFont(0.9rem, 2vw, 1.1rem);
   font-weight: 300;
   line-height: 1em;
   letter-spacing: 0.03em;
@@ -52,6 +52,7 @@
   letter-spacing: 0.03em;
   transition: var(--main-default-animation-time) ease transform, filter;
   cursor: pointer;
+  opacity: 0.7;
 
   &:hover {
     transform: translateX(10%) scale(1.05);
@@ -88,6 +89,7 @@
   letter-spacing: 0.03em;
   transition: var(--main-default-animation-time) ease transform, filter;
   cursor: pointer;
+  opacity: 0.7;
 
   &:hover {
     transform: scale(1.04) translateY(1px);

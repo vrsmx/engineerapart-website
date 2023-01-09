@@ -49,10 +49,11 @@
 
 h1 {
   font-family: var(--main-font-primary);
-  @include responsiveFont(3.8rem, 10vw, 6rem);
+  @include responsiveFont(3.2rem, 10vw, 6rem);
   font-weight: 500;
   line-height: 1em;
   word-break: keep-all;
+  letter-spacing: 0.1rem;
 }
 
 h2 {
