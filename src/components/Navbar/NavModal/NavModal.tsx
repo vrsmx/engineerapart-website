@@ -1,11 +1,13 @@
-import {Link} from 'gatsby';
 import * as React from 'react';
+import {motion} from 'framer-motion';
+import {Link} from 'gatsby';
 import {EmailIcon} from 'src/assets/icons/EmailIcon';
 import {LinkedInIcon} from 'src/assets/icons/LinkedInIcon';
 import {Modal} from 'src/components/Modal/Modal';
 import {usePreventScroll} from 'src/utils/usePreventScroll';
 
 import * as styles from './NavModal.module.scss';
+import {slideFromRightAnimation} from 'src/assets/animations';
 
 interface NavModalProps {
   isOpen: boolean;
@@ -16,7 +18,10 @@ export const NavModal: React.FC<NavModalProps> = ({isOpen, onClose}) => {
 
   return (
     <Modal wrapperId="react-portal-modal-container" isOpen={isOpen}>
-      <div className={`${styles.modal_container} flex column align-center`}>
+      <motion.div
+        className={`${styles.modal_container} flex column align-center`}
+        {...slideFromRightAnimation}
+      >
         <div className="full-width flex justify-end">
           <button onClick={onClose} className={styles.close_button}>
             close
@@ -80,7 +85,7 @@ export const NavModal: React.FC<NavModalProps> = ({isOpen, onClose}) => {
             </li>}
           </ul> */}
         </div>
-      </div>
+      </motion.div>
     </Modal>
   );
 };

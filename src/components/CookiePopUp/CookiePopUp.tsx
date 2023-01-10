@@ -1,5 +1,7 @@
 import {Link} from 'gatsby';
+import {motion} from 'framer-motion';
 import * as React from 'react';
+import {slideFromBottomAnimation} from 'src/assets/animations';
 import {Modal} from 'src/components/Modal/Modal';
 import * as styles from './CookiePopUp.module.scss';
 
@@ -18,7 +20,10 @@ export const CookiePopUp: React.FC = () => {
 
   return (
     <Modal wrapperId="react-portal-modal-container" isOpen={isOpen}>
-      <div className={styles.cookie_popup_backdrop}>
+      <motion.div
+        className={styles.cookie_popup_backdrop}
+        {...slideFromBottomAnimation}
+      >
         <div
           className={`${styles.cookie_popup_container} flex column page-container bg-black`}
         >
@@ -38,7 +43,7 @@ export const CookiePopUp: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Modal>
   );
 };

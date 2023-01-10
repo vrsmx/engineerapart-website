@@ -1,4 +1,6 @@
 import * as React from 'react';
+import {motion} from 'framer-motion';
+import {fadeInAnimation, slideFromBottomAnimation} from 'src/assets/animations';
 import {CrossIcon} from 'src/assets/icons/CrossIcon';
 import {Button} from 'src/components/Button/Button';
 import {Modal} from 'src/components/Modal/Modal';
@@ -63,8 +65,11 @@ export const CardsFormWizard: React.FC<Props> = ({
 
   return (
     <Modal wrapperId="react-portal-modal-container" isOpen={isOpen}>
-      <div className={styles.wizard_backdrop}>
-        <div className={styles.wizard_container}>
+      <motion.div className={styles.wizard_backdrop} {...fadeInAnimation}>
+        <motion.div
+          className={styles.wizard_container}
+          {...slideFromBottomAnimation}
+        >
           <div className="flex justify-end full-width">
             <div className="icon-container small">
               <button className="cursor-pointer" onClick={onClose}>
@@ -149,8 +154,8 @@ export const CardsFormWizard: React.FC<Props> = ({
               )}
             </div>
           </form>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </Modal>
   );
 };

@@ -1,3 +1,4 @@
+import {AnimatePresence} from 'framer-motion';
 import * as React from 'react';
 import {createPortal} from 'react-dom';
 
@@ -51,7 +52,11 @@ interface Props {
   wrapperId?: string;
 }
 export const Modal: React.FC<Props> = ({children, isOpen, wrapperId}) => {
-  if (!isOpen) return null;
-
-  return <ReactPortal wrapperId={wrapperId}>{children}</ReactPortal>;
+  return (
+    <AnimatePresence>
+      {isOpen ? (
+        <ReactPortal wrapperId={wrapperId}>{children}</ReactPortal>
+      ) : null}
+    </AnimatePresence>
+  );
 };
