@@ -1,10 +1,15 @@
-import {Link} from 'gatsby';
 import * as React from 'react';
+import {motion} from 'framer-motion';
+import {Link} from 'gatsby';
 import {TwoColumnLayout} from 'src/components/TwoColumnLayout/TwoColumnLayout';
+import {viewPortAnimation} from 'src/assets/animations';
 
 export const ContactCtaSection: React.FC = () => {
   return (
-    <section className="page-container mrg-btm-xxl">
+    <motion.section
+      className="page-container mrg-btm-xxl"
+      {...viewPortAnimation}
+    >
       <TwoColumnLayout
         leftSize={2}
         rightSize={3}
@@ -24,6 +29,6 @@ export const ContactCtaSection: React.FC = () => {
           </div>
         }
       />
-    </section>
+    </motion.section>
   );
 };

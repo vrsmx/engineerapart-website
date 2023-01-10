@@ -1,4 +1,6 @@
 import * as React from 'react';
+import {motion} from 'framer-motion';
+import {viewPortAnimation} from 'src/assets/animations';
 import * as styles from './AchievementNumbers.module.scss';
 
 interface AchievementNumberCardProps {
@@ -19,7 +21,10 @@ const AchievementNumberCard: React.FC<AchievementNumberCardProps> = ({
 
 export const AchievementNumbers: React.FC = () => {
   return (
-    <div className={`${styles.numbers_container} flex wrap`}>
+    <motion.div
+      className={`${styles.numbers_container} flex wrap`}
+      {...viewPortAnimation}
+    >
       <div
         className={`${styles.numbers_container} flex column`}
         style={{flex: 3}}
@@ -40,6 +45,6 @@ export const AchievementNumbers: React.FC = () => {
       >
         <AchievementNumberCard number="63" label="projects" />
       </div>
-    </div>
+    </motion.div>
   );
 };

@@ -1,4 +1,6 @@
 import * as React from 'react';
+import {motion} from 'framer-motion';
+import {viewPortAnimation} from 'src/assets/animations';
 
 interface LayoutItem {
   icon: React.ReactNode;
@@ -11,7 +13,10 @@ interface Props {
 }
 export const ThreeColumnLayout: React.FC<Props> = ({items}) => {
   return (
-    <div className="column-grid mrg-top-l mrg-btm-l">
+    <motion.div
+      className="column-grid mrg-top-l mrg-btm-l"
+      {...viewPortAnimation}
+    >
       {items.map((item) => (
         <div className="column-grid-element" key={item.title}>
           <div className="column-grid-element-title">
@@ -21,6 +26,6 @@ export const ThreeColumnLayout: React.FC<Props> = ({items}) => {
           <p>{item.content}</p>
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 };

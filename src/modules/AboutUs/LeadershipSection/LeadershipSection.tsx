@@ -1,26 +1,35 @@
 import * as React from 'react';
+import {motion} from 'framer-motion';
 import * as styles from './LeadershipSection.module.scss';
 import {TwoColumnLayout} from 'src/components/TwoColumnLayout/TwoColumnLayout';
 import {StaticImage} from 'gatsby-plugin-image';
+import {viewPortAnimation} from 'src/assets/animations';
 
 export const LeadershipSection: React.FC = () => {
   return (
-    <section className="page-container flex column">
+    <motion.section className="page-container flex column">
       <TwoColumnLayout
         alignItems="start"
         leftSize={2}
         rightSize={3}
-        leftColumn={<h3 className="section-header">Leaders</h3>}
+        leftColumn={
+          <motion.h3 className="section-header" {...viewPortAnimation}>
+            Leaders
+          </motion.h3>
+        }
         rightColumn={
-          <h4 className="section-header-underline">
+          <motion.h4
+            className="section-header-underline"
+            {...viewPortAnimation}
+          >
             Our engineering team is led by experienced principal level engineers
             who have previously worked at some of the world's largest tech
             companies.
-          </h4>
+          </motion.h4>
         }
       />
       <ul className="mrg-btm-xl">
-        <li className="flex column mrg-btm-m">
+        <motion.li className="flex column mrg-btm-m" {...viewPortAnimation}>
           <h4 className={`${styles.leader_title} mrg-btm-xs`}>Patrick Sears</h4>
           <TwoColumnLayout
             className=""
@@ -62,8 +71,8 @@ export const LeadershipSection: React.FC = () => {
               </div>
             }
           />
-        </li>
-        <li className="flex column">
+        </motion.li>
+        <motion.li className="flex column" {...viewPortAnimation}>
           <h4 className={`${styles.leader_title} mrg-btm-xs`}>Barry Steyn</h4>
           <TwoColumnLayout
             className=""
@@ -105,8 +114,8 @@ export const LeadershipSection: React.FC = () => {
               </div>
             }
           />
-        </li>
+        </motion.li>
       </ul>
-    </section>
+    </motion.section>
   );
 };

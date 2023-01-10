@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {motion} from 'framer-motion';
 import {SectionHeader} from 'src/components/SectionHeader/SectionHeader';
 import {ContactFormWizardCardsStep} from 'src/modules/Shared/ContactFormWizard/ContactFormWizardCardsStep';
 import {ContactFormWizardStepController} from 'src/modules/Shared/ContactFormWizard/ContactFormWizardStepController';
@@ -15,6 +16,7 @@ import {MobileAppsIcon} from 'src/assets/icons/MobileAppsIcon';
 import {ExtendTeamIcon} from 'src/assets/icons/ExtendTeamIcon';
 import {NewTeamIcon} from 'src/assets/icons/NewTeamIcon';
 import {ScaleIcon} from 'src/assets/icons/ScaleIcon.tsx';
+import {viewPortAnimation} from 'src/assets/animations';
 
 interface GetSteps {
   readonly updateList: ListUpdate;
@@ -130,7 +132,10 @@ export const ContactFormWizard = () => {
   });
 
   return (
-    <section className="page-container flex column mrg-top-xl">
+    <motion.section
+      className="page-container flex column mrg-top-xl"
+      {...viewPortAnimation}
+    >
       <SectionHeader
         title={
           <>
@@ -147,6 +152,6 @@ export const ContactFormWizard = () => {
         backStep={backStep}
         done={isSent}
       />
-    </section>
+    </motion.section>
   );
 };

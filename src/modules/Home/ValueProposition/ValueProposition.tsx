@@ -1,5 +1,7 @@
-import {Link} from 'gatsby';
 import * as React from 'react';
+import {Link} from 'gatsby';
+import {motion} from 'framer-motion';
+import {viewPortAnimation} from 'src/assets/animations';
 import {AccelerateIcon} from 'src/assets/icons/AccelerateIcon';
 import {ScaleIcon} from 'src/assets/icons/ScaleIcon.tsx';
 import {StartIcon} from 'src/assets/icons/StartIcon';
@@ -31,7 +33,11 @@ const layoutitems = [
 
 export const ValueProposition: React.FC = () => {
   return (
-    <section className="page-container flex column" id="value-proposition">
+    <motion.section
+      className="page-container flex column"
+      {...viewPortAnimation}
+      id="value-proposition"
+    >
       <SectionHeader
         title={<>Minimum effort, maximum returns</>}
         underline={
@@ -63,6 +69,6 @@ export const ValueProposition: React.FC = () => {
           </Link>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

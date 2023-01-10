@@ -1,4 +1,6 @@
 import * as React from 'react';
+import {motion} from 'framer-motion';
+import {viewPortAnimation} from 'src/assets/animations';
 import {ExtendTeamIcon} from 'src/assets/icons/ExtendTeamIcon';
 import {NewTeamIcon} from 'src/assets/icons/NewTeamIcon';
 import {useContactFormWizard} from 'src/modules/Shared/ContactFormWizard/ContactFormWizard.utils';
@@ -16,7 +18,8 @@ export const TeamBuildingCards: React.FC = () => {
   };
 
   return (
-    <div
+    <motion.div
+      {...viewPortAnimation}
       className={`${styles.cards_container} flex justify-center align-stretch wrap mrg-btm-xl`}
     >
       <div
@@ -75,6 +78,6 @@ export const TeamBuildingCards: React.FC = () => {
         loading={loading}
         error={error}
       />
-    </div>
+    </motion.div>
   );
 };

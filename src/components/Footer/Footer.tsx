@@ -1,13 +1,18 @@
 import * as React from 'react';
 import {Link} from 'gatsby';
+import {motion} from 'framer-motion';
 import * as styles from './Footer.module.scss';
 import {LinkedInIcon} from 'src/assets/icons/LinkedInIcon';
+import {viewPortAnimation} from 'src/assets/animations';
 
 export const Footer = () => {
   return (
     <footer className="full-width bg-black txt-light pdg-top-l pdg-btm-l">
       <div className="page-container flex column" style={{gap: '50px'}}>
-        <nav className={`${styles.footer_nav} flex wrap`}>
+        <motion.nav
+          className={`${styles.footer_nav} flex wrap`}
+          {...viewPortAnimation}
+        >
           <div className={`${styles.navlink_column} flex column`}>
             <Link className={styles.nav_header} to="/">
               Home
@@ -55,8 +60,9 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-        </nav>
-        <div
+        </motion.nav>
+        <motion.div
+          {...viewPortAnimation}
           className={`${styles.linkedin_link} full-width flex align-center`}
           style={{gap: 2}}
         >
@@ -72,8 +78,11 @@ export const Footer = () => {
           >
             LinkedIn
           </a>
-        </div>
-        <div className="full-width flex justify-between wrap">
+        </motion.div>
+        <motion.div
+          className="full-width flex justify-between wrap"
+          {...viewPortAnimation}
+        >
           <span className={`${styles.legal_link} mrg-btm-s`}>
             © 2022 EngineerApart. All rights reserved.
           </span>
@@ -89,7 +98,7 @@ export const Footer = () => {
               <Link to="/legals#terms-and-condition">Terms and Condition</Link>
             </li> */}
           </ul>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

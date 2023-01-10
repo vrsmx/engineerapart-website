@@ -1,23 +1,22 @@
 import * as React from 'react';
+import {motion} from 'framer-motion';
 import {HeadFC, Link, PageProps} from 'gatsby';
 import {ThreeColumnLayout} from 'src/components/ThreeColumnLayout/ThreeColumnLayout';
 import {PageHeader} from 'src/components/PageHeader/PageHeader';
 import {PageHeaderNavbar} from 'src/components/Navbar/PageHeaderNavbar/PageHeaderNavbar';
-import {TwoColumnLayout} from 'src/components/TwoColumnLayout/TwoColumnLayout';
-import {SectionHeader} from 'src/components/SectionHeader/SectionHeader';
 import {QuoteSection} from 'src/components/QuoteSection/QuoteSection';
 import {Topbar} from 'src/components/Topbar/Topbar';
 import {TeamBuildingCards} from 'src/modules/Services/TeamBuildingCards/TeamBuildingCards';
 import {ContactCtaSection} from 'src/modules/Shared/ContactCtaSection/ContactCtaSection';
 import {Footer} from 'src/components/Footer/Footer';
 import {CloudAndMobileSolutions} from 'src/modules/Services/CloudAndMobileSolutions/CloudAndMobileSolutions';
-import {ProductOrToolIcon} from 'src/assets/icons/ProductOrToolIcon';
 import {AccurateSearchIcon} from 'src/assets/icons/AccurateSearchIcon';
 import {PersonalizedSearchIcon} from 'src/assets/icons/PersonalizedSearchIcon';
 import {FollowUpIcon} from 'src/assets/icons/FollowUpIcon';
 import {ServicesResults} from 'src/modules/Services/Results/Results';
 import {ReactExpertice} from 'src/modules/Services/ReactExpertice/ReactExpertice';
 import {CookiePopUp} from 'src/components/CookiePopUp/CookiePopUp';
+import {viewPortAnimation} from 'src/assets/animations';
 
 const layoutitems = [
   {
@@ -67,32 +66,42 @@ const ServicesPage: React.FC<PageProps> = () => {
             }
           />
         </section>
-        <section className="page-container mrg-top-xl mrg-btm-xl">
+        <motion.section
+          className="page-container mrg-top-xl mrg-btm-xl"
+          {...viewPortAnimation}
+        >
           <ServicesResults />
-        </section>
-        <section
+        </motion.section>
+        <motion.section
           className="page-container mrg-top-xl mrg-btm-xl"
           id="expertice"
+          {...viewPortAnimation}
         >
           <ReactExpertice />
-        </section>
+        </motion.section>
         <QuoteSection>
-          <div className="page-container flex column align-end">
+          <motion.div
+            className="page-container flex column align-end"
+            {...viewPortAnimation}
+          >
             <p className="quote-l txt-light txt-max-width-m">
               Our React experts will deliver high quality, responsive and
               efficient UIs that can be easily scaled and mantained to future
               proof your investment.
             </p>
-          </div>
+          </motion.div>
         </QuoteSection>
         <CloudAndMobileSolutions />
-        <section className="page-container flex column align-center">
+        <motion.section
+          className="page-container flex column align-center"
+          {...viewPortAnimation}
+        >
           <h3 className="section-header txt-center txt-max-width-s">
             Grow and build your teams
           </h3>
           <ThreeColumnLayout items={layoutitems} />
           <TeamBuildingCards />
-        </section>
+        </motion.section>
         <ContactCtaSection />
       </main>
       <Footer />

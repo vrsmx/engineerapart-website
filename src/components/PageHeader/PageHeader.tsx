@@ -1,4 +1,6 @@
 import * as React from 'react';
+import {motion} from 'framer-motion';
+import {viewPortAnimation} from 'src/assets/animations';
 import * as styles from './PageHeader.module.scss';
 
 interface Props {
@@ -11,11 +13,21 @@ export const PageHeader: React.FC<Props> = ({title, underline, cta}) => {
     <div
       className={`${styles.page_header_component} page-container flex column pdg-top-l pdg-btm-l txt-light`}
     >
-      <h1 className="txt-left txt-max-width-xl mrg-btm-xxs">{title}</h1>
-      <h2 className="page-header-underline txt-left txt-max-width-xs mrg-btm-xxs">
+      <motion.h1
+        className="txt-left txt-max-width-xl mrg-btm-xxs"
+        {...viewPortAnimation}
+      >
+        {title}
+      </motion.h1>
+      <motion.h2
+        className="page-header-underline txt-left txt-max-width-xs mrg-btm-xxs"
+        {...viewPortAnimation}
+      >
         {underline}
-      </h2>
-      <div className="flex">{cta}</div>
+      </motion.h2>
+      <motion.div className="flex" {...viewPortAnimation}>
+        {cta}
+      </motion.div>
     </div>
   );
 };

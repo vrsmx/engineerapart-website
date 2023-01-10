@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {motion} from 'framer-motion';
 import {HeadFC, Link, PageProps} from 'gatsby';
 import {PageHeaderNavbar} from 'src/components/Navbar/PageHeaderNavbar/PageHeaderNavbar';
 import {PageHeader} from 'src/components/PageHeader/PageHeader';
@@ -10,6 +11,7 @@ import {Footer} from 'src/components/Footer/Footer';
 import {LeadershipSection} from 'src/modules/AboutUs/LeadershipSection/LeadershipSection';
 import {AchievementNumbers} from 'src/modules/AboutUs/AchievementNumbers/AchievementNumbers';
 import {CookiePopUp} from 'src/components/CookiePopUp/CookiePopUp';
+import {viewPortAnimation} from 'src/assets/animations';
 
 const AboutPage: React.FC<PageProps> = () => {
   return (
@@ -28,7 +30,10 @@ const AboutPage: React.FC<PageProps> = () => {
             }
           />
         </section>
-        <section className="page-container mrg-top-xl mrg-btm-xl">
+        <motion.section
+          className="page-container mrg-top-xl mrg-btm-xl"
+          {...viewPortAnimation}
+        >
           <TwoColumnLayout
             leftSize={1}
             rightSize={1}
@@ -56,14 +61,17 @@ const AboutPage: React.FC<PageProps> = () => {
             }
           />
           <AchievementNumbers />
-        </section>
+        </motion.section>
         <section className="mrg-top-l mrg-btm-l">
           <QuoteSection>
-            <div className="page-container flex justify-end">
+            <motion.div
+              className="page-container flex justify-end"
+              {...viewPortAnimation}
+            >
               <p className="quote-xl txt-light txt-left txt-max-width-xs">
                 We are proud of our work and the impact it has on our clients
               </p>
-            </div>
+            </motion.div>
           </QuoteSection>
         </section>
         <LeadershipSection />

@@ -1,11 +1,14 @@
-import {Link} from 'gatsby';
 import * as React from 'react';
+import {motion} from 'framer-motion';
+import {Link} from 'gatsby';
 import * as styles from './HomeHeader.module.scss';
+import {viewPortAnimation} from 'src/assets/animations';
 
 export const HomeHeader: React.FC = () => {
   return (
-    <section
+    <motion.section
       className={`${styles.hero_component} page-container flex column align-center`}
+      {...viewPortAnimation}
     >
       <h1 className="txt-center txt-dark">
         Start <br />
@@ -28,6 +31,6 @@ export const HomeHeader: React.FC = () => {
           </Link>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

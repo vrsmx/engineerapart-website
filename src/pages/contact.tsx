@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {motion} from 'framer-motion';
 import {HeadFC, Link, PageProps} from 'gatsby';
 import {PageHeaderNavbar} from 'src/components/Navbar/PageHeaderNavbar/PageHeaderNavbar';
 import {PageHeader} from 'src/components/PageHeader/PageHeader';
@@ -9,6 +10,7 @@ import {Calendar} from 'src/modules/Contact/Calendar/Calendar';
 import {ContactForm} from 'src/modules/Shared/ContactForm/ContactForm';
 import {ContactLinks} from 'src/modules/Contact/ContactLinks/ContactLinks';
 import {CookiePopUp} from 'src/components/CookiePopUp/CookiePopUp';
+import {viewPortAnimation} from 'src/assets/animations';
 
 const ContactPage: React.FC<PageProps> = () => {
   return (
@@ -27,7 +29,10 @@ const ContactPage: React.FC<PageProps> = () => {
             }
           />
         </section>
-        <section className="page-container mrg-top-xl mrg-btm-l">
+        <motion.section
+          className="page-container mrg-top-xl mrg-btm-l"
+          {...viewPortAnimation}
+        >
           <TwoColumnLayout
             leftSize={5}
             rightSize={3}
@@ -46,11 +51,18 @@ const ContactPage: React.FC<PageProps> = () => {
               </div>
             }
           />
-        </section>
-        <section className="page-container pdg-btm-xl" id="form">
+        </motion.section>
+        <motion.section
+          className="page-container pdg-btm-l"
+          {...viewPortAnimation}
+          id="form"
+        >
           <Calendar />
-        </section>
-        <section className="page-container mrg-top-xl mrg-btm-xl">
+        </motion.section>
+        <motion.section
+          className="page-container mrg-top-xl mrg-btm-xl"
+          {...viewPortAnimation}
+        >
           <TwoColumnLayout
             alignItems="start"
             leftColumn={
@@ -67,7 +79,7 @@ const ContactPage: React.FC<PageProps> = () => {
             }
             rightColumn={<ContactForm />}
           />
-        </section>
+        </motion.section>
       </main>
       <Footer />
       <CookiePopUp />
