@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as styles from './LeadershipSection.module.scss';
 import {TwoColumnLayout} from 'src/components/TwoColumnLayout/TwoColumnLayout';
+import {StaticImage} from 'gatsby-plugin-image';
 
 export const LeadershipSection: React.FC = () => {
   return (
@@ -28,10 +29,19 @@ export const LeadershipSection: React.FC = () => {
             rightSize={3}
             leftColumn={
               <div className={styles.leader_image_container}>
-                <div
-                  className="bg-gray"
-                  style={{width: '208px', height: '241px'}}
-                ></div>
+                <div className="bg-gray">
+                  <StaticImage
+                    src={'../../../images/patrick-sears.jpeg'}
+                    alt="EngineerApart Logo"
+                    transformOptions={{
+                      cropFocus: 'attention',
+                      grayscale: true,
+                    }}
+                    placeholder="blurred"
+                    aspectRatio={208 / 209}
+                    width={258}
+                  />
+                </div>
               </div>
             }
             rightColumn={
@@ -62,10 +72,19 @@ export const LeadershipSection: React.FC = () => {
             rightSize={3}
             leftColumn={
               <div className={styles.leader_image_container}>
-                <div
-                  className="bg-gray"
-                  style={{width: '208px', height: '241px'}}
-                ></div>
+                <div className="bg-gray">
+                  <StaticImage
+                    src={'../../../images/barry-steyn.jpeg'}
+                    alt="EngineerApart Logo"
+                    transformOptions={{
+                      cropFocus: 'attention',
+                      grayscale: true,
+                    }}
+                    placeholder="blurred"
+                    aspectRatio={208 / 209}
+                    width={258}
+                  />
+                </div>
               </div>
             }
             rightColumn={
