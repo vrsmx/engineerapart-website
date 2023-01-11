@@ -77,13 +77,13 @@ export const ResultsAnimation: React.FC = () => {
     <motion.div
       className={styles.graph_container}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
       variants={graphContainerVariants}
     >
       <motion.div
         className={styles.bars_container}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
         variants={barsContainerVariants}
       >
         <motion.div
@@ -116,7 +116,7 @@ export const ResultsAnimation: React.FC = () => {
       <motion.div
         className={styles.labels_container}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
         variants={labelsContainerVariants}
       >
         <motion.div className={styles.graph_label} variants={labelVariant} />

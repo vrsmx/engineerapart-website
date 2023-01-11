@@ -96,7 +96,7 @@ export const ProductAnimation: React.FC = () => {
       <motion.div
         className={styles.product_container}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
         variants={uiContainerVariants}
       >
         <motion.div className={styles.product_navbar}>
@@ -154,7 +154,7 @@ export const ProductAnimation: React.FC = () => {
           <motion.div
             className={styles.product_grid}
             initial="test"
-            animate="show"
+            whileInView="show"
             variants={gridVariants}
           >
             <GridElement />

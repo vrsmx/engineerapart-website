@@ -92,7 +92,7 @@ export const MobileAppAnimation: React.FC = () => {
       <motion.div
         className={styles.mobile_animation_mobile_container}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
         variants={uiContainerVariants}
       >
         <motion.div

@@ -59,7 +59,7 @@ export const CalendarAnimation: React.FC = () => {
       <motion.div
         className={styles.calendar_animation_scheduler_container}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
         variants={schedulerVariants}
       >
         <motion.div
