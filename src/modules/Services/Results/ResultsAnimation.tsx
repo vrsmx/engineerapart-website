@@ -1,24 +1,130 @@
 import * as React from 'react';
+import {motion} from 'framer-motion';
 import * as styles from './Results.module.scss';
+
+const graphContainerVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
+const barsContainerVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      when: 'beforeChildren',
+      ease: 'linear',
+      duration: 0.35,
+      delay: 0.5,
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const barVariants = {
+  hidden: {
+    scaleY: 0,
+  },
+  visible: {
+    scaleY: 1,
+    transition: {
+      when: 'afterChildren',
+      ease: 'linear',
+      duration: 0.25,
+    },
+  },
+};
+
+const labelsContainerVariants = {
+  hidden: {
+    opacity: 0,
+    x: 500,
+  },
+  visible: {
+    opacity: [0, 0, 1],
+    x: [500, 250, 0],
+    transition: {
+      when: 'beforeChildren',
+      ease: 'linear',
+      duration: 0.35,
+      delay: 0.5,
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const labelVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 0.7,
+    transition: {
+      when: 'afterChildren',
+      ease: 'linear',
+      duration: 0.25,
+    },
+  },
+};
 
 export const ResultsAnimation: React.FC = () => {
   return (
-    <div className={styles.graph_container}>
-      <div className={styles.bars_container}>
-        <div className={styles.graph_bar} style={{height: 50}} />
-        <div className={styles.graph_bar} style={{height: 150}} />
-        <div className={styles.graph_bar} style={{height: 200}} />
-        <div className={styles.graph_bar} style={{height: 220}} />
-        <div className={styles.graph_bar} style={{height: 350}} />
-      </div>
-      <div className={styles.divider} />
-      <div className={styles.labels_container}>
-        <div className={styles.graph_label} />
-        <div className={styles.graph_label} />
-        <div className={styles.graph_label} />
-        <div className={styles.graph_label} />
-        <div className={styles.graph_label} />
-      </div>
-    </div>
+    <motion.div
+      className={styles.graph_container}
+      initial="hidden"
+      animate="visible"
+      variants={graphContainerVariants}
+    >
+      <motion.div
+        className={styles.bars_container}
+        initial="hidden"
+        animate="visible"
+        variants={barsContainerVariants}
+      >
+        <motion.div
+          className={styles.graph_bar}
+          style={{height: 50, originY: 1}}
+          variants={barVariants}
+        />
+        <motion.div
+          className={styles.graph_bar}
+          style={{height: 150, originY: 1}}
+          variants={barVariants}
+        />
+        <motion.div
+          className={styles.graph_bar}
+          style={{height: 200, originY: 1}}
+          variants={barVariants}
+        />
+        <motion.div
+          className={styles.graph_bar}
+          style={{height: 220, originY: 1}}
+          variants={barVariants}
+        />
+        <motion.div
+          className={styles.graph_bar}
+          style={{height: 350, originY: 1}}
+          variants={barVariants}
+        />
+      </motion.div>
+      <motion.div className={styles.divider} />
+      <motion.div
+        className={styles.labels_container}
+        initial="hidden"
+        animate="visible"
+        variants={labelsContainerVariants}
+      >
+        <motion.div className={styles.graph_label} variants={labelVariant} />
+        <motion.div className={styles.graph_label} variants={labelVariant} />
+        <motion.div className={styles.graph_label} variants={labelVariant} />
+        <motion.div className={styles.graph_label} variants={labelVariant} />
+        <motion.div className={styles.graph_label} variants={labelVariant} />
+      </motion.div>
+    </motion.div>
   );
 };
