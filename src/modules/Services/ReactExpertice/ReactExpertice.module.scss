@@ -1,5 +1,16 @@
 @import 'src/styles/mediaQuery.scss';
 
+.product_backdrop {
+  width: 100%;
+  background: transparent;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0.1em, transparent 0.1em),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0.1em, transparent 0.1em);
+  background-size: 5em 5em;
+  background-position: center;
+
+  display: relative;
+}
+
 .product_container {
   background-color: var(--main-color-white);
   width: calc(100% - 100px);
