@@ -14,7 +14,7 @@ const pageStyles = {
 
 const config = {
   name: 'EngineerApart',
-  short: 'EA',
+  short: 'EngineerApart',
   address: '1301 Oak Lake Court, San Jose, 95131',
   domain: 'engineerapart.com',
   realURL: 'www.engineerapart.com',
@@ -34,16 +34,16 @@ const LegalsPage: React.FC<PageProps> = () => {
         </section>
         <section className="page-container flex column txt-max-width-xl mrg-btm-xl">
           <p className="paragraph">
-            <strong>{config.name}</strong> (<strong>{config.short}</strong> for
-            short), with address in {config.address}, recognizes the importance
-            of a legitimate, controlled, and informed treatment of the personal
-            data of its visitors and users of our website denominated{' '}
-            {config.domain}, and puts at your disposal the present Privacy
-            Statement, in order for you to know its practices when obtaining,
-            using, saving, and in general, handling your personal information in
-            accordance with the Federal Law of Personal Data Protection in
-            Possession of Particulars or Ley Federal de Protección de Datos
-            Personales en Posesión de los Particulares (henceforth the “Law”).
+            <strong>{config.name}</strong>, with address in {config.address},
+            recognizes the importance of a legitimate, controlled, and informed
+            treatment of the personal data of its visitors and users of our
+            website denominated {config.domain}, and puts at your disposal the
+            present Privacy Statement, in order for you to know its practices
+            when obtaining, using, saving, and in general, handling your
+            personal information in accordance with the Federal Law of Personal
+            Data Protection in Possession of Particulars or Ley Federal de
+            Protección de Datos Personales en Posesión de los Particulares
+            (henceforth the “Law”).
           </p>
           <h4 className="mrg-btm-xxs mrg-top-s">1. Collected Personal Data</h4>
           <p className="paragraph">
