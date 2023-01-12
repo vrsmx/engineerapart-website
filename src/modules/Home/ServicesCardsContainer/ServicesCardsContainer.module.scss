@@ -15,6 +15,18 @@
 }
 
 .cards_container {
+  display: flex;
+  justify-content: center;
+}
+
+.cards_grid {
+  width: 100%;
+  background: transparent;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0.1em, transparent 0.1em),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0.1em, transparent 0.1em);
+  background-size: 5em 5em;
+  background-position: center;
+
   gap: 30px;
 
   display: flex;

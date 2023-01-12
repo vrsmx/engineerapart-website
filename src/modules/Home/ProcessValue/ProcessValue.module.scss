@@ -16,6 +16,15 @@
   }
 }
 
+.proces_animation_backdrop {
+  padding: 35px 65px;
+  background: transparent;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0.1em, transparent 0.1em),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0.1em, transparent 0.1em);
+  background-size: 5em 5em;
+  background-position: center;
+}
+
 .process_animation_container {
   padding: 40px 25px;
   display: grid;

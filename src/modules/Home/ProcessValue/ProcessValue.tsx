@@ -69,7 +69,6 @@ export const ProcessValue: React.FC = () => {
             className="image-body flex column gradient-blue-turquioise"
             style={{
               minWidth: '300px',
-              padding: '35px 65px',
             }}
             {...viewPortAnimation}
           >

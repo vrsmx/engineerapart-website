@@ -10,6 +10,7 @@ const graphContainerVariants = {
     opacity: 1,
   },
 };
+
 const barsContainerVariants = {
   hidden: {
     opacity: 0,
