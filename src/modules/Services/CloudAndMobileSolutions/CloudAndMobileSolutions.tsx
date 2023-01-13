@@ -11,7 +11,7 @@ export const CloudAndMobileSolutions: React.FC = () => {
   return (
     <section
       className="page-container mrg-top-xl mrg-btm-xl"
-      id="hiring-process"
+      id="other-solutions"
     >
       <SectionHeader
         title={<>Cloud and mobile solutions</>}
@@ -70,7 +70,11 @@ export const CloudAndMobileSolutions: React.FC = () => {
                 increase your customer base and experience.
               </p>
             </div>
-            <Link to="/services" className={`paragraph-link txt-blue txt-left`}>
+            <Link
+              to="/contact#schedule-a-call"
+              className={`paragraph-link txt-blue txt-left`}
+              id="build-your-team"
+            >
               You name it, we build it →
             </Link>
           </div>

@@ -9,6 +9,7 @@ export const ContactCtaSection: React.FC = () => {
     <motion.section
       className="page-container mrg-btm-xxl"
       {...viewPortAnimation}
+      id="contact-links"
     >
       <TwoColumnLayout
         leftSize={2}
@@ -21,6 +22,7 @@ export const ContactCtaSection: React.FC = () => {
               experienced and skilled members.
             </h4>
             <div className="flex wrap" style={{gap: '24px'}}>
+              {/* TODO: ADD CALENDLY LINK */}
               <button className="button primary">Schedule a call</button>
               <Link className="button secondary" to="/contact/#form">
                 Leave a message

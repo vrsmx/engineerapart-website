@@ -60,7 +60,10 @@ const ServicesPage: React.FC<PageProps> = () => {
             title="You give the problem, we deliver the solution"
             underline="Engineering is about understanding the problem at its core and finding the most efficient solution"
             cta={
-              <Link className="button primary big" to="/contact">
+              <Link
+                className="button primary big"
+                to="/contact#schedule-a-call"
+              >
                 Get your solution
               </Link>
             }

@@ -24,13 +24,13 @@ export const Footer = () => {
             </Link>
             <ul className={`${styles.navlinks_container} flex`}>
               <li className={styles.nav_link}>
-                <Link to="/services#expertice">Expertice</Link>
+                <Link to="/services#expertice">React Experts</Link>
               </li>
               <li className={styles.nav_link}>
-                <Link to="/services#hiring-process">Hiring process</Link>
+                <Link to="/services#other-solutions">Cloud and mobile</Link>
               </li>
               <li className={styles.nav_link}>
-                <Link to="/services#team-building">Team building</Link>
+                <Link to="/services#build-your-team">Team building</Link>
               </li>
             </ul>
           </div>
@@ -56,7 +56,7 @@ export const Footer = () => {
                 <Link to="/contact#schedule-a-call">Schedule a call</Link>
               </li>
               <li className={styles.nav_link}>
-                <Link to="/contact#message">Message</Link>
+                <Link to="/contact#form">Message</Link>
               </li>
             </ul>
           </div>

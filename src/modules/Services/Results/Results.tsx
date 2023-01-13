@@ -19,7 +19,10 @@ export const ServicesResults: React.FC = () => {
             in addition to technical and soft skills required to expand your
             existing teams or build new ones from zero.
           </p>
-          <Link to="/services" className={`paragraph-link txt-blue txt-left`}>
+          <Link
+            to="/services#build-your-team"
+            className={`paragraph-link txt-blue txt-left`}
+          >
             Learn more on how we build teams →
           </Link>
         </div>

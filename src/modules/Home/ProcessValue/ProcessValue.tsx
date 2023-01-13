@@ -59,7 +59,10 @@ export const ProcessValue: React.FC = () => {
                 match the skill set required by your projects.
               </p>
             </motion.div>
-            <Link to="/services" className="paragraph-link txt-blue">
+            <Link
+              to="/services#build-your-team"
+              className="paragraph-link txt-blue"
+            >
               Learn more about our process →
             </Link>
           </div>

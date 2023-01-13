@@ -21,9 +21,13 @@ const ContactPage: React.FC<PageProps> = () => {
         <section className="bg-black full-width">
           <PageHeader
             title="Our team of experts are ready to help"
-            underline="Doesn’t matter the problem, If it’s software we can help you."
+            underline="Doesn’t matter the problem, If it's software we can help you."
             cta={
-              <Link className="button primary big" to="/contact">
+              <Link
+                className="button primary big"
+                to="/contact#schedule-a-call"
+                id="schedule-a-call"
+              >
                 Call the experts
               </Link>
             }
@@ -47,6 +51,7 @@ const ContactPage: React.FC<PageProps> = () => {
                   We are happy and ready to aid you build your teams of
                   qualified engineers. Doesn't matter the size or stack
                 </h4>
+                {/* TODO: ADD CALENDLY LINK */}
                 <button className="button primary">Schedule a call</button>
               </div>
             }

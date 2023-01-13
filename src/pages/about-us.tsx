@@ -24,7 +24,11 @@ const AboutPage: React.FC<PageProps> = () => {
             title="Building teams that deliver solutions"
             underline="Building high quality and scalable solutions from its foundations is key for the success of any company."
             cta={
-              <Link className="button primary big" to="/contact">
+              <Link
+                className="button primary big"
+                to="/contact#schedule-a-call"
+                id="story"
+              >
                 Build your team
               </Link>
             }
@@ -68,7 +72,10 @@ const AboutPage: React.FC<PageProps> = () => {
               className="page-container flex justify-end"
               {...viewPortAnimation}
             >
-              <p className="quote-xl txt-light txt-left txt-max-width-xs">
+              <p
+                className="quote-xl txt-light txt-left txt-max-width-xs"
+                id="leadership"
+              >
                 We are proud of our work and the impact it has on our clients
               </p>
             </motion.div>

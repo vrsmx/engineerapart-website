@@ -28,7 +28,7 @@ const LegalsPage: React.FC<PageProps> = () => {
         <PageHeaderNavbar light={true} />
         <section className="bg-black full-width mrg-btm-xl">
           <PageHeader
-            title="Legals"
+            title="Privacy and Terms of Use"
             underline="Information about our privacy and terms of use"
           />
         </section>
