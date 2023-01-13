@@ -70,9 +70,7 @@ export const NavModal: React.FC<NavModalProps> = ({isOpen, onClose}) => {
             <div className="icon-container small">
               <EmailIcon className="icon-white" styles={{width: 25}} />
             </div>
-            <a href="mailto:contact@engineerapart.com">
-              contact@engineerapart.com
-            </a>
+            <a href="mailto:sales@engineerapart.com">sales@engineerapart.com</a>
           </div>
           {/* <ul className="flex justify-end">
             <li className={styles.legal_link}>

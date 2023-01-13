@@ -2,7 +2,7 @@ import * as React from 'react';
 import {EmailIcon} from 'src/assets/icons/EmailIcon';
 import {LinkedInIcon} from 'src/assets/icons/LinkedInIcon';
 
-const CONTACT_EMAIL = 'contact@engineerapart.com';
+const CONTACT_EMAIL = 'sales@engineerapart.com';
 
 export const ContactLinks: React.FC = () => {
   return (

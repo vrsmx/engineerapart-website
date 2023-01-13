@@ -84,7 +84,7 @@ export const Footer = () => {
           {...viewPortAnimation}
         >
           <span className={`${styles.legal_link} mrg-btm-s`}>
-            © 2022 EngineerApart. All rights reserved.
+            © 2023 EngineerApart. All rights reserved.
           </span>
           <ul
             className={`${styles.legal_links_container} flex justify-between`}
