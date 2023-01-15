@@ -7,11 +7,9 @@ const ERROR_MESSAGE =
 
 export async function createFormSubmission(data: ContactFormWizardValues) {
   try {
-    const res = await fetch(`${process.env.API_URL}/websiteContactService`, {
+    const res = await fetch(`${process.env.API_URL}websiteContactService`, {
       method: 'POST',
-      mode: 'cors',
       headers: {
-        'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({

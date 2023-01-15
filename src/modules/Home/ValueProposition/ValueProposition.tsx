@@ -14,19 +14,19 @@ const layoutitems = [
   {
     title: 'Start',
     content:
-      'Bootstrap new projects within your company with hand-picked experts aligned with the project needs, goals and constraints.',
+      'Bootstrap projects with experts who are aligned to your needs, goals and constraints.',
     icon: <StartIcon className="icon-blue" styles={{width: 50, top: 0}} />,
   },
   {
     title: 'Scale',
     content:
-      'Integrate individual contributors or full teams to upscale the output and speed of software building process.',
+      'Integrate individual contributors or full teams to scale the software building process.',
     icon: <ScaleIcon className="icon-blue" styles={{width: 45}} />,
   },
   {
     title: 'Accelerate',
     content:
-      'Use the specialized skill set of our teams to deliver high quality, maintainable and scalable solutions within large scale projects.',
+      'Utilize the specialized skills of our team to deliver quality solutions within large scale projects.',
     icon: <AccelerateIcon className="icon-blue" styles={{width: 60}} />,
   },
 ];

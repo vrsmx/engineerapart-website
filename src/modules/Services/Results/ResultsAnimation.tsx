@@ -44,11 +44,9 @@ const barVariants = {
 const labelsContainerVariants = {
   hidden: {
     opacity: 0,
-    x: 500,
   },
   visible: {
     opacity: [0, 0, 1],
-    x: [500, 250, 0],
     transition: {
       when: 'beforeChildren',
       ease: 'linear',
