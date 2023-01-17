@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkengineerapart_website=self.webpackChunkengineerapart_website||[]).push([[393],{1694:function(e,t,n){n.r(t),n.d(t,{Head:function(){return i}});var a=n(7294),s=n(1883);const r={color:"#232129",padding:96,fontFamily:"-apple-system, Roboto, sans-serif, serif"};t.default=()=>a.createElement("main",{style:r},a.createElement(s.Link,{to:"/"},"home"));const i=()=>a.createElement("title",null,"Legals Page")}}]);
+//# sourceMappingURL=component---src-pages-legals-tsx-72cf922dabc4bf6eaddd.js.map
