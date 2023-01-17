@@ -41,7 +41,3 @@ Global style clases are name `with-this-case`, while module clases are named `wi
 - Screen media query
 - Responsive font-size
 - Responsive container size, margin and padding
-
-### Component Sufixes
-
-Add the `component` sufix to all top level html tags inside container, for easily identification when working with css.
