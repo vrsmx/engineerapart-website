@@ -16,16 +16,14 @@ const calendarDayAnimation = {
 const schedulerVariants = {
   hidden: {
     opacity: 0,
-    x: 500,
   },
   visible: {
     opacity: [0, 0, 1],
-    x: [500, 250, 0],
     transition: {
       when: 'beforeChildren',
       ease: 'linear',
       duration: 0.35,
-      delay: 1.35,
+      delay: 1.15,
       staggerChildren: 0.15,
     },
   },

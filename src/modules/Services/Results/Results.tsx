@@ -15,8 +15,8 @@ export const ServicesResults: React.FC = () => {
           </h3>
           <p>
             We understand shipping quality software is about problem solving and
-            not code writing, a quality we look for in every member of our team
-            in addition to technical and soft skills required to expand your
+            not code writing, quality we look for in every member of our team in
+            addition to the technical and soft skills required to expand your
             existing teams or build new ones from zero.
           </p>
           <Link

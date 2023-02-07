@@ -19,8 +19,7 @@ export const HomeHeader: React.FC = () => {
       <div className={`${styles.underline_container} flex column align-center`}>
         <h2 className="section-header-underline txt-center txt-max-width-s">
           Build or grow your software development teams with cost-effective
-          expert engineers specialized in product driven development engineers
-          engineers
+          engineers specialized in product driven development
         </h2>
         <div className={`${styles.buttons_container} flex justify-center wrap`}>
           <Link className="button primary" to="/#wizard">

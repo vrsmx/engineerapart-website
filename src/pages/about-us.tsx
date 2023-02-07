@@ -50,7 +50,7 @@ const AboutPage: React.FC<PageProps> = () => {
               <div className="flex column" style={{gap: '2em'}}>
                 <p className="section-header-underline">
                   We understand the competitiveness in the current tech
-                  industry, EngineerApart is dedicated to help enterprises build
+                  industry. EngineerApart is dedicated to help enterprises build
                   their software solutions with reduced costs, while keeping the
                   high quality needed to build performant, scalable and
                   maintainable software.

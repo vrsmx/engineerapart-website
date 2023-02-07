@@ -44,12 +44,6 @@ export const ReactExpertice: React.FC = () => {
               management, enterprise security management or custom e-commerce
               platform.
             </p>
-
-            <p>
-              Our React experts will deliver high quality, responsive and
-              efficient UIs that can be easily scaled and maintained to future
-              proof your investment.
-            </p>
           </div>
         }
       />

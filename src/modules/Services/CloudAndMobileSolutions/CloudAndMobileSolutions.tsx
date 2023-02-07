@@ -51,8 +51,8 @@ export const CloudAndMobileSolutions: React.FC = () => {
               </div>
               <p>
                 Fast and reliable cloud services are key to a performant
-                infrastructure. Our engineers can assist with designing or
-                scaling performant cloud architectures to power products or
+                infrastructure. Our engineers can assist with the design and
+                scale of performant cloud architectures to power products or
                 services on multiple cloud platforms, including AWS, Google
                 Cloud, and Azure.
               </p>

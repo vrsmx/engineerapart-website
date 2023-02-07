@@ -56,9 +56,9 @@ export const ValueProposition: React.FC = () => {
         <p
           className={`${styles.services_headline} section-header-underline txt-center mrg-btm-xs`}
         >
-          At EngineerApart we are React experts that can build any web UI you
-          may need, we also master the complete web stack to aid your teams in
-          any position they require.
+          We are React experts that can build any web UI you may need that also
+          master the complete web stack to aid your teams in any position they
+          require.
         </p>
         <ServicesCardsContainer />
         <div className="flex justify-end full-width">
