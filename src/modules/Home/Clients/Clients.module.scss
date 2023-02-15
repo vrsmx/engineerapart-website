@@ -1,4 +1,5 @@
 @import 'src/styles/mediaQuery.scss';
+@import 'src/styles/mediaQuery.scss';
 
 .clients_component {
   background-color: var(--main-color-white-shade);
@@ -9,7 +10,11 @@
 .clients_list {
   background-color: var(--main-color-white-shade);
   margin: 0 auto;
-  width: 100%;
+  width: 60%;
+
+  @include screen-s {
+    width: 100%;
+  }
 }
 
 .client_container {

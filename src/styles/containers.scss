@@ -137,6 +137,11 @@
   position: relative;
   overflow: visible;
 
+  &.grayscale {
+    filter: grayscale(1);
+    opacity: 0.7;
+  }
+
   &.xsmall {
     width: min(max(1rem, 3vw), 1.5rem);
     height: min(max(1rem, 3vw), 1.5rem);
@@ -165,6 +170,16 @@
   &.xlarge {
     width: 100px;
     height: 100px;
+
+    @include screen-s {
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  &.custom-l {
+    width: 150px;
+    height: 150px;
 
     @include screen-s {
       width: 75px;

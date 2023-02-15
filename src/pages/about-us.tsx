@@ -9,7 +9,7 @@ import {QuoteSection} from 'src/components/QuoteSection/QuoteSection';
 import {ContactCtaSection} from 'src/modules/Shared/ContactCtaSection/ContactCtaSection';
 import {Footer} from 'src/components/Footer/Footer';
 import {LeadershipSection} from 'src/modules/AboutUs/LeadershipSection/LeadershipSection';
-import {AchievementNumbers} from 'src/modules/AboutUs/AchievementNumbers/AchievementNumbers';
+// import {AchievementNumbers} from 'src/modules/AboutUs/AchievementNumbers/AchievementNumbers';
 import {CookiePopUp} from 'src/components/CookiePopUp/CookiePopUp';
 import {viewPortAnimation} from 'src/assets/animations';
 
@@ -64,7 +64,7 @@ const AboutPage: React.FC<PageProps> = () => {
               </div>
             }
           />
-          <AchievementNumbers />
+          {/*  <AchievementNumbers /> */}
         </motion.section>
         <section className="mrg-top-l mrg-btm-l">
           <QuoteSection>
